@@ -1,0 +1,10 @@
+1,Zori la Semineu, Petre Ispirescu,1990
+2,Catelul meu,Claudiu Costea,2021
+4,Deu,Denis,2002
+3,Adevarul gol golut,Andrei Cizmas,1950
+5,Ddseu,Denis,2003
+6,Ddbeu,Denis,2004
+7,Ddxeu,Denis,2005
+8,Ddeeu,Denis,2006
+9,Ddeeu,Denis,2007
+10,Dddeu,Denis,2008
