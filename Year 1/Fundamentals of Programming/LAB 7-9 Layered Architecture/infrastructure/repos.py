@@ -259,6 +259,7 @@ class repoParticipare:
             if p.getID_Pers()==id:
                 self._participationList.remove(p)
                 return
+            
 class FileRepoEvents(repoEvents):
     def __init__(self, file_path):
         self.__file_path=file_path
@@ -314,7 +315,8 @@ class FileRepoEvents(repoEvents):
     
     def delete(self,id):
         self.__read_all_from_file()
-        repoEvents.delete(self,id)
+        #repoEvents.delete(self,id)
+        repoEvents.delete_rec(self, id, len(self._eventList)-1)
         self.__write_to_file_nothing()
         for event in self._eventList:
             self.__append_to_file(event)
