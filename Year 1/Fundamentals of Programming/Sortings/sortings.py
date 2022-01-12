@@ -65,8 +65,6 @@ class Sortings:
             self.QuickSort(lista, left, Pivot)
             self.QuickSort(lista, Pivot+1, right)
 
-        greater=self.QuickSort_pythonic([el for el in lista if el>=pivot])
-        return lower+[pivot]+greater'''
     def SelectionSort(self, lista): #teta(n^2)
         for i in range(len(lista)-1):
             for j in range(i+1,len(lista)):
