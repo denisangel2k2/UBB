@@ -16,12 +16,22 @@ class Teste(unittest.TestCase):
         l=self.__lista
         self.__sorter.SelectionSort(l)
         self.assertTrue(self.__lista_sortata==l)
+    
+    def testSelection2(self):
+        l=self.__lista
+        self.__sorter.SelectionSort2(l)
+        self.assertTrue(self.__lista_sortata==l)
 
     def testBubble(self):
         l=self.__lista
         self.__sorter.BubbleSort(l)
         self.assertTrue(self.__lista_sortata==l)
 
+    def testInsertion(self):
+        l=self.__lista
+        self.__sorter.InsertionSort(l)
+        self.assertTrue(self.__lista_sortata==l)
+        
 
 class Sortings:
     def __init__(self):
@@ -38,14 +48,14 @@ class Sortings:
         i=left-1
         pivot=lista[right-1]
         i_pivot=right-1
-        for j in range(left, right-1):
+        for j in range(left, right):
             if lista[j] <= pivot:
                 i+=1
                 lista[i], lista[j] = lista[j], lista[i]
         
-        lista[i+1], lista[i_pivot] = lista[i_pivot], lista[i+1]
+        #lista[i+1], lista[i_pivot] = lista[i_pivot], lista[i+1]
         
-        return (i+1)
+        return (i)
 
    
     def QuickSort(self, lista, left, right):
@@ -55,21 +65,26 @@ class Sortings:
             self.QuickSort(lista, left, Pivot)
             self.QuickSort(lista, Pivot+1, right)
 
-    '''def QuickSort_pythonic(self, lista):
-
-        if len(lista)<=1:
-            return lista
-        pivot=lista.pop()
-        lower=self.QuickSort_pythonic([el for el in lista if el<pivot])
         greater=self.QuickSort_pythonic([el for el in lista if el>=pivot])
         return lower+[pivot]+greater'''
-
-    def SelectionSort(self, lista):
+    def SelectionSort(self, lista): #teta(n^2)
         for i in range(len(lista)-1):
             for j in range(i+1,len(lista)):
                 if lista[i]>lista[j]:
                     lista[i], lista[j] = lista[j], lista[i]
+        
     
+    def SelectionSort2(self,lista): #teta(n^2)
+        for i in range(len(lista)-1):
+            imin=i
+            Min=lista[i]
+            for j in range(i+1, len(lista)):
+                if lista[j]<Min:
+                    Min=lista[j]
+                    imin=j
+            lista[imin], lista[i] = lista[i], lista[imin]
+            
+            
     def BubbleSort(self, lista):
         ok=False
         while not ok:
@@ -79,8 +94,23 @@ class Sortings:
                     lista[i], lista[i+1] = lista[i+1], lista[i]
                     ok=False
     
+    def InsertionSort(self, lista):
+        for i in range(len(lista)):
+            ind=i-1
+            nr=lista[i]
+            while ind>=0 and nr<lista[ind]:
+                lista[ind+1]=lista[ind]
+                ind-=1
+                         
+            lista[ind+1]=nr
+            
+    def MergeSort(self, lista):
+        pass
 
 def main():  
     unittest.main()
+    
+
+
    
 main()
