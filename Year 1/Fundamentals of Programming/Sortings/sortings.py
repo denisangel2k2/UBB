@@ -1,4 +1,5 @@
 import unittest
+from pywin.framework import startup
 class Teste(unittest.TestCase):
 
     def setUp(self):
@@ -31,7 +32,13 @@ class Teste(unittest.TestCase):
         l=self.__lista
         self.__sorter.InsertionSort(l)
         self.assertTrue(self.__lista_sortata==l)
-        
+    
+    def testMerge(self):
+        l=self.__lista
+        self.__sorter.MergeSort(l, 0, len(l)-1)
+        #print(l)
+        #print(self.__lista_sortata)
+        self.assertTrue(l==self.__lista_sortata)
 
 class Sortings:
     def __init__(self):
@@ -64,6 +71,7 @@ class Sortings:
 
             self.QuickSort(lista, left, Pivot)
             self.QuickSort(lista, Pivot+1, right)
+            
 
     def SelectionSort(self, lista): #teta(n^2)
         for i in range(len(lista)-1):
@@ -101,9 +109,44 @@ class Sortings:
                 ind-=1
                          
             lista[ind+1]=nr
+    
+    def Merge(self, l, start, end, mij):
+        i=start
+        j=mij+1
+        aux=[None]*len(l)
+        k=start
+        while i<=mij and  j<=end:
+            if l[i] < l[j]:
+                aux[k]=l[i]
+                i+=1
+                k+=1
+            else:
+                aux[k]=l[j]
+                j+=1
+                k+=1
+        
+        while i<=mij:
+            aux[k]=l[i]
+            i+=1
+            k+=1
+        
+        while j<=end:
+            aux[k]=l[j]
+            j+=1
+            k+=1
+                    
+        for i in range(start, end+1):
+            l[i]=aux[i]    
             
-    def MergeSort(self, lista):
-        pass
+    def MergeSort(self, lista, st, dr):
+        
+        if st<dr:
+            
+            mij=(st+dr)//2
+            self.MergeSort(lista, st, mij)
+            self.MergeSort(lista, mij+1, dr)
+            self.Merge(lista, st, dr, mij)
+            
 
 def main():  
     unittest.main()
