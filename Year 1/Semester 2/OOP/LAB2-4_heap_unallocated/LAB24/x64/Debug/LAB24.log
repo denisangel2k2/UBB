@@ -1,0 +1,8 @@
+﻿  main.c
+C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\LAB24\LAB24\main.c(19,15): warning C4047: 'function': 'UI *' differs in levels of indirection from 'UI **'
+C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\LAB24\LAB24\main.c(19,12): warning C4024: 'destroyUI': different types for formal and actual parameter 1
+C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\LAB24\LAB24\main.c(20,22): warning C4047: 'function': 'Service *' differs in levels of indirection from 'Service **'
+C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\LAB24\LAB24\main.c(20,17): warning C4024: 'destroyService': different types for formal and actual parameter 1
+C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\LAB24\LAB24\main.c(21,19): warning C4047: 'function': 'Repository *' differs in levels of indirection from 'Repository **'
+C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\LAB24\LAB24\main.c(21,14): warning C4024: 'destroyRepo': different types for formal and actual parameter 1
+  LAB24.vcxproj -> C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\LAB24\x64\Debug\LAB24.exe
