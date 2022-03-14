@@ -1,0 +1,4 @@
+﻿  ui.c
+C:\Users\Denis\Desktop\Uni\OOP\DynamicLab2\DynamicLab2\ui.c(143,47): warning C4113: 'int (__cdecl *)(double,double)' differs in parameter lists from 'int (__cdecl *)(void *,void *)'
+C:\Users\Denis\Desktop\Uni\OOP\DynamicLab2\DynamicLab2\ui.c(154,47): warning C4113: 'int (__cdecl *)(double,double)' differs in parameter lists from 'int (__cdecl *)(void *,void *)'
+  DynamicLab2.vcxproj -> C:\Users\Denis\Desktop\Uni\OOP\DynamicLab2\x64\Debug\DynamicLab2.exe

@@ -1,0 +1,21 @@
+[2022-03-13 18:18:09] [info] Start Program:
+Path:"C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\DynamicLab2\x64\Debug\DynamicLab2.exe"
+Arguments:
+Working directory: "C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\DynamicLab2\DynamicLab2\"
+Modules: Selected: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\DynamicLab2\x64\Debug\DynamicLab2.exe Excluded: 
+Sources: Selected: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\DynamicLab2\DynamicLab2 Excluded: ui 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\Denis\AppData\Local\Temp\gzykopkb.abl 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-03-13 18:18:09] [info] Module: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\DynamicLab2\x64\Debug\DynamicLab2.exe is selected because it matches selected pattern: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\DynamicLab2\x64\Debug\DynamicLab2.exe
+[2022-03-13 18:18:11] [info] ----------------------------------------------------
+[2022-03-13 18:18:11] [info] Coverage binary generated in file: C:\Users\Denis\AppData\Local\Temp\gzykopkb.abl
+[2022-03-13 18:18:11] [info] ----------------------------------------------------
