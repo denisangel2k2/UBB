@@ -2,14 +2,19 @@
 #include <malloc.h>
 #include <string.h>
 #include <stdlib.h>
+#include <assert.h>
 
 Repository* createRepo(int cap) {
 
 	Repository* repo = (Repository*)malloc(sizeof(Repository));
-	repo->offers = create(cap);
-	repo->history = create(2);
-	repo->index = -1;
-	return repo;
+	if (repo != NULL) {
+		repo->offers = create(cap);
+		repo->history = create(2);
+		repo->index = -1;
+		return repo;
+	}
+	else return NULL;
+	
 
 }
 void destroyOffers(VectorDinamic* v) {
@@ -27,16 +32,23 @@ void destroyHistory(VectorDinamic* v) {
 }
 
 void destroyRepo(Repository* repo) {
-	destroyOffers(repo->offers);
-	destroy(&(repo->offers));
-	destroyHistory(repo->history);
-	destroy(&(repo->history));
-	free(repo);
+	if (repo != NULL) {
+		destroyOffers(repo->offers);
+		destroy(&(repo->offers));
+		if (repo->history!=NULL)
+			destroyHistory(repo->history);
+		destroy(&(repo->history));
+		free(repo);
+	}
+	
 }
 VectorDinamic* repoCopyOffers(Repository* repo, VectorDinamic* ve) {
 	VectorDinamic* v = create(1);
 	Offer* ofini;
 	Offer* ofcopy;
+
+	assert(repo);
+
 	for (int i = 0; i < len(ve); i++) {
 		ofini = getElement(ve, i);
 		ofcopy = createOffer(ofini->id, ofini->type, ofini->suprafata, ofini->adresa, ofini->pret);

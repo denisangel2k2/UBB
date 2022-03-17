@@ -7,8 +7,8 @@ typedef struct {
 Service* createService(Repository* repo);
 void destroyService(Service* serv);
 
-VectorDinamic* sortPret(Service* serv, int (*compara)(void*, void*));
-VectorDinamic* sortType(Service* serv, int (*compara)(void*, void*));
+VectorDinamic* sortPret(Service* serv, int (*compara)(double, double));
+VectorDinamic* sortType(Service* serv, int (*compara)(char*, char*));
 int serviceDelete(Service* serv, int id);
 int serviceUpdate(Service* serv, int id, char type[], int suprafata, char adresa[], double pret);
 VectorDinamic* serviceGetAll(Service* serv);

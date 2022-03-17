@@ -3,22 +3,30 @@
 
 VectorDinamic* create(int cap) {
 	VectorDinamic* v = (VectorDinamic*)malloc(sizeof(VectorDinamic));
-	v->capacity = cap;
-	v->lg = 0;
-	v->elems = (Element*)malloc(sizeof(Element)*cap);
-	return v;
+	if (v != NULL) {
+		v->capacity = cap;
+		v->lg = 0;
+		v->elems = (Element*)malloc(sizeof(Element) * cap);
+		return v;
+	}
+	else return NULL;
+	
 }
 
 void resize(VectorDinamic* v) {
 
 	int newCap = v->capacity * 2;
-	Element* newList = (Element*)malloc(sizeof(Element) * newCap);
-	for (int i = 0; i < v->lg; i++)
-		newList[i] = v->elems[i];
+	Element* newList = (Element*)calloc(newCap, sizeof(Element));
+	if (newList != NULL && v->lg < newCap) {
+		for (int i = 0; i < v->lg; i++)
+			newList[i] = v->elems[i];
 
-	free(v->elems);
-	v->elems = newList;
-	v->capacity = newCap;
+		free(v->elems);
+		v->elems = newList;
+		v->capacity = newCap;
+	}
+	else return;
+	
 
 }
 void destroy(VectorDinamic** v) {

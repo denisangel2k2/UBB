@@ -1,21 +1,21 @@
-[2022-03-15 00:20:39] [info] Start Program:
+[2022-03-17 15:52:38] [info] Start Program:
 Path:"C:\Users\Denis\Desktop\Uni\OOP\DynamicLab2\x64\Debug\DynamicLab2.exe"
 Arguments:
 Working directory: "C:\Users\Denis\Desktop\Uni\OOP\DynamicLab2\DynamicLab2\"
 Modules: Selected: C:\Users\Denis\Desktop\Uni\OOP\DynamicLab2\x64\Debug\DynamicLab2.exe Excluded: 
-Sources: Selected: C:\Users\Denis\Desktop\Uni\OOP\DynamicLab2\DynamicLab2 Excluded: ui compare_func 
+Sources: Selected: C:\Users\Denis\Desktop\Uni\OOP\DynamicLab2\DynamicLab2 Excluded: ui 
 Log Level: Normal
 Cover Children: 0
 Aggregate by file: 1
 Continue after C++ exception: 0
 Optimized build support: 0
-Export: Binary C:\Users\Denis\AppData\Local\Temp\a2owdhng.uoe 
+Export: Binary C:\Users\Denis\AppData\Local\Temp\eucxu2ue.ko1 
 Input coverage: 
 Unified diff: 
 Excluded line regular expressions: 
 Substitute pdb source paths: 
 
-[2022-03-15 00:20:39] [info] Module: C:\Users\Denis\Desktop\Uni\OOP\DynamicLab2\x64\Debug\DynamicLab2.exe is selected because it matches selected pattern: C:\Users\Denis\Desktop\Uni\OOP\DynamicLab2\x64\Debug\DynamicLab2.exe
-[2022-03-15 00:20:42] [info] ----------------------------------------------------
-[2022-03-15 00:20:42] [info] Coverage binary generated in file: C:\Users\Denis\AppData\Local\Temp\a2owdhng.uoe
-[2022-03-15 00:20:42] [info] ----------------------------------------------------
+[2022-03-17 15:52:38] [info] Module: C:\Users\Denis\Desktop\Uni\OOP\DynamicLab2\x64\Debug\DynamicLab2.exe is selected because it matches selected pattern: C:\Users\Denis\Desktop\Uni\OOP\DynamicLab2\x64\Debug\DynamicLab2.exe
+[2022-03-17 15:52:39] [info] ----------------------------------------------------
+[2022-03-17 15:52:39] [info] Coverage binary generated in file: C:\Users\Denis\AppData\Local\Temp\eucxu2ue.ko1
+[2022-03-17 15:52:39] [info] ----------------------------------------------------

@@ -31,14 +31,16 @@ void testDynamicVector() {
 }
 void testGetElemVector() {
 	VectorDinamic* v = create(1);
-	add(v, 13);
-	assert(getElement(v, 0) == 13);
+	int a = 13;
+	add(v, &a);
+	assert(getElement(v, 0) == &a);
 	assert(getElement(v, -1) == 0);
 	destroy(&v);
 }
 void testDeleteVector() {
 	VectorDinamic* v = create(1);
-	add(v, 13);
+	int a = 13;
+	add(v, &a);
 	del(v, 0);
 	int x = del(v, -1);
 	assert(x == 0);
@@ -47,16 +49,19 @@ void testDeleteVector() {
 }
 void testUpdateVector() {
 	VectorDinamic* v = create(1);
-	add(v, 13);
-	update(v, 0, 14);
-	int x = update(v, -1,3);
+	int b = 13;
+	add(v, &b);
+	int a = 14;
+	update(v, 0, &a);
+	int x = update(v, -1,&a);
 	assert(x == 0);
-	assert(v->elems[0] == 14);
+	assert(v->elems[0] == &a);
 	destroy(&v);
 }
 void testCopyVector() {
 	VectorDinamic* v = create(1);
-	add(v, 131);
+	int a = 131;
+	add(v, &a);
 	VectorDinamic* copie = copy(v);
 	
 	assert(len(copie) == 1);
@@ -68,7 +73,7 @@ void testCopyVector() {
 void testCreateVector() {
 	VectorDinamic* v = create(1);
 	assert(v->lg == 0);
-	assert(v->capacity = 1);
+	assert(v->capacity == 1);
 	destroy(&v);
 }
 void testDestroyVector() {
@@ -504,8 +509,8 @@ void testServFitlerTip() {
 }
 
 void testCompare() {
-	//assert(comparePretAsc(1.1, 1.2) == 1);
-	//assert(comparePretDsc(1.1, 1.2) == 0);
-	//assert(compareTypeAsc("aa", "bb") == 1);
-	//assert(compareTypeDsc("aa", "bb") == 0);
+	assert(comparePretAsc(1.1, 1.2) == 0);
+	assert(comparePretDsc(1.1, 1.2) == 1);
+	assert(compareTypeAsc("aa", "bb") == 1 );
+	assert(compareTypeDsc("aa", "bb") == 0);
 }

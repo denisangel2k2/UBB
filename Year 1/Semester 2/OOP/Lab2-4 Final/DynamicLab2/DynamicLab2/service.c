@@ -4,9 +4,12 @@
 
 Service* createService(Repository* repo) {
 	Service* serv = (Service*)malloc(sizeof(Service));
-
-	serv->repo = repo;
-	return serv;
+	if (serv != NULL) {
+		serv->repo = repo;
+		return serv;
+	}
+	else return NULL;
+	
 }
 
 void destroyService(Service* serv) {
