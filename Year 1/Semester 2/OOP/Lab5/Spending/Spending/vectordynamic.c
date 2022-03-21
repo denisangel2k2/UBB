@@ -1,15 +1,16 @@
 #include "vectordynamic.h"
 #include <malloc.h>
+#include <assert.h>
 
 VectorDinamic* create(int cap) {
 	VectorDinamic* v = (VectorDinamic*)malloc(sizeof(VectorDinamic));
-	if (v != NULL) {
+	
 		v->capacity = cap;
 		v->lg = 0;
 		v->elems = (Element*)malloc(sizeof(Element) * cap);
 		return v;
-	}
-	else return NULL;
+	
+	
 
 }
 
@@ -80,4 +81,69 @@ VectorDinamic* copy(VectorDinamic* v) {
 		copyv->elems[i] = v->elems[i];
 	copyv->lg = v->lg;
 	return copyv;
+}
+
+void test_vector() {
+	VectorDinamic* v = create(1);
+	int a = 13;
+	add(v, &a);
+	assert(getElement(v, 0) == &a);
+	assert(getElement(v, -1) == 0);
+	destroy(&v);
+
+	 v = create(1);
+	a = 13;
+	add(v, &a);
+	del(v, 0);
+	int x = del(v, -1);
+	assert(x == 0);
+	assert(v->lg == 0);
+	destroy(&v);
+
+	 v = create(1);
+	int b = 13;
+	add(v, &b);
+	a = 14;
+	update(v, 0, &a);
+	x = update(v, -1, &a);
+	assert(x == 0);
+	assert(v->elems[0] == &a);
+	destroy(&v);
+
+	 v = create(1);
+	a = 131;
+	add(v, &a);
+	VectorDinamic* copie = copy(v);
+
+	assert(len(copie) == 1);
+	destroy(&v);
+	destroy(&copie);
+
+	 v = create(1);
+	assert(v->lg == 0);
+	assert(v->capacity == 1);
+	destroy(&v);
+
+	 v = create(1);
+	destroy(&v);
+
+	 v = create(1);
+	x = 33;
+
+	add(v, &x);
+	add(v, &x);
+	add(v, &x);
+
+	assert(len(v) == 3);
+	destroy(&v);
+
+	 v = create(1);
+	x = 33;
+
+	add(v, &x);
+	add(v, &x);
+	add(v, &x);
+
+	assert(len(v) == 3);
+	destroy(&v);
 }

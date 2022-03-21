@@ -43,7 +43,11 @@ void realloc_repository(repository* repo, int new_capacity) {
     for (int i = 0; i < repo->size; ++i) {
         new_list[i] = repo->list[i];
     }
+
+   
     free(repo->list);
+    
+
     repo->list = new_list;
     repo->capacity = new_capacity;
 }
@@ -94,9 +98,12 @@ repository* repository_filter(repository* repo, char* field, char* key) {
                 ++filtered->size;
             }
         }
+        
     }
     return filtered;
 }
+
+
 
 void swap(repository* ordered, int i, int j) {
     spending_type* spending = ordered->list[i];

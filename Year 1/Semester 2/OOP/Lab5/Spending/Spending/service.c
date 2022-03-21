@@ -59,6 +59,22 @@ char* service_filter(service* srv, char* field, char* key) {
     free(filtered);
     return result;
 }
+char* serv_fitler_new(service* srv, int numar, double suma) {
+    if (srv->repo->size == 0)
+        return NULL;
+
+    repository* filter = create_repository();
+    spending_type* s;
+    for (int i = 0; i < srv->repo->size; i++) {
+        if (srv->repo->list[i]->ap_no == numar && srv->repo->list[i]->sum - suma<0.00001) {
+            s = create_spending(srv->repo->list[i]->ap_no, srv->repo->list[i]->sum, srv->repo->list[i]->type);
+            repository_add(filter, s);
+        }
+    }
+    char* result = stringify(filter);
+    delete_repository(filter);
+    return result;
+}
 
 char* service_print(service* srv) {
     return stringify(srv->repo);
@@ -131,12 +147,15 @@ void test_service() {
     char* result = service_print(srv);
     assert(result == NULL);
     
-    
+    result = serv_fitler_new(srv, 18, 2000);
+    free(result);
     service_add(srv, 18, 2000, "gaz");
     service_add(srv, 17, 1031.5, "gaz");
     service_add(srv, 16, 31.5, "curent");
     service_modify(srv, 0, 1999.2, "gaz");
     result = service_filter(srv, "tip", "gaz");
+    free(result);
+    result = serv_fitler_new(srv, 18, 2000);
     free(result);
     result = service_order(srv, 1, 1);
     free(result);

@@ -17,3 +17,4 @@ int del(VectorDinamic* v, int pos);
 int update(VectorDinamic* v, int pos, Element e);
 Element getElement(VectorDinamic* v, int pos);
 int len(VectorDinamic* v);
+void test_vector();

@@ -1,0 +1,30 @@
+[2022-03-22 00:33:48] [info] Start Program:
+Path:"C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab5\Spending\x64\Debug\Spending.exe"
+Arguments:
+Working directory: "C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab5"
+Modules: Selected: * Excluded: 
+Sources: Selected: * Excluded: ui vectordynamic 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\Denis\AppData\Local\Temp\m5sobyl4.qer 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-03-22 00:33:49] [info] Module: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab5\Spending\x64\Debug\Spending.exe is selected because it matches selected pattern: *
+[2022-03-22 00:33:49] [info] Module: C:\Windows\System32\ntdll.dll is selected because it matches selected pattern: *
+[2022-03-22 00:33:49] [info] Module: C:\Windows\System32\kernel32.dll is selected because it matches selected pattern: *
+[2022-03-22 00:33:49] [info] Module: C:\Windows\System32\KernelBase.dll is selected because it matches selected pattern: *
+[2022-03-22 00:33:49] [info] Module: C:\Windows\System32\vcruntime140d.dll is selected because it matches selected pattern: *
+[2022-03-22 00:33:49] [info] Module: C:\Windows\System32\ucrtbased.dll is selected because it matches selected pattern: *
+[2022-03-22 00:33:49] [info] Module: C:\Windows\System32\ucrtbased.dll is selected because it matches selected pattern: *
+[2022-03-22 00:33:53] [info] Module: C:\Windows\System32\kernel.appcore.dll is selected because it matches selected pattern: *
+[2022-03-22 00:33:53] [info] Module: C:\Windows\System32\msvcrt.dll is selected because it matches selected pattern: *
+[2022-03-22 00:33:53] [info] Module: C:\Windows\System32\rpcrt4.dll is selected because it matches selected pattern: *
+[2022-03-22 00:33:53] [info] ----------------------------------------------------
+[2022-03-22 00:33:53] [info] Coverage binary generated in file: C:\Users\Denis\AppData\Local\Temp\m5sobyl4.qer
+[2022-03-22 00:33:53] [info] ----------------------------------------------------

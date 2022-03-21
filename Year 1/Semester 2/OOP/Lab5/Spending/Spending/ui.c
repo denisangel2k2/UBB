@@ -30,6 +30,7 @@ void ui_help() {
     printf("'order' - ordoneaza facturile dupa suma (crescator/descrescator)\n");
     printf("'filter' - filtreaza facturile dupa suma sau tip (ex tip = 'gaz')\n");
     printf("'undo' - efectueaza undo la ultima operatie\n");
+    printf("'nfilter' - efectueaza filtrare dupa numar si suma\n");
 }
 
 void ui_add(service* srv) {
@@ -100,9 +101,26 @@ void ui_filter(service* srv) {
     free(field);
     free(key);
 }
+void ui_filter_new(ui_type* ui) {
+    printf("Filtrare dupa numar si suma:\n\n");
+    int numar;
+    printf("Numar: ");
+    scanf("%d", &numar);
+    double suma;
+    printf("\nSuma: ");
+    scanf("%lf", &suma);
 
+    char* result = serv_fitler_new(ui->srv, numar, suma);
+    if (result == NULL)
+        printf("Nu este nimic de printat!\n");
+    else {
+        printf("%s", result);
+        free(result);
+    }
+    
+}
 void ui_run(ui_type* ui) {
-    char* input = malloc(sizeof(char) * 10);
+    char* input = malloc(sizeof(char) * 50);
     printf("Salutare, aceasta aplicatie gestioneaza facturile tale\n"
         "pentru a afla ce poti face in aplicatie introdu comanda 'help'\n"
         "iar daca vrei sa iesi din aplicatie introdu comanda 'exit'\n");
@@ -138,6 +156,9 @@ void ui_run(ui_type* ui) {
         }
         else if (!strcmp(input, "undo")) {
             ui_undo(ui);
+        }
+        else if (!strcmp(input, "nfilter")) {
+            ui_filter_new(ui);
         }
         else {
             printf("Ai introdus o comanda invalida, introdu 'help' daca te-ai blocat\n");

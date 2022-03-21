@@ -4,11 +4,13 @@
 #include "repository.h"
 #include "service.h"
 #include "ui.h"
+#include "vectordynamic.h"
 
 int main() {
     test_domain();
     test_repository();
     test_service();
+    test_vector();
     repository* repo = create_repository();
     service* srv = create_service(repo);
     ui_type* ui = create_ui(srv);
