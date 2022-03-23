@@ -82,7 +82,8 @@ void ui_order(service* srv) {
     printf("Introdu 0 pentru a sorta dupa suma si 1 pentru a sorta dupa tip: ");
     scanf("%d", &type);
     char* result = service_order(srv, op, type);
-    printf("%s", result);
+    if (result!=NULL)
+        printf("%s", result);
     free(result);
 }
 
@@ -95,8 +96,10 @@ void ui_filter(service* srv) {
     scanf("%s", field);
     printf("Introdu valoarea dupa care vrei sa filtrezi, %s = ", field);
     scanf("%s", key);
+
     result = service_filter(srv, field, key);
-    printf("%s", result);
+    if (result!=NULL)
+        printf("%s", result);
     free(result);
     free(field);
     free(key);
@@ -145,11 +148,9 @@ void ui_run(ui_type* ui) {
         }
         else if (!strcmp(input, "order")) {
             ui_order(ui->srv);
-            return;
         }
         else if (!strcmp(input, "filter")) {
             ui_filter(ui->srv);
-            return;
         }
         else if (!strcmp(input, "print")) {
             ui_print(ui->srv);

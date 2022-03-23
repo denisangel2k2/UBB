@@ -54,11 +54,18 @@ char* stringify(repository* repo) {
 
 char* service_filter(service* srv, char* field, char* key) {
     repository* filtered = repository_filter(srv->repo, field, key);
+    //if (filtered->size == 0)
+      //  return NULL;
     char* result = stringify(filtered);
+    
     free(filtered->list);
     free(filtered);
+    
+    //delete_repository(filtered);
+
     return result;
 }
+
 char* serv_fitler_new(service* srv, int numar, double suma) {
     if (srv->repo->size == 0)
         return NULL;
@@ -133,9 +140,12 @@ int service_modify(service* srv, int id, double sum, char* type) {
 
 char* service_order(service* srv, int op, int type) {
     repository* ordered = repository_order(srv->repo, op, type);
+    //if (ordered->size == 0)
+        //return NULL;
     char* result = stringify(ordered);
     free(ordered->list);
     free(ordered);
+   // delete_repository(ordered);
     return result;
 }
 

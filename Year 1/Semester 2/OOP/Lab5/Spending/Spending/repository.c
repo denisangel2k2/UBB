@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <string.h>
+#include "spending.h"
 
 repository* create_repository() {
 
@@ -79,21 +80,28 @@ int repository_delete(repository* repo, int id) {
 repository* repository_filter(repository* repo, char* field, char* key) {
     repository* filtered = create_repository();
     realloc_repository(filtered, repo->size);
+    //spending_type* s;
     for (int i = 0; i < repo->size; ++i) {
         if (!strcmp(field, "numar")) {
             if (atoi(key) == repo->list[i]->ap_no) {
+               // s = create_spending(repo->list[i]->ap_no, repo->list[i]->sum, repo->list[i]->type);
+               // repository_add(filtered, s);
                 filtered->list[filtered->size] = repo->list[i];
                 ++filtered->size;
             }
         }
         else if (!strcmp(field, "suma")) {
             if (atoi(key) == repo->list[i]->sum) {
+               // s = create_spending(repo->list[i]->ap_no, repo->list[i]->sum, repo->list[i]->type);
+               // repository_add(filtered, s);
                 filtered->list[filtered->size] = repo->list[i];
                 ++filtered->size;
             }
         }
         else if (!strcmp(field, "tip")) {
             if (!strcmp(key, repo->list[i]->type)) {
+                //s = create_spending(repo->list[i]->ap_no, repo->list[i]->sum, repo->list[i]->type);
+                //repository_add(filtered, s);
                 filtered->list[filtered->size] = repo->list[i];
                 ++filtered->size;
             }
@@ -145,8 +153,12 @@ void sort(repository* ordered, int op, int type) {
 repository* repository_order(repository* repo, int op, int type) {
     repository* ordered = create_repository();
     realloc_repository(ordered, repo->size);
+    //spending_type* s;
     ordered->size = repo->size;
     for (int i = 0; i < ordered->size; ++i) {
+       // s = create_spending(repo->list[i]->ap_no, repo->list[i]->sum, repo->list[i]->type);
+
+       // repository_add(ordered, s);
         ordered->list[i] = repo->list[i];
     }
     sort(ordered, op, type);

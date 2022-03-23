@@ -5,7 +5,11 @@ typedef struct {
     spending_type** list;
     int size, capacity;
 } repository;
-
+/// <summary>
+/// 
+/// </summary>
+/// <param name="repo"></param>
+/// <returns></returns>
 repository* copyRepo(repository* repo);
 repository* create_repository();
 repository* repository_filter(repository* repo, char* field, char* key);
