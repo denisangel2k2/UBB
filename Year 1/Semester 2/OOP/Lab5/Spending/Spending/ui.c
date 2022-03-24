@@ -37,10 +37,23 @@ void ui_add(service* srv) {
     printf("Introdu numarul apartamentului, suma si tipul cheltuielii:\n");
     int no_ap;
     double sum;
-    char* type = malloc(sizeof(char) * 10);
-    scanf("%d %lf %s", &no_ap, &sum, type);
-    service_add(srv, no_ap, sum, type);
+    char* summ= malloc(sizeof(char) * 1000);
+    char* no_app= malloc(sizeof(char) * 1000);
+    char* type = malloc(sizeof(char) * 1000);
+
+    scanf_s("%s %s %s", no_app,50, summ,50, type, 50);
+
+    if (strlen(no_app) > 16 || strlen(summ) > 16)
+        printf("Date prea mari!\n");
+    else {
+        sum = strtof(summ, NULL);
+        no_ap = atoi(no_app);
+        service_add(srv, no_ap, sum, type);
+        
+    }
     free(type);
+    free(summ);
+    free(no_app);
 }
 void ui_remove(service* srv) {
     int id;
@@ -79,7 +92,7 @@ void ui_order(service* srv) {
     int op = 0, type = 0;
     printf("Introdu 0 pentru a sorta descrescator si 1 pentru crescator: ");
     scanf("%d", &op);
-    printf("Introdu 0 pentru a sorta dupa suma si 1 pentru a sorta dupa tip: ");
+    printf("Introdu 0 pentru a sorta dupa suma si 1 pentru a sorta dupa tip si 2 dupa toate 3 tipurile: ");
     scanf("%d", &type);
     char* result = service_order(srv, op, type);
     if (result!=NULL)

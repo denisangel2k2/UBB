@@ -48,7 +48,6 @@ void realloc_repository(repository* repo, int new_capacity) {
    
     free(repo->list);
     
-
     repo->list = new_list;
     repo->capacity = new_capacity;
 }
@@ -122,7 +121,7 @@ void swap(repository* ordered, int i, int j) {
 void sort(repository* ordered, int op, int type) {
     for (int i = 0; i < ordered->size; ++i) {
         for (int j = i + 1; j < ordered->size; ++j) {
-            if (type) {
+            if (type==1) {
                 if (op) {
                     if (strcmp(ordered->list[i]->type, ordered->list[j]->type) > 0) {
                         swap(ordered, i, j);
@@ -134,7 +133,7 @@ void sort(repository* ordered, int op, int type) {
                     }
                 }
             }
-            else {
+            else if (type == 0) {
                 if (op) {
                     if (ordered->list[i]->sum > ordered->list[j]->sum) {
                         swap(ordered, i, j);
@@ -146,19 +145,45 @@ void sort(repository* ordered, int op, int type) {
                     }
                 }
             }
+            else if (type==2) {
+                if (op) {
+                    if (ordered->list[i]->sum > ordered->list[j]->sum)
+                        swap(ordered, i, j);
+
+                    else if (ordered->list[i]->sum - ordered->list[j]->sum < 0.00001)
+
+                        if (strcmp(ordered->list[i]->type, ordered->list[j]->type) > 0)
+                            swap(ordered, i, j);
+
+                        else if (strcmp(ordered->list[i]->type, ordered->list[j]->type) == 0)
+                            if (ordered->list[i]->ap_no > ordered->list[j]->ap_no)
+                                swap(ordered, i, j);
+                }
+                else {
+                    if (ordered->list[i]->sum < ordered->list[j]->sum)
+                        swap(ordered, i, j);
+
+                    else if (ordered->list[i]->sum - ordered->list[j]->sum < 0.00001)
+
+                        if (strcmp(ordered->list[i]->type, ordered->list[j]->type) < 0)
+                            swap(ordered, i, j);
+
+                        else if (strcmp(ordered->list[i]->type, ordered->list[j]->type) == 0)
+                            if (ordered->list[i]->ap_no < ordered->list[j]->ap_no)
+                                swap(ordered, i, j);
+                }
+            }
+          }
         }
     }
-}
 
 repository* repository_order(repository* repo, int op, int type) {
     repository* ordered = create_repository();
     realloc_repository(ordered, repo->size);
-    //spending_type* s;
+  
     ordered->size = repo->size;
     for (int i = 0; i < ordered->size; ++i) {
-       // s = create_spending(repo->list[i]->ap_no, repo->list[i]->sum, repo->list[i]->type);
-
-       // repository_add(ordered, s);
+       
         ordered->list[i] = repo->list[i];
     }
     sort(ordered, op, type);
@@ -196,6 +221,12 @@ void test_repository() {
     free(ordered->list);
     free(ordered);
     ordered = repository_order(repo, 1, 1);
+    free(ordered->list);
+    free(ordered);
+    ordered = repository_order(repo, 1, 2);
+    free(ordered->list);
+    free(ordered);
+    ordered = repository_order(repo, 0, 2);
     free(ordered->list);
     free(ordered);
     assert(repository_delete(repo, 0) == 1);
