@@ -1,0 +1,227 @@
+#include "UI.h"
+#include <iostream>
+void UI::filterUI()
+{
+	string cmd;
+	cout << "Introduceti modul filtrarii(prod/tip): ";
+	cin >> cmd;
+	if (cmd == "prod") {
+		string producator;
+
+		cout << "Introduceti producator: ";
+		cin >> producator;
+
+		vector<Masina>v = srv.filter(producator, 1);
+		for (const auto& el : v)
+			cout << el.getID() << " " << el.getNrInmatriculare() << " " << el.getModel() << " " << el.getProducator() << " " << el.getTip() << '\n';
+
+		
+	}
+
+	else if (cmd == "tip") {
+		string tip;
+
+		cout << "Introduceti tip: ";
+		cin >> tip;
+
+		vector<Masina>v = srv.filter(tip, 2);
+		for (const auto& el : v)
+			cout << el.getID() << " " << el.getNrInmatriculare() << " " << el.getModel() << " " << el.getProducator() << " " << el.getTip() << '\n';
+
+	}
+
+	else cout << "Comanda invalida!";
+	cout << "\n\n\n";
+}
+void UI::sortUI()
+{
+	string cmd;
+	cout << "Sortare dupa(nrInm,tip,prod+model): ";
+	cin >> cmd;
+
+	if (cmd == "nrInm") {
+		vector<Masina>v = srv.sort([](const Masina& m1, const Masina& m2) {if (m1.getNrInmatriculare() < m2.getNrInmatriculare()) return true; else return false; });
+		for (const auto& el : v)
+			cout << el.getID() << " " << el.getNrInmatriculare() << " " << el.getModel() << " " << el.getProducator() << " " << el.getTip() << '\n';
+
+
+	}
+	else if (cmd == "tip") {
+		vector<Masina>v = srv.sort([](const Masina& m1, const Masina& m2) {if (m1.getTip() < m2.getTip()) return true; else return false; });
+		for (const auto& el : v)
+			cout << el.getID() << " " << el.getNrInmatriculare() << " " << el.getModel() << " " << el.getProducator() << " " << el.getTip() << '\n';
+
+	}
+	else if (cmd == "prod+model") {
+		vector<Masina>v = srv.sort([](const Masina& m1, const Masina& m2) {
+			if (m1.getProducator() < m2.getProducator())
+				return true;
+			else if (m1.getProducator() == m2.getProducator())
+				if (m1.getModel() < m2.getModel())
+					return true;
+				else return false;
+			else return false;
+			});
+		for (const auto& el : v)
+			cout << el.getID() << " " << el.getNrInmatriculare() << " " << el.getModel() << " " << el.getProducator() << " " << el.getTip() << '\n';
+
+	}
+	else cout << "Comanda invalida\n";
+	cout << "\n\n\n";
+}
+void UI::showUI()
+{
+	cout << "Lista de comenzi:\n\n";
+	cout << "'add' - adauga o masina\n";
+	cout << "'del' - sterge o masina\n";
+	cout << "'update' - modifica o masina\n";
+	cout << "'print' - tipareste masinile\n";
+	cout << "'find' - gaseste o masina\n";
+	cout << "'filter' - filtreaza masinile\n";
+	cout << "'sort' - sorteaza masinile\n";
+	cout << "'help - tipareste acest meniu\n";
+	cout << "'exit' - iesire\n";
+
+
+}
+void UI::addUI()
+{
+	string id;
+	string nrI;
+	string prod;
+	string model;
+	string tip;
+
+	cout << "Introduceti ID: ";
+	cin >> id;
+	cout << "Introduceti Nr. inmatriculare: ";
+	cin >> nrI;
+	cout << "Introduceti producator: ";
+	cin >> prod;
+	cout << "Introduceti model: ";
+	cin >> model;
+	cout << "Introduceti tip: ";
+	cin >> tip;
+	if (id.length() > 16)
+		cout << "ID-ul este prea mare!\n";
+	else {
+		int id_int = stoi(id);
+		try {
+			srv.srv_add(id_int, nrI, prod, model, tip);
+			cout << "Adaugat cu succes!\n";
+		}
+		catch (exception& ex) {
+			cout << ex.what();
+		}
+		
+	}
+	cout << "\n\n\n";
+}
+void UI::delUI()
+{
+	string id;
+	cout << "Introduceti ID: ";
+	cin >> id;
+	if (id.length()>16)
+		cout << "ID-ul este prea mare!\n";
+	else {
+		try {
+			int id_int = stoi(id);
+			srv.srv_del(id_int);
+			cout << "Sters cu succes!\n";
+		}
+		catch (exception& ex) {
+			cout << ex.what();
+		}
+	}
+	cout << "\n\n\n";
+}
+void UI::updateUI()
+{
+	string id;
+	string nrI;
+	string prod;
+	string model;
+	string tip;
+
+	cout << "Introduceti ID: ";
+	cin >> id;
+	cout << "Introduceti Nr. inmatriculare: ";
+	cin >> nrI;
+	cout << "Introduceti producator: ";
+	cin >> prod;
+	cout << "Introduceti model: ";
+	cin >> model;
+	cout << "Introduceti tip: ";
+	cin >> tip;
+	if (id.length() > 16)
+		cout << "ID-ul este prea mare!\n";
+	else {
+		int id_int = stoi(id);
+		try {
+			srv.srv_update(id_int, nrI, prod, model, tip);
+			cout << "Actualizat cu succes!\n";
+		}
+		catch (exception& ex) {
+			cout << ex.what();
+		}
+
+	}
+	cout << "\n\n\n";
+}
+void UI::printUI()
+{
+	vector<Masina>v = srv.srv_getAll();
+	for (const auto& el : v)
+
+		cout << el.getID() << " " << el.getNrInmatriculare() << " " << el.getModel() << " " << el.getProducator() << " " << el.getTip() << '\n';
+	
+	cout << "\n\n\n";
+}
+void UI::findCarUI()
+{
+	string id;
+	cout << "Introduceti ID: ";
+	cin >> id;
+	if (id.length() > 16) {
+		cout << "ID invalid!\n";
+	}
+	else {
+		try {
+			int id_int = stoi(id);
+			Masina el = srv.srv_findCar(id_int);
+			cout << el.getID() << " " << el.getNrInmatriculare() << " " << el.getModel() << " " << el.getProducator() << " " << el.getTip() << '\n';
+			
+		}
+		catch (exception& ex) {
+			cout << ex.what();
+		}
+	}
+	cout << "\n\n\n";
+}
+void UI::run() {
+	string cmd;
+	while (1) {
+		cout << "help - pentru a vedea lista de comenzi!\n";
+		cout << "Introduceti comanda\n>>>";
+		cin >> cmd;
+		if (cmd == "add")
+			addUI();
+		else if (cmd == "del")
+			delUI();
+		else if (cmd == "print")
+			printUI();
+		else if (cmd == "update")
+			updateUI();
+		else if (cmd == "exit")
+			return;
+		else if (cmd == "find")
+			findCarUI();
+		else if (cmd == "filter")
+			filterUI();
+		else if (cmd == "sort")
+			sortUI();
+		else if (cmd == "help")
+			showUI();
+	}
+}
