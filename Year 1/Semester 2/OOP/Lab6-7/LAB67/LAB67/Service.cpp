@@ -1,5 +1,9 @@
 #include "Service.h"
 #include <iostream>
+#include <iterator>
+#include <algorithm>
+
+Service::Service(Repository& rep, Valid& _valid) :repo{rep},valid{_valid}{}
 
 int Service::srv_add(int id, const string& nrI, const string& prod, const string& model, const string& tip)
 {
@@ -26,17 +30,14 @@ const Masina& Service::srv_findCar(int id) const
 {
 	return repo.findCar(id);
 }
-
-vector<Masina> Service::filter(const string& what, int whichFilter)
+//
+vector<Masina> Service::filter(const string& what, int whichFilter) const
 {
 	vector<Masina>v1;
 	vector<Masina>v2;
 	v1 = repo.getAll();
 	if (whichFilter == 1) {
-		for (const auto& el : v1) {
-			if (el.getProducator() == what)
-				v2.push_back(el);
-		}
+		copy_if(v1.begin(), v1.end(),back_inserter(v2), [&](const Masina& m) {return m.getProducator() == what; });
 	}
 	else if (whichFilter == 2) {
 		for (const auto& el : v1) {
@@ -48,7 +49,7 @@ vector<Masina> Service::filter(const string& what, int whichFilter)
 	
 }
 
-vector<Masina> Service::sort(function<bool(const Masina& m1, const Masina& m2)>compareFunction)
+vector<Masina> Service::sort(function<bool(const Masina& m1, const Masina& m2)>compareFunction) const
 {
 	vector<Masina>v = repo.getAll();
 
@@ -60,7 +61,7 @@ vector<Masina> Service::sort(function<bool(const Masina& m1, const Masina& m2)>c
 	return v;
 }
 
-vector<Masina> Service::srv_getAll()
+vector<Masina> Service::srv_getAll() const
 {
 	return repo.getAll();
 }

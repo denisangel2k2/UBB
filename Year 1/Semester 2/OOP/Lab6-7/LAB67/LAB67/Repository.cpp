@@ -17,24 +17,19 @@ int Repository::del(int id)
 	auto it = find_if(lista.begin(), lista.end(), [=](const Masina& m) {return m.getID() == id; });
 	if (it != lista.end()) {
 		lista.erase(it);
-		return 1;
-	}
+		return 1;}
 	else {
-		throw runtime_error("Nu exista masina!\n");
-	}
-
-}
+		throw runtime_error("Nu exista masina!\n");}}
 
 int Repository::update(const Masina& m)
 {
-	auto it = find_if(lista.begin(), lista.end(), [&](const Masina& otm) {if (otm.getID() == m.getID()) return 1; });
+	auto it = find_if(lista.begin(), lista.end(), [&](const Masina& otm) {if (otm.getID() == m.getID()) return 1; else return 0; });
 
-	if (it != lista.end())
+	if (it != lista.end()) {
 		*it = m;
+		return 1;}
 	else {
-		throw runtime_error("Nu exista masina!\n");
-	}
-}
+		throw runtime_error("Nu exista masina!\n");}}
 
 int Repository::find(int id)
 {
@@ -49,7 +44,11 @@ const Masina& Repository::findCar(int id) const
 	auto it = find_if(lista.begin(), lista.end(), [=](const Masina& m) {return m.getID() == id; });
 	if (it != lista.end())
 		return *it;
-	else throw runtime_error("Nu exista masina!\n");
+	else throw runtime_error("Nu exista masina!\n");}
+
+size_t Repository::size()
+{
+	return this->lista.size();
 }
 
 vector<Masina> Repository::getAll() const

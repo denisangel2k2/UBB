@@ -14,6 +14,7 @@ private:
 
 public:
 	Masina(int id, const string& nrInm, const string& prod, const string& model, const string& tip) :id{id},nrInmatriculare { nrInm }, producator{ prod }, model{ model }, tip{ tip }{}
+	//Masina(const Masina& ot);
 	const string& getNrInmatriculare() const;
 	const string& getProducator() const;
 	const string& getModel() const;
@@ -23,7 +24,7 @@ public:
 	void setProducator(const string& pr);
 	void setModel(const string& model);
 	void setTip(const string& tip);
-
+	
 
 
 	Masina& operator=(const Masina& ot) {
@@ -33,6 +34,10 @@ public:
 		this->model = ot.model;
 		this->tip = ot.tip;
 		return *this;
+	}
+
+	bool operator==(const Masina& ot) {
+		return ((this->id == ot.id) && (this->nrInmatriculare == ot.nrInmatriculare) && (this->producator == ot.producator) && (this->model == ot.model) && (this->tip == ot.tip));
 	}
 
 

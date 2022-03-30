@@ -1,7 +1,15 @@
 #include "Domain.h"
 #include <iostream>
 
-
+/*
+Masina::Masina(const Masina& ot)
+{
+	this->id = ot.id;
+	this->nrInmatriculare = ot.nrInmatriculare;
+	this->model = ot.model;
+	this->tip = ot.tip;
+}
+*/
 const string& Masina::getNrInmatriculare() const
 {
 	return this->nrInmatriculare;
@@ -37,14 +45,14 @@ void Masina::setProducator(const string& pr)
 	this->producator = pr;
 }
 
-void Masina::setModel(const string& model)
+void Masina::setModel(const string& _model)
 {
-	this->model = model;
+	this->model = _model;
 }
 
-void Masina::setTip(const string& tip)
+void Masina::setTip(const string& _tip)
 {
-	this->tip = tip;
+	this->tip = _tip;
 }
 
 

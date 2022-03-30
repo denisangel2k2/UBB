@@ -6,7 +6,7 @@ class UI
 {
 
 private:
-	Service srv;
+	Service& srv;
 	void filterUI();
 	void sortUI();
 	void showUI();
@@ -17,7 +17,7 @@ private:
 	void findCarUI();
 public:
 	UI(const UI& ot) = delete;
-	UI(const Service& srv) :srv{ srv } {}
+	UI(Service& srv) :srv{ srv } {}
 
 	
 
