@@ -46,12 +46,12 @@ const Masina& Repository::findCar(int id) const
 		return *it;
 	else throw runtime_error("Nu exista masina!\n");}
 
-size_t Repository::size()
+size_t Repository::size() noexcept
 {
 	return this->lista.size();
 }
 
-vector<Masina> Repository::getAll() const
+const vector<Masina>& Repository::getAll() const
 {
 	return lista;
 }

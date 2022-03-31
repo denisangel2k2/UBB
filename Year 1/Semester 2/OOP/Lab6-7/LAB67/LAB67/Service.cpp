@@ -3,7 +3,7 @@
 #include <iterator>
 #include <algorithm>
 
-Service::Service(Repository& rep, Valid& _valid) :repo{rep},valid{_valid}{}
+Service::Service(Repository& rep, Valid& _valid) :repo{rep},valid{_valid} {}
 
 int Service::srv_add(int id, const string& nrI, const string& prod, const string& model, const string& tip)
 {
@@ -34,7 +34,7 @@ const Masina& Service::srv_findCar(int id) const
 vector<Masina> Service::filter(const string& what, int whichFilter) const
 {
 	vector<Masina>v1;
-	vector<Masina>v2;
+	vector<Masina> v2;
 	v1 = repo.getAll();
 	if (whichFilter == 1) {
 		copy_if(v1.begin(), v1.end(),back_inserter(v2), [&](const Masina& m) {return m.getProducator() == what; });

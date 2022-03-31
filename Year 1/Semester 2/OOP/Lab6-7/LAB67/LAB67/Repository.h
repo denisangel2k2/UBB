@@ -46,11 +46,11 @@ public:
 	/// Functie care returneaza lungimea repo-ului
 	/// </summary>
 	/// <returns>size_t</returns>
-	size_t size();
+	size_t size() noexcept;
 	/// <summary>
 	/// Functie care returneaza o copie a intregului repo
 	/// </summary>
 	/// <returns> vector of Masina type </returns>
-	vector<Masina> getAll() const;
+	const vector<Masina>& getAll() const;
 };
 

@@ -17,7 +17,7 @@ void Tests::runTests()
 
 void Tests::testDomain()
 {
-	int id = 1;
+	constexpr int id = 1;
 	string nrI{ "AR303ZDD" };
 	string prod{ "Ford" };
 	string model{"Focus"};
@@ -36,7 +36,7 @@ void Tests::testDomain()
 	try {
 		validator.validate(m2);
 	}
-	catch (exception& ex) {
+	catch (const exception& ex) {
 		string s = ex.what();
 		assert(s == "ID invalid!\nModel invalid!\nNr. inmatriculare invalid!\nProducator invalid!\nTip invalid!\n");
 	}
@@ -68,7 +68,7 @@ void Tests::testCreateServ()
 {
 	Repository repo;
 	Valid val;
-	Service serv{ repo, val };
+	Service const serv{ repo, val };
 	
 	assert(repo.size() == 0);
 
@@ -80,7 +80,7 @@ void Tests::testServAdd()
 	Repository repo;
 	Valid val;
 	Service serv{ repo , val};
-	int id = 1;
+	constexpr int id = 1;
 	string nrI = "iai";
 	string prodd = "pap";
 	string model = "mam";
@@ -109,7 +109,7 @@ void Tests::testServDelete()
 	Valid val;
 	Service serv{ repo , val };
 
-	int id = 1;
+	constexpr int id = 1;
 	string nrI = "iai";
 	string prod = "pap";
 	string model = "mam";
@@ -144,7 +144,7 @@ void Tests::testServUpdate()
 	Valid val;
 	Service serv{ repo , val };
 
-	int id = 1;
+	constexpr int id = 1;
 	string nrI = "iai";
 	string nrI2 = "ddd";
 	string prod = "pap";
@@ -185,7 +185,7 @@ void Tests::testServFilter()
 	Valid val;
 	Service serv{ repo , val };
 
-	int id = 1;
+	constexpr int id = 1;
 	string nrI = "iai";
 	string prod = "pap";
 	string model = "mam";
@@ -214,7 +214,7 @@ void Tests::testServSort()
 	Valid val;
 	Service serv{ repo , val };
 
-	int id = 1;
+	constexpr int id = 1;
 	string nrI = "iai";
 	string prod = "pap";
 	string nrI2 = "aaa";
@@ -245,7 +245,7 @@ void Tests::testServGetAll()
 	Valid val;
 	Service serv{ repo , val };
 
-	int id = 1;
+	constexpr int id = 1;
 	string nrI = "iai";
 	string prod = "pap";
 	string model = "mam";

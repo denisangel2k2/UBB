@@ -1,7 +1,7 @@
 #include "Valid.h"
 #include <iostream>
 using namespace std;
-bool Valid::validateID(int id)
+bool Valid::validateID(int id) noexcept
 {
 
     if (id <= 0)
@@ -10,7 +10,7 @@ bool Valid::validateID(int id)
     return true;
 }
 
-bool Valid::validate(Masina& masina)
+bool Valid::validate(const Masina& masina)
 {
     vector<string>ex;
     Exceptions exceptie;
@@ -39,6 +39,7 @@ bool Valid::validate(Masina& masina)
 string Exceptions::getEx(const vector<string>& ex)
 {
     string s;
+
     for (const auto& el : ex) {
         s = s + el;
     }

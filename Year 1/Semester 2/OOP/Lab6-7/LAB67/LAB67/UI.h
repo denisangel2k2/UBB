@@ -17,7 +17,7 @@ private:
 	void findCarUI();
 public:
 	UI(const UI& ot) = delete;
-	UI(Service& srv) :srv{ srv } {}
+	UI(Service& srv) noexcept :srv{ srv } {}
 
 	
 

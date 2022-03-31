@@ -39,12 +39,31 @@ public:
 	/// <param name="tip">string</param>
 	/// <returns>1 - daca a fost actualizat cu succes  exceptie - altfel</returns>
 	int srv_update(int id, const string& nrI, const string& prod, const string& model, const string& tip);
-	
+	/// <summary>
+	/// Functie care cauta si returneaza o masina
+	/// pre : id - int
+	/// post : masina
+	/// </summary>
 	const Masina& srv_findCar(int id) const;
-
-	vector<Masina>filter(const string& what, int whichFilter) const;
+	/// <summary>
+	/// Functia care filtreaza in functie de parametrul dat
+	/// pre : what - string 
+	///		whichFilter - int
+	/// post : vector<Masina>
+	/// </summary>
+	vector<Masina> filter(const string& what, int whichFilter) const;
+	/// <summary>
+	/// Functia care sorteaza in functie de parametrul dat
+	/// pre : *functie
+	/// post : vector<Masina>
+	/// </summary>
 	vector<Masina>sort(function<bool(const Masina& m1, const Masina& m2)>compareFunction) const;
-	
+	/// <summary>
+	/// Functia care returneaza getAll
+	/// pre : what - string 
+	///		whichFilter - int
+	/// post : vector<Masina>
+	/// </summary>
 	vector<Masina> srv_getAll() const;
 
 };

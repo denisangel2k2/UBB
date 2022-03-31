@@ -91,26 +91,36 @@ void UI::addUI()
 	string prod;
 	string model;
 	string tip;
-
-	cout << "Introduceti ID: ";
-	cin >> id;
-	cout << "Introduceti Nr. inmatriculare: ";
-	cin >> nrI;
-	cout << "Introduceti producator: ";
-	cin >> prod;
-	cout << "Introduceti model: ";
-	cin >> model;
-	cout << "Introduceti tip: ";
-	cin >> tip;
+	//cin.ignore();
+	cout << "Introduceti ID:\n";
+	getline(cin, id);
+	cout << "Introduceti Nr. inmatriculare:\n";
+	getline(cin, nrI);
+	cout << "Introduceti producator:\n";
+	getline(cin, prod);
+	cout << "Introduceti model:\n";
+	getline(cin, model);
+	cout << "Introduceti tip:\n";
+	getline(cin, tip);
 	if (id.length() > 16)
 		cout << "ID-ul este prea mare!\n";
 	else {
-		int id_int = stoi(id);
+		int id_int=0;
+		
 		try {
+			id_int = stoi(id);
+		}
+		catch (exception&) {
+
+			cout << "ID-ul este invalid!\n";
+			return;
+		}
+		try {
+
 			srv.srv_add(id_int, nrI, prod, model, tip);
 			cout << "Adaugat cu succes!\n";
 		}
-		catch (exception& ex) {
+		catch (const exception& ex) {
 			cout << ex.what();
 		}
 		
@@ -120,17 +130,27 @@ void UI::addUI()
 void UI::delUI()
 {
 	string id;
-	cout << "Introduceti ID: ";
-	cin >> id;
+	//cin.ignore();
+	cout << "Introduceti ID:\n";
+	getline(cin, id);
 	if (id.length()>16)
 		cout << "ID-ul este prea mare!\n";
 	else {
+		int id_int = 0;
+
 		try {
-			int id_int = stoi(id);
+			id_int = stoi(id);
+		}
+		catch (exception&) {
+
+			cout << "ID-ul este invalid!\n";
+			return;
+		}
+		try {
 			srv.srv_del(id_int);
 			cout << "Sters cu succes!\n";
 		}
-		catch (exception& ex) {
+		catch (const exception& ex) {
 			cout << ex.what();
 		}
 	}
@@ -144,25 +164,35 @@ void UI::updateUI()
 	string model;
 	string tip;
 
-	cout << "Introduceti ID: ";
-	cin >> id;
-	cout << "Introduceti Nr. inmatriculare: ";
-	cin >> nrI;
-	cout << "Introduceti producator: ";
-	cin >> prod;
-	cout << "Introduceti model: ";
-	cin >> model;
-	cout << "Introduceti tip: ";
-	cin >> tip;
+	//cin.ignore();
+	cout << "Introduceti ID:\n";
+	getline(cin, id);
+	cout << "Introduceti Nr. inmatriculare:\n";
+	getline(cin, nrI);
+	cout << "Introduceti producator:\n";
+	getline(cin, prod);
+	cout << "Introduceti model:\n";
+	getline(cin, model);
+	cout << "Introduceti tip:\n";
+	getline(cin, tip);
 	if (id.length() > 16)
 		cout << "ID-ul este prea mare!\n";
 	else {
-		int id_int = stoi(id);
+		int id_int = 0;
+
+		try {
+			id_int = stoi(id);
+		}
+		catch (exception&) {
+
+			cout << "ID-ul este invalid!\n";
+			return;
+		}
 		try {
 			srv.srv_update(id_int, nrI, prod, model, tip);
 			cout << "Actualizat cu succes!\n";
 		}
-		catch (exception& ex) {
+		catch (const exception& ex) {
 			cout << ex.what();
 		}
 
@@ -188,12 +218,12 @@ void UI::findCarUI()
 	}
 	else {
 		try {
-			int id_int = stoi(id);
+			const int id_int = stoi(id);
 			Masina el = srv.srv_findCar(id_int);
 			cout << el.getID() << " " << el.getNrInmatriculare() << " " << el.getModel() << " " << el.getProducator() << " " << el.getTip() << '\n';
 			
 		}
-		catch (exception& ex) {
+		catch (const exception& ex) {
 			cout << ex.what();
 		}
 	}
@@ -204,7 +234,8 @@ void UI::run() {
 	while (1) {
 		cout << "help - pentru a vedea lista de comenzi!\n";
 		cout << "Introduceti comanda\n>>>";
-		cin >> cmd;
+		//cin >> cmd;
+		getline(cin, cmd);
 		if (cmd == "add")
 			addUI();
 		else if (cmd == "del")

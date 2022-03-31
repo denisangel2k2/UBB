@@ -1,0 +1,2 @@
+C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\x64\Debug\LAB67.exe.lastcodeanalysissucceeded
+C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\LAB67\x64\Debug\NativeCodeAnalysis.read.1.tlog

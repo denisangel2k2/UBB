@@ -14,7 +14,7 @@ class Valid
 private:
 
 public:
-	bool validateID(int id);
-	bool validate(Masina& masina);
+	bool validateID(int id) noexcept;
+	bool validate(const Masina& masina);
 };
 
