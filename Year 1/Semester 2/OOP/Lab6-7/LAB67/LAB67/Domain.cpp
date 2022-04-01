@@ -11,7 +11,7 @@ Masina::Masina(const Masina& ot)
 	this->producator = ot.producator;
 	this->model = ot.model;
 	this->tip = ot.tip;
-	std::cout << "Masina creata!\n";
+	//std::cout << "Masina creata!\n";
 }
 
 const string& Masina::getNrInmatriculare() const noexcept

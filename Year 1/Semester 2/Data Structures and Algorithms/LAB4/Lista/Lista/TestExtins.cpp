@@ -96,6 +96,7 @@ void testModificaStergeCauta() {
         assert(true);
     }
     assert(lista.dim() == 100);
+    //cout << lista.cauta(100) << " ";
     assert(lista.cauta(100) == -1);
     assert(lista.cauta(99) == 99);
     int v = 99;
@@ -103,6 +104,7 @@ void testModificaStergeCauta() {
         lista.modifica(i,v);
         v--;
     }
+    
     assert(lista.element(99) == 0);
     assert(lista.cauta(99) == 0);
     assert(lista.cauta(0) == 99);

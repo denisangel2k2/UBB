@@ -20,9 +20,6 @@ private:
 	void dealoca(int i);
 	void resize();
 
-	
-
-
 
 	
 public:

@@ -2,6 +2,7 @@
 #include <iostream>
 #include "LI.h"
 #include "IteratorLI.h"
+using namespace std;
 
 int LI::aloca()
 {
@@ -94,17 +95,31 @@ TElem LI::element(int i) const {
 
 TElem LI::modifica(int i, TElem e) {
 	if (i >= lungime || i < 0)
-		throw 1;
+		throw std::exception();
 	else {
-		int p = prim;
-		int index = 0;
-		while (index < i) {
-			index++;
-			p = urmator[p];
+		/*
+		if (i == 0) {
+			TElem vechi = elemente[prim];
+			elemente[prim] = e;
+			return vechi;
 		}
-		TElem vechi = elemente[p];
-		elemente[p] = e;
-		return vechi;
+		else if (i == lungime - 1) {
+			TElem vechi = elemente[ultim];
+			elemente[ultim] = e;
+			return vechi;
+		}
+		*/
+		//else {
+			int p = prim;
+			int index = 0;
+			while (index < i) {
+				index++;
+				p = urmator[p];
+			}
+			TElem vechi = elemente[p];
+			elemente[p] = e;
+			return vechi;
+		//}
 	}
 }
 
@@ -171,17 +186,29 @@ void LI::adauga(int i, TElem e) {
 
 TElem LI::sterge(int i) {
 	if (i >= lungime || i < 0)
-		throw 1;
+		throw std::exception();
 
 	int p = prim;
 	int index = 0;
 
-	while (index != i) {
-		p = urmator[p];
+	if (i == 0) {
+		prim = urmator[prim];
+		anterior[prim] = nothing;
 	}
-
-	urmator[anterior[p]] = urmator[p];
-	anterior[urmator[p]] = anterior[p];
+	else if (i == lungime - 1)
+	{
+		p = ultim;
+		ultim = ultim[anterior];
+		ultim[urmator] = nothing;
+	}
+	else {
+		while (index != i) {
+			p = urmator[p];
+		}
+		urmator[anterior[p]] = urmator[p];
+		anterior[urmator[p]] = anterior[p];
+	}
+	
 
 	dealoca(p);
 	lungime--;
@@ -192,12 +219,15 @@ TElem LI::sterge(int i) {
 int LI::cauta(TElem e) const{
 	int index = 0;
 	int p = prim;
-	while (e != elemente[p]) {
+	while (e != elemente[p] && p!=nothing) {
 		p = urmator[p];
+		index++;
 	}
+
 	if (p == nothing)
 		return -1;
-	else return elemente[p];
+
+	else return index;
 }
 
 IteratorLI LI::iterator() const {

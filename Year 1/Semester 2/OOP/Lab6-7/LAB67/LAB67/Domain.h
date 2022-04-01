@@ -61,6 +61,7 @@ public:
 	/// <param name="tip"></param>
 	void setTip(const string& tip);
 	
+	
 
 
 	Masina& operator=(const Masina& ot) {

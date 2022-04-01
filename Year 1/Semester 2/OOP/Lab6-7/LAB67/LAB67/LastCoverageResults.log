@@ -1,4 +1,4 @@
-[2022-03-31 16:02:30] [info] Start Program:
+[2022-04-01 17:19:39] [info] Start Program:
 Path:"C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\x64\Debug\LAB67.exe"
 Arguments:
 Working directory: "C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\LAB67\"
@@ -9,13 +9,13 @@ Cover Children: 0
 Aggregate by file: 1
 Continue after C++ exception: 0
 Optimized build support: 0
-Export: Binary C:\Users\Denis\AppData\Local\Temp\puwde4d4.tmi 
+Export: Binary C:\Users\Denis\AppData\Local\Temp\bqvmab34.k1b 
 Input coverage: 
 Unified diff: 
 Excluded line regular expressions: 
 Substitute pdb source paths: 
 
-[2022-03-31 16:02:31] [info] Module: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\x64\Debug\LAB67.exe is selected because it matches selected pattern: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\x64\Debug\LAB67.exe
-[2022-03-31 16:02:42] [info] ----------------------------------------------------
-[2022-03-31 16:02:42] [info] Coverage binary generated in file: C:\Users\Denis\AppData\Local\Temp\puwde4d4.tmi
-[2022-03-31 16:02:42] [info] ----------------------------------------------------
+[2022-04-01 17:19:39] [info] Module: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\x64\Debug\LAB67.exe is selected because it matches selected pattern: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\x64\Debug\LAB67.exe
+[2022-04-01 17:19:41] [info] ----------------------------------------------------
+[2022-04-01 17:19:41] [info] Coverage binary generated in file: C:\Users\Denis\AppData\Local\Temp\bqvmab34.k1b
+[2022-04-01 17:19:41] [info] ----------------------------------------------------

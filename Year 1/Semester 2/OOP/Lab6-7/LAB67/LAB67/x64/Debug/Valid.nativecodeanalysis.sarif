@@ -14,20 +14,44 @@
       },
       "invocations": [
         {
-          "commandLine": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00007FF7E94D9CC0 -il C:\\Users\\Denis\\AppData\\Local\\Temp\\_CL_065e302cast -typedil -f Valid.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -pc \\:/ -D_MSC_VER=1931 -D_MSC_FULL_VER=193131104 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -nologo -W 4 -WX -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -Zc:wchar_t -Zc:forScope -permissive- -Fox64\\Debug\\Valid.obj -Fdx64\\Debug\\vc143.pdb -external:W 4 -Gd -analyze:projectdirectory C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 1\\Semester 2\\OOP\\Lab6-7\\LAB67\\LAB67 -analyze:rulesetdirectory ;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 1\\Semester 2\\OOP\\Lab6-7\\LAB67\\LAB67\\Include\\um -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 1\\Semester 2\\OOP\\Lab6-7\\LAB67\\LAB67\\Include\\um -I C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 1\\Semester 2\\OOP\\Lab6-7\\LAB67\\LAB67\\Include\\um",
+          "commandLine": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00007FF7FB299CC0 -il C:\\Users\\Denis\\AppData\\Local\\Temp\\_CL_c9f0541east -typedil -f Valid.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -pc \\:/ -D_MSC_VER=1931 -D_MSC_FULL_VER=193131104 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -nologo -W 4 -WX -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -Zc:wchar_t -Zc:forScope -permissive- -Fox64\\Debug\\Valid.obj -Fdx64\\Debug\\vc143.pdb -external:W 4 -Gd -analyze:projectdirectory C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 1\\Semester 2\\OOP\\Lab6-7\\LAB67\\LAB67 -analyze:rulesetdirectory ;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 1\\Semester 2\\OOP\\Lab6-7\\LAB67\\LAB67\\Include\\um -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 1\\Semester 2\\OOP\\Lab6-7\\LAB67\\LAB67\\Include\\um -I C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 1\\Semester 2\\OOP\\Lab6-7\\LAB67\\LAB67\\Include\\um",
           "executionSuccessful": true
         }
       ],
       "artifacts": [
         {
           "location": {
-            "uri": "file:///c:/users/denis/documents/github/ubb/year 1/semester 2/oop/lab6-7/lab67/lab67/valid.cpp"
+            "uri": "file:///c:/users/denis/documents/github/ubb/year 1/semester 2/oop/lab6-7/lab67/lab67/main.cpp"
           },
           "roles": [
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "155744b371084984c96b924c49a1edd027c719c4ab80a975085d578934719a7c"
+            "sha-256": "843262983569dca87c2f213aea82f122fe2cf315cf1ce584b2f68ba20aa00b3e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/documents/github/ubb/year 1/semester 2/oop/lab6-7/lab67/lab67/repository.h"
+          },
+          "hashes": {
+            "sha-256": "bb9935c5268285554ab01964b32707c5b99f8ce9698c7d88dee978a110d0a560"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/documents/github/ubb/year 1/semester 2/oop/lab6-7/lab67/lab67/domain.h"
+          },
+          "hashes": {
+            "sha-256": "b25c8f51c509f08f84c0fdf3bee75665369ddfa101529f915ac0292b044ebe01"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/documents/github/ubb/year 1/semester 2/oop/lab6-7/lab67/lab67/service.h"
+          },
+          "hashes": {
+            "sha-256": "ec8f9968f1823d40b9e72fa0e86e4231045e6dca0c23a3acaafae6094c687987"
           }
         },
         {
@@ -40,10 +64,29 @@
         },
         {
           "location": {
-            "uri": "file:///c:/users/denis/documents/github/ubb/year 1/semester 2/oop/lab6-7/lab67/lab67/domain.h"
+            "uri": "file:///c:/users/denis/documents/github/ubb/year 1/semester 2/oop/lab6-7/lab67/lab67/ui.h"
           },
           "hashes": {
-            "sha-256": "9ee3ef76fe0ae735292ce2f162d8d9c4be7f72e9cedfb32e638da77467f162a8"
+            "sha-256": "7cf8a66b64ecb755a56fc215b3e2565deeb566e50c615238914ad90eb62df0db"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/documents/github/ubb/year 1/semester 2/oop/lab6-7/lab67/lab67/tests.h"
+          },
+          "hashes": {
+            "sha-256": "44d2cbfab4a432791fa9d3b2880b7fb476d79a619ecc1b12bdb9e599e85c94e2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/documents/github/ubb/year 1/semester 2/oop/lab6-7/lab67/lab67/valid.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "155744b371084984c96b924c49a1edd027c719c4ab80a975085d578934719a7c"
           }
         }
       ]

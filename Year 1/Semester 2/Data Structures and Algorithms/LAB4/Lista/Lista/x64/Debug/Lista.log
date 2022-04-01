@@ -1,8 +1,5 @@
-﻿  App.cpp
-  DynamicVector.cpp
-  IteratorLI.cpp
+﻿  IteratorLI.cpp
   LI.cpp
-  Teste.cpp
   TestExtins.cpp
   TestScurt.cpp
   Generating Code...

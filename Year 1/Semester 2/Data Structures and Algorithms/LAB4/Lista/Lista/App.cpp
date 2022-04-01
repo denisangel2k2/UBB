@@ -7,6 +7,6 @@
 int main() {
 
     testAll();
-    //testAllExtins();
+    testAllExtins();
     std::cout << "Finished LI Tests!" << std::endl;
 }
