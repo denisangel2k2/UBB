@@ -1,0 +1,21 @@
+[2022-04-06 01:21:50] [info] Start Program:
+Path:"C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\x64\Debug\LAB67.exe"
+Arguments:
+Working directory: "C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\LAB67\"
+Modules: Selected: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\x64\Debug\LAB67.exe Excluded: 
+Sources: Selected: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\LAB67 Excluded: UI Tests 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: Binary C:\Users\Denis\AppData\Local\Temp\jjj21l1i.pyq 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2022-04-06 01:21:50] [info] Module: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\x64\Debug\LAB67.exe is selected because it matches selected pattern: C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab6-7\LAB67\x64\Debug\LAB67.exe
+[2022-04-06 01:22:15] [info] ----------------------------------------------------
+[2022-04-06 01:22:15] [info] Coverage binary generated in file: C:\Users\Denis\AppData\Local\Temp\jjj21l1i.pyq
+[2022-04-06 01:22:15] [info] ----------------------------------------------------
