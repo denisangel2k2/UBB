@@ -52,5 +52,7 @@ public:
 	/// </summary>
 	/// <returns> vector of Masina type </returns>
 	const vector<Masina>& getAll() const;
+	const size_t getNumberOfCars() const;
+	void clearRepo();
 };
 

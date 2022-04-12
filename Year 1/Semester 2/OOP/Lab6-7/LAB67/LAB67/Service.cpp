@@ -2,6 +2,7 @@
 #include <iostream>
 #include <iterator>
 #include <algorithm>
+#include <random>
 
 Service::Service(Repository& rep, Valid& _valid) :repo{rep},valid{_valid} {}
 
@@ -11,6 +12,8 @@ int Service::srv_add(int id, const string& nrI, const string& prod, const string
 	valid.validate(m);
 	return repo.add(m);
 }
+
+
 
 int Service::srv_del(int id)
 {
@@ -34,16 +37,13 @@ const Masina& Service::srv_findCar(int id) const
 vector<Masina> Service::filter(const string& what, int whichFilter) const
 {
 	vector<Masina>v1;
-	vector<Masina> v2;
+	vector<Masina>v2;
 	v1 = repo.getAll();
 	if (whichFilter == 1) {
 		copy_if(v1.begin(), v1.end(),back_inserter(v2), [&](const Masina& m) {return m.getProducator() == what; });
 	}
 	else if (whichFilter == 2) {
-		for (const auto& el : v1) {
-			if (el.getTip() == what)
-				v2.push_back(el);
-		}
+		copy_if(v1.begin(), v1.end(), back_inserter(v2), [&](const Masina& m) {return m.getTip() == what; });
 	}
 	return v2;
 	
@@ -52,7 +52,7 @@ vector<Masina> Service::filter(const string& what, int whichFilter) const
 vector<Masina> Service::sort(function<bool(const Masina& m1, const Masina& m2)>compareFunction) const
 {
 	vector<Masina>v = repo.getAll();
-
+	
 	for (auto& el1 : v)
 		for (auto& el2 : v)
 			if (compareFunction(el1, el2))
@@ -64,6 +64,79 @@ vector<Masina> Service::sort(function<bool(const Masina& m1, const Masina& m2)>c
 vector<Masina> Service::srv_getAll() const
 {
 	return repo.getAll();
+	
+}
+
+const size_t Service::srv_getNumberOfCars() const
+{
+	return repo.getNumberOfCars();
+}
+
+int Service::srv_add(const string& nrI)
+{
+	std::mt19937 mt{ std::random_device{}() };
+	int numarMasini = (int)srv_getNumberOfCars();
+	std::uniform_int_distribution<> dist(numarMasini, numarMasini+1000);
+	int rndNr = dist(mt);
+
+	int id = rndNr;
+	string prod;
+	string model;
+	string tip;
+
+	prod = "Prod" + to_string(id);
+	model = "Model" + to_string(id);
+	tip = "Tip" + to_string(id);
+
+	while (1) {
+		try {
+			id = dist(mt);
+			srv_add(id, nrI, prod, model, tip);
+			break;
+		}
+		catch (const exception&) {
+			continue;
+		}
+	}
+	return 1;
+
+}
+
+void Service::srv_clearRepo()
+{
+	repo.clearRepo();
+}
+
+int Service::addRandom(int numberToAdd)
+{
+	int rndNr=1;
+	int numarInvalide = 0;
+	for (int i = 1; i <= numberToAdd; i++) {
+
+		std::mt19937 mt{ std::random_device{}() };
+		int numarMasini = (int)srv_getNumberOfCars();
+		std::uniform_int_distribution<> dist(numarMasini, numarMasini + numberToAdd+100);
+		rndNr = dist(mt);
+
+		string prod;
+		string model;
+		string tip;
+		string nrI;
+
+		prod = "Prod" + to_string(rndNr);
+		model = "Model" + to_string(rndNr);
+		tip = "Tip" + to_string(rndNr);
+		nrI = "Numar Inm." + to_string(rndNr);
+
+		try {
+			srv_add(rndNr, nrI, prod, model, tip);
+		}
+		catch (const exception&) {
+			numarInvalide++;
+		}
+	}
+	return numarInvalide;
+	
 }
 
 

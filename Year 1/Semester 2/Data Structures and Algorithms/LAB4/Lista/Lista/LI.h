@@ -1,6 +1,7 @@
 #pragma once
 #include "DynamicVector.h"
 typedef int TElem;
+typedef int TPosition;
 class IteratorLI;
 
 class LI {
@@ -55,7 +56,9 @@ public:
 		TElem sterge(int i);
 
 		// cauta element si returneaza prima pozitie pe care apare (sau -1)
-		int cauta(TElem e)  const;
+		int cauta(TElem e) const;
+
+		TPosition ultimulIndex(TElem elem) const;
 
 		// returnare iterator
 		IteratorLI iterator() const;

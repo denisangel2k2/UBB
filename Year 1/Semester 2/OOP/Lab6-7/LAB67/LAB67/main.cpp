@@ -4,10 +4,18 @@
 #include "UI.h"
 #include "Tests.h"
 #include "Valid.h"
+#include <random>
+#include <chrono> 
 
 using namespace std;
 
 int main() {
+
+
+	
+	
+
+
 	Tests teste;
 	teste.runTests();
 

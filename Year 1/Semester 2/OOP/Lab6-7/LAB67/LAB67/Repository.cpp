@@ -11,7 +11,13 @@ int Repository::add(const Masina& m)
 	this->lista.push_back(m);
 	return 1;
 }
-
+const size_t Repository::getNumberOfCars() const{
+	return lista.size();
+}
+void Repository::clearRepo()
+{
+	lista.clear();
+}
 int Repository::del(int id)
 {
 	auto it = find_if(lista.begin(), lista.end(), [=](const Masina& m) {return m.getID() == id; });
