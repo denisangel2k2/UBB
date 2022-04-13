@@ -1,5 +1,5 @@
 # **[Babeș-Bolyai University Cluj-Napoca - Computer Science](https://www.cs.ubbcluj.ro)**
-Here you will find all my projects I do throught my university years
+Here you will find all my projects I do throughout my university years
 
 On top of that, I will try to delimit every part of the following 3 years in semesters and describe them with a quote and a video.
 
@@ -11,10 +11,10 @@ On top of that, I will try to delimit every part of the following 3 years in sem
 
 Passed subjects: 
 
-- Algebra, 
-- Mathematical Analysis, 
-- Fundamentals of Programming, 
-- Assembly Language, 
+- Algebra 
+- Mathematical Analysis 
+- Fundamentals of Programming 
+- Assembly Language 
 - Computational Logic
 
 
