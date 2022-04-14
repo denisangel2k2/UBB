@@ -10,8 +10,10 @@ class Repository
 private:
 
 	vector<Masina>lista;
+	vector<Masina>lista_fictiva;
 
 public:
+	int add_fictiv(const Masina& m);
 	/// <summary>
 	/// Adauga o masina la repo
 	/// </summary>
@@ -47,12 +49,16 @@ public:
 	/// </summary>
 	/// <returns>size_t</returns>
 	size_t size() noexcept;
+	const size_t sizeAdmin() noexcept;
 	/// <summary>
 	/// Functie care returneaza o copie a intregului repo
 	/// </summary>
 	/// <returns> vector of Masina type </returns>
 	const vector<Masina>& getAll() const;
+	const vector<Masina>& getAllFictiv() const;
 	const size_t getNumberOfCars() const;
 	void clearRepo();
+
+	void clearRepoFictiv();
 };
 

@@ -6,14 +6,12 @@
 #include "Valid.h"
 #include <random>
 #include <chrono> 
+#include "AdminService.h"
+
 
 using namespace std;
 
 int main() {
-
-
-	
-	
 
 
 	Tests teste;
@@ -22,7 +20,8 @@ int main() {
 	Repository repo;
 	Valid valid;
 	Service serv{ repo, valid };
-	UI ui{ serv };
+	AdminService serv2{ repo,valid };
+	UI ui{ serv, serv2};
 	ui.run();
 
 

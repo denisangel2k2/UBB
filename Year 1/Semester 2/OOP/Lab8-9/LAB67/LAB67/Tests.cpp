@@ -7,6 +7,7 @@
 #include "Service.h"
 #include <assert.h>
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 void Tests::runTests()
@@ -50,8 +51,8 @@ void Tests::testDomain()
 	
 	assert(m == m2);
 
-
-
+	ofstream fout("test.csv");
+	fout << m << endl;
 }
 
 void Tests::testService()
@@ -300,6 +301,11 @@ void Tests::testRepo()
 	assert(repo.size() == 1);
 	repo.clearRepo();
 	assert(repo.size() == 0);
+
+	repo.add_fictiv(m);
+	assert(repo.sizeAdmin() == 1);
+	repo.clearRepoFictiv();
+	vector<Masina>v = repo.getAllFictiv();
 }
 
 void Tests::testSrvClearRepo()

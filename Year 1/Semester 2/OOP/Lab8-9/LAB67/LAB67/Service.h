@@ -6,7 +6,7 @@
 
 class Service
 {
-private:
+protected:
 	Repository& repo;
 	Valid& valid;
 
@@ -65,6 +65,7 @@ public:
 	/// post : vector<Masina>
 	/// </summary>
 	vector<Masina> srv_getAll() const;
+
 	const size_t srv_getNumberOfCars() const;
 	int srv_add(const string& nrI);
 	void srv_clearRepo();

@@ -143,6 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AdminService.cpp" />
     <ClCompile Include="Domain.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Exceptii.cpp" />
@@ -153,6 +154,7 @@
     <ClCompile Include="Valid.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdminService.h" />
     <ClInclude Include="Domain.h" />
     <ClInclude Include="Exceptii.h" />
     <ClInclude Include="Repository.h" />

@@ -94,7 +94,6 @@ int Service::srv_add(const string& nrI)
 	return 1;
 
 }
-
 void Service::srv_clearRepo()
 {
 	repo.clearRepo();

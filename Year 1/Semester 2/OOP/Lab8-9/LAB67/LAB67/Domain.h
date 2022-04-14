@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 using std::string;
+using std::ostream;
 
 class Masina
 {
@@ -61,6 +62,7 @@ public:
 	/// <param name="tip"></param>
 	void setTip(const string& tip);
 	
+	friend ostream& operator<<(ostream& os, const Masina& m);
 	
 
 

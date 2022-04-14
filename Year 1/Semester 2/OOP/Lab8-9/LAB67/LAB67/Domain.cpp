@@ -3,7 +3,6 @@
 
 
 
-
 Masina::Masina(const Masina& ot)
 {
 	this->id = ot.id;
@@ -59,6 +58,9 @@ void Masina::setTip(const string& _tip)
 	this->tip = _tip;
 }
 
-
-
+ostream& operator<<(ostream& os, const Masina& m)
+{
+	os << m.getID() << "," << m.getModel() << "," << m.getNrInmatriculare() << "," << m.getProducator() << "," << m.getTip();
+	return os;
+}
 

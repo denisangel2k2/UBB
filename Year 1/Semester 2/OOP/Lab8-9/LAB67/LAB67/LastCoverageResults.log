@@ -1,21 +1,21 @@
-[2022-04-13 23:12:06] [info] Start Program:
+[2022-04-14 16:00:24] [info] Start Program:
 Path:"C:\Users\Denis\Desktop\LAB67\x64\Debug\LAB67.exe"
 Arguments:
 Working directory: "C:\Users\Denis\Desktop\LAB67\LAB67\"
 Modules: Selected: C:\Users\Denis\Desktop\LAB67\x64\Debug\LAB67.exe Excluded: 
-Sources: Selected: C:\Users\Denis\Desktop\LAB67\LAB67 Excluded: UI 
+Sources: Selected: C:\Users\Denis\Desktop\LAB67\LAB67 Excluded: UI AdminService 
 Log Level: Normal
 Cover Children: 0
 Aggregate by file: 1
 Continue after C++ exception: 0
 Optimized build support: 0
-Export: Binary C:\Users\Denis\AppData\Local\Temp\djprkchv.m33 
+Export: Binary C:\Users\Denis\AppData\Local\Temp\vblgsoks.kea 
 Input coverage: 
 Unified diff: 
 Excluded line regular expressions: 
 Substitute pdb source paths: 
 
-[2022-04-13 23:12:06] [info] Module: C:\Users\Denis\Desktop\LAB67\x64\Debug\LAB67.exe is selected because it matches selected pattern: C:\Users\Denis\Desktop\LAB67\x64\Debug\LAB67.exe
-[2022-04-13 23:12:07] [info] ----------------------------------------------------
-[2022-04-13 23:12:07] [info] Coverage binary generated in file: C:\Users\Denis\AppData\Local\Temp\djprkchv.m33
-[2022-04-13 23:12:07] [info] ----------------------------------------------------
+[2022-04-14 16:00:24] [info] Module: C:\Users\Denis\Desktop\LAB67\x64\Debug\LAB67.exe is selected because it matches selected pattern: C:\Users\Denis\Desktop\LAB67\x64\Debug\LAB67.exe
+[2022-04-14 16:00:26] [info] ----------------------------------------------------
+[2022-04-14 16:00:26] [info] Coverage binary generated in file: C:\Users\Denis\AppData\Local\Temp\vblgsoks.kea
+[2022-04-14 16:00:26] [info] ----------------------------------------------------
