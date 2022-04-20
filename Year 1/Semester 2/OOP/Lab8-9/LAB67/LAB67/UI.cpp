@@ -1,6 +1,7 @@
 #include "UI.h"
 #include <iostream>
 #include <fstream>
+#include "Exceptii.h"
 
 using std::string;
 
@@ -88,6 +89,7 @@ void UI::showUI()
 	cout << "'random' - adauga n masini pentru spalare\n";
 	cout << "'rand' - adauga n masini\n";
 	cout << "'export' - exporta masinile pentru spalare in fisierul output.csv\n";
+	cout << "'undo' - reface ultima operatie\n";
 	cout << "'help - tipareste acest meniu\n";
 	cout << "'exit' - iesire\n";
 
@@ -413,6 +415,16 @@ void UI::batchmode()
 	}
 
 }
+void UI::undo()
+{
+	try {
+		srv.undo();
+		cout << "Undo efectuat cu succes!\n";
+	}
+	catch (Exceptie& ex) {
+		cout << ex.getMessage();
+	}
+}
 void UI::run() {
 	string cmd;
 	while (1) {
@@ -456,5 +468,7 @@ void UI::run() {
 			exporter();
 		else if (cmd == "batch")
 			batchmode();
+		else if (cmd == "undo")
+			undo();
 	}
 }

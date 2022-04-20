@@ -1,10 +1,10 @@
 #include "Exceptii.h"
 
-RepoException::RepoException(const string& _mesaj) : mesaj{_mesaj}
+Exceptie::Exceptie(const string& _mesaj) : mesaj{_mesaj}
 {
 }
 
-const string& RepoException::getMessage()
+const string& Exceptie::getMessage() const
 {
 	return mesaj;
 }

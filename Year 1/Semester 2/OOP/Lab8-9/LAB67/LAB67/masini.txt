@@ -1,0 +1,14 @@
+5,Numar Inm.5,Prod5,Model5,Tip5
+1,Numar Inm.1,Prod1,Model1,Tip1
+2,Numar Inm.2,Prod2,Model2,Tip2
+27,Numar Inm.27,Prod27,Model27,Tip27
+18,Numar Inm.18,Prod18,Model18,Tip18
+26,Numar Inm.26,Prod26,Model26,Tip26
+16,Numar Inm.16,Prod16,Model16,Tip16
+24,Numar Inm.24,Prod24,Model24,Tip24
+31,Numar Inm.31,Prod31,Model31,Tip31
+30,Numar Inm.30,Prod30,Model30,Tip30
+21,Numar Inm.21,Prod21,Model21,Tip21
+11,Numar Inm.11,Prod11,Model11,Tip11
+12,Numar Inm.12,Prod12,Model12,Tip12
+15,Numar Inm.15,Prod15,Model15,Tip15

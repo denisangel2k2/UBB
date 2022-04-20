@@ -1,14 +1,19 @@
 #pragma once
 #include "Repository.h"
+#include "FileRepository.h"
 #include "Valid.h"
 #include "Domain.h"
 #include <functional>
+#include "undo.h"
+#include <memory>
 
 class Service
 {
 protected:
+	
 	Repository& repo;
 	Valid& valid;
+	vector<unique_ptr<UndoAction>>undoActions;
 
 public:
 
@@ -57,7 +62,7 @@ public:
 	/// pre : *functie
 	/// post : vector<Masina>
 	/// </summary>
-	vector<Masina>sort(function<bool(const Masina& m1, const Masina& m2)>compareFunction) const;
+	vector<Masina> sort(function<bool(const Masina& m1, const Masina& m2)>compareFunction) const;
 	/// <summary>
 	/// Functia care returneaza getAll
 	/// pre : what - string 
@@ -70,5 +75,7 @@ public:
 	int srv_add(const string& nrI);
 	void srv_clearRepo();
 	int addRandom(int numberToAdd);
+
+	void undo();
 };
 

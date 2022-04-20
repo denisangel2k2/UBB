@@ -42,6 +42,12 @@
     <ClCompile Include="AdminService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FileRepository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="undo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Repository.h">
@@ -66,6 +72,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AdminService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FileRepository.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="undo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -3,14 +3,23 @@
 #include <iterator>
 #include <algorithm>
 #include <random>
+#include "Exceptii.h"
 
-Service::Service(Repository& rep, Valid& _valid) :repo{rep},valid{_valid} {}
+
+using std::vector;
+
+Service::Service(Repository& _rep, Valid& _valid) : repo{ _rep }, valid{ _valid }{}
+
+
 
 int Service::srv_add(int id, const string& nrI, const string& prod, const string& model, const string& tip)
 {
 	Masina m{ id,nrI,prod,model,tip };
 	valid.validate(m);
-	return repo.add(m);
+
+	repo.add(m);
+	undoActions.push_back(make_unique<UndoAdd>(m, repo));
+	return 1;
 }
 
 
@@ -19,14 +28,25 @@ int Service::srv_del(int id)
 {
 	if (!valid.validateID(id))
 		throw runtime_error("ID invalid!\n");
-	return repo.del(id);
+
+	Masina m = repo.findCar(id);
+	repo.del(id);
+	undoActions.push_back(make_unique<UndoDelete>(m, repo));
+	return 1;
 }
 
 int Service::srv_update(int id, const string& nrI, const string& prod, const string& model, const string& tip)
 {
 	Masina m{ id,nrI,prod,model,tip };
 	valid.validate(m);
-	return repo.update(m);
+	
+	try {
+		Masina m_init = repo.findCar(id);
+		undoActions.push_back(make_unique<UndoUpdate>(m_init, repo));
+	}
+	catch (const exception&) {}
+	repo.update(m);
+	return 1;
 }
 
 const Masina& Service::srv_findCar(int id) const
@@ -52,12 +72,13 @@ vector<Masina> Service::filter(const string& what, int whichFilter) const
 vector<Masina> Service::sort(function<bool(const Masina& m1, const Masina& m2)>compareFunction) const
 {
 	vector<Masina>v = repo.getAll();
-	
+	std::sort(v.begin(), v.end(), compareFunction);
+		/*
 	for (auto& el1 : v)
 		for (auto& el2 : v)
 			if (compareFunction(el1, el2))
 				swap(el1, el2);
-
+*/
 	return v;
 }
 
@@ -151,9 +172,9 @@ int Service::addRandom(int numberToAdd)
 
 		std::mt19937 mt{ std::random_device{}() };
 		int numarMasini = (int)srv_getNumberOfCars();
-		std::uniform_int_distribution<> dist(numarMasini, numarMasini + numberToAdd*2);
-		
-		
+		std::uniform_int_distribution<> dist(numarMasini, numarMasini + numberToAdd * 2);
+
+
 		try {
 			rndNr = dist(mt);
 			prod = "Prod" + to_string(rndNr);
@@ -161,7 +182,7 @@ int Service::addRandom(int numberToAdd)
 			tip = "Tip" + to_string(rndNr);
 			nrI = "Numar Inm." + to_string(rndNr);
 
-			if (odata == 0){
+			if (odata == 0) {
 				odata = 1;
 				srv_add(-1, nrI, prod, model, tip);
 			}
@@ -169,11 +190,21 @@ int Service::addRandom(int numberToAdd)
 			srv_add(rndNr, nrI, prod, model, tip);
 			cateAdaugate++;
 		}
-		catch (const exception&) {
-			continue;}
-
-	}	
+		catch (const exception&) {}
+		
+	}
 	return 1;
+}
+
+void Service::undo()
+{
+
+	if (undoActions.size() == 0)
+		throw Exceptie{ "Nu se poate efectua undo!\n" };
+	
+	undoActions.back()->doUndo();
+	undoActions.pop_back();
+
 }
 
 

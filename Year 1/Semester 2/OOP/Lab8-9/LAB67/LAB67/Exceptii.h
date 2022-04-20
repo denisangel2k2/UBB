@@ -5,14 +5,14 @@
 using std::exception;
 using std::string;
 
-class RepoException : public exception
+class Exceptie
 {
 private:
 	string mesaj;
 
 public:
-	RepoException(const string&);
-	const string& getMessage();
+	Exceptie(const string&);
+	const string& getMessage() const;
 
 };
 

@@ -30,6 +30,7 @@ private:
 	void exporter();
 
 	void batchmode();
+	void undo();
 public:
 	UI(const UI& ot) = delete;
 	UI(Service& srv, AdminService& _srv2) noexcept :srv{ srv }, srv2{ _srv2 } {}

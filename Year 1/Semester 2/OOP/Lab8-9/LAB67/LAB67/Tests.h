@@ -20,6 +20,7 @@ private:
 	void testRepo();
 	void testSrvClearRepo();
 	void testSrvAddRandom();
+	void testUndo();
 
 };
 

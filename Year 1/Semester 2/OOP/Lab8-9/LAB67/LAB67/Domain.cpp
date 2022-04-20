@@ -64,3 +64,5 @@ ostream& operator<<(ostream& os, const Masina& m)
 	return os;
 }
 
+
+

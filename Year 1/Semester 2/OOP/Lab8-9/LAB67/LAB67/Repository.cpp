@@ -26,7 +26,7 @@ int Repository::add(const Masina& m)
 	this->lista.push_back(m);
 	return 1;
 }
-const size_t Repository::getNumberOfCars() const{
+const size_t Repository::getNumberOfCars() {
 	return lista.size();
 }
 void Repository::clearRepoFictiv()
@@ -64,7 +64,7 @@ int Repository::find(int id)
 	return 0;
 }
 
-const Masina& Repository::findCar(int id) const
+const Masina& Repository::findCar(int id) 
 {
 	auto it = find_if(lista.begin(), lista.end(), [=](const Masina& m) {return m.getID() == id; });
 	if (it != lista.end())
@@ -81,12 +81,12 @@ const size_t Repository::sizeAdmin() noexcept
 	return this->lista_fictiva.size();
 }
 
-const vector<Masina>& Repository::getAll() const
+const vector<Masina>& Repository::getAll() 
 {
 	return lista;
 }
 
-const vector<Masina>& Repository::getAllFictiv() const
+const vector<Masina>& Repository::getAllFictiv() 
 {
 	return this->lista_fictiva;
 }

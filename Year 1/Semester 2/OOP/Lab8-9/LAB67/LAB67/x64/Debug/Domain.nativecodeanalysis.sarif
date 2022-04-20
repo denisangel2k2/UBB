@@ -14,11 +14,149 @@
       },
       "invocations": [
         {
-          "commandLine": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00007FF7393A9CC0 -il C:\\Users\\Denis\\AppData\\Local\\Temp\\_CL_18a88848ast -typedil -f Domain.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -pc \\:/ -D_MSC_VER=1931 -D_MSC_FULL_VER=193131104 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -nologo -W 4 -WX -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -D_DEBUG -D_CONSOLE -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -Zc:wchar_t -Zc:forScope -permissive- -Fox64\\Debug\\Domain.obj -Fdx64\\Debug\\vc143.pdb -external:W 4 -Gd -analyze:projectdirectory C:\\Users\\Denis\\Desktop\\LAB67\\LAB67 -analyze:rulesetdirectory ;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Users\\Denis\\Desktop\\LAB67\\LAB67\\Include\\um -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Users\\Denis\\Desktop\\LAB67\\LAB67\\Include\\um -I C:\\Users\\Denis\\Desktop\\LAB67\\LAB67\\Include\\um",
+          "commandLine": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00007FF738739CC0 -il C:\\Users\\Denis\\AppData\\Local\\Temp\\_CL_540d9ab3ast -typedil -f Domain.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -pc \\:/ -D_MSC_VER=1931 -D_MSC_FULL_VER=193131104 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -nologo -W 4 -WX -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -D_DEBUG -D_CONSOLE -D_CRT_SECURE_NO_WARNINGS -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -Zc:wchar_t -Zc:forScope -permissive- -Fox64\\Debug\\Domain.obj -Fdx64\\Debug\\vc143.pdb -external:W 4 -Gd -analyze:projectdirectory C:\\Users\\Denis\\Desktop\\LAB67\\LAB67 -analyze:rulesetdirectory ;C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX64\\x64\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Users\\Denis\\Desktop\\LAB67\\LAB67\\Include\\um -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\include -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.31.31103\\atlmfc\\include -external:I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Users\\Denis\\Desktop\\LAB67\\LAB67\\Include\\um -I C:\\Users\\Denis\\Desktop\\LAB67\\LAB67\\Include\\um",
           "executionSuccessful": true
         }
       ],
       "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/valid.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "7668c8c53d78a00ed501a067ca6ad84adda580b1ecb14f4c4fb148009296bada"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/valid.h"
+          },
+          "hashes": {
+            "sha-256": "0078da9b9a380e9111022da0b648d62a86a4ed534486b6cf4c01865f829483c4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/domain.h"
+          },
+          "hashes": {
+            "sha-256": "0ccc53a77b3c91147f5ea3101d5980d6303efa3b8a7899da8a49c25325c0e2dc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/ui.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "6adaaeef3dc17515f6c578d3d4a53eb63d9139f5feb815f453bd04316e1b0c3c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/ui.h"
+          },
+          "hashes": {
+            "sha-256": "b99aea3be89cdedf8a075f06f320e213ae2d2686ad85d05dffd6e959f4acac07"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/service.h"
+          },
+          "hashes": {
+            "sha-256": "10523ca9a50da4e55ee998389bfaa5341f02564e92ca00cb74cac98d5ffd2578"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/repository.h"
+          },
+          "hashes": {
+            "sha-256": "7ed4e338ec800f6f829ab38c40429f2e044a0efc9881202772a423f190af01d0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/filerepository.h"
+          },
+          "hashes": {
+            "sha-256": "79f4287e7ee3d6c3da6eed91184914ca4ab63237d48f2aae56246828ded720e3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/adminservice.h"
+          },
+          "hashes": {
+            "sha-256": "1c8d44b07da904159c32e194b7093ddef9bd16b4ab0c3bf0c28f441e281583d8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/tests.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "9bb62a5b16ce575f7696e121a97a7d296f40e4db43795319f7ef4d186834717f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/tests.h"
+          },
+          "hashes": {
+            "sha-256": "aadaa8145daae830674190cd5c0f32554182f2caea149596f102f62b3ee887f5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/exceptii.h"
+          },
+          "hashes": {
+            "sha-256": "351fc88befb0ae9d8814238b4242ede28bf77c8321f612985e6f105c0151de2a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/exceptii.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "48fcd5ec63f8e48ecfd235aca6ef9ed13f058ab4bf54a765001102ce7a187d69"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/main.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "4df72120ba93ecd3aab10e21da12da3ba4f69b1cd92508ff0f63524b428c98d7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/denis/desktop/lab67/lab67/filerepository.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "551182c0f91b9a7f7f994af0399c07a3eb543b53a3f3135c481854f2469fd062"
+          }
+        },
         {
           "location": {
             "uri": "file:///c:/users/denis/desktop/lab67/lab67/domain.cpp"
@@ -27,15 +165,7 @@
             "analysisTarget"
           ],
           "hashes": {
-            "sha-256": "1318226b354518998058247fcbc234d8569e04de0e9c28a3461152b358c83ce8"
-          }
-        },
-        {
-          "location": {
-            "uri": "file:///c:/users/denis/desktop/lab67/lab67/domain.h"
-          },
-          "hashes": {
-            "sha-256": "3aebe53b10f34edc7f4dbe3b096e54673c3153cb57b7514043ce35cef66a3adb"
+            "sha-256": "0d9545caeeaa611b5b69fa17170d9cfedabd97357f1b7e6dcdc776bab5a3a92a"
           }
         }
       ]

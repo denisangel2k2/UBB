@@ -3,6 +3,7 @@
 #include <iostream>
 using std::string;
 using std::ostream;
+using std::istream;
 
 class Masina
 {
@@ -63,6 +64,7 @@ public:
 	void setTip(const string& tip);
 	
 	friend ostream& operator<<(ostream& os, const Masina& m);
+	//friend istream& operator>>(istream& is, Masina& m);
 	
 
 

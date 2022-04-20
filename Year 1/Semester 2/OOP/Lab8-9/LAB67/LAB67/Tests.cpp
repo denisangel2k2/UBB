@@ -67,7 +67,7 @@ void Tests::testService()
 	testServAdd2();
 	testSrvClearRepo();
 	testSrvAddRandom();
-	
+	testUndo();
 }
 
 void Tests::testCreateServ()
@@ -271,7 +271,7 @@ void Tests::testServSort()
 		});
 	assert(v.size() == 102);
 
-	RepoException r{ "exceptie test" };
+	Exceptie r{ "exceptie test" };
 	assert(r.getMessage() == "exceptie test");
 }
 
@@ -306,6 +306,14 @@ void Tests::testRepo()
 	assert(repo.sizeAdmin() == 1);
 	repo.clearRepoFictiv();
 	vector<Masina>v = repo.getAllFictiv();
+	try {
+		repo.del(13);
+	}
+	catch (const exception& ex) {
+		string exceptie = ex.what();
+		assert(exceptie == "Nu exista masina!\n");
+	}
+	
 }
 
 void Tests::testSrvClearRepo()
@@ -330,5 +338,45 @@ void Tests::testSrvAddRandom()
 	serv.addRandom(100);
 	
 	assert(repo.size() == 100);
+
+}
+
+void Tests::testUndo()
+{
+	FileRepository repo{ "testrepo.txt" };
+	Valid valid;
+	Service srv{ repo,valid };
+	ofstream fout("testrepo.txt");
+	fout << "";
+	if (fout.is_open()) {
+		constexpr int id = 1;
+		string nrI = "iai";
+		string prod = "pap";
+		string model = "mam";
+		string tip = "tit";
+
+		srv.srv_add(id, nrI, prod, model, tip);
+		srv.undo();
+		assert(repo.size() == 0);
+
+		srv.srv_add(id, nrI, prod, model, tip);
+		srv.srv_update(id, "sad", prod, model, tip);
+		srv.undo();
+		assert(srv.srv_findCar(id).getNrInmatriculare() == nrI);
+
+		srv.srv_del(id);
+		srv.undo();
+		assert(repo.size() == 1);
+
+		try {
+			srv.undo();
+			srv.undo();
+		}
+		catch (const Exceptie& ex) {
+			assert(ex.getMessage() == "Nu se poate efectua undo!\n");
+		}
+	}
+	fout.close();
+	
 
 }
