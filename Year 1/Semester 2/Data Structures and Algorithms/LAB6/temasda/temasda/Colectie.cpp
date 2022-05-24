@@ -20,8 +20,34 @@ Colectie::Colectie() {
 	m = 10;
 }
 
+int Colectie::stergeToateElementeleRepetitive() //
+{
+	int cate = 0;
+	for (int i = 0; i < CAP; i++) {
+		PNod p = tabela[i];
+		while (p != nullptr) {
+			int sw = 0;
+			while (nrAparitii(p->element.first) > 1) {
+				sterge(p->element.first);
+				cate++;
+				sw = 1;
+			}
+			if (sw == 1) {
+				TElem ele = p->element.first;
+				p = p->urm;
+				sterge(ele);
+				cate++;
+			}
+			else p = p->urm;
+			
 
-void Colectie::adauga(TElem elem) {
+		}
+	}
+	return cate;
+}
+
+
+void Colectie::adauga(TElem elem) { //o(n)   teta(1)   teta(n)    
 	int poz = dispersie(elem);
 	
 	if (tabela[poz] == nullptr) {
@@ -48,7 +74,7 @@ void Colectie::adauga(TElem elem) {
 }
 
 
-bool Colectie::sterge(TElem elem) {
+bool Colectie::sterge(TElem elem) { //o(n)    //teta(1) - caz favorabil   //teta(n) - caz defavorabil
 	int poz = dispersie(elem);
 	
 	if (tabela[poz] == nullptr)
@@ -99,7 +125,7 @@ bool Colectie::sterge(TElem elem) {
 }
 
 
-bool Colectie::cauta(TElem elem) const {
+bool Colectie::cauta(TElem elem) const { //o(n) 
 
 	int poz = dispersie(elem);
 
@@ -113,7 +139,7 @@ bool Colectie::cauta(TElem elem) const {
 	return true;
 }
 
-int Colectie::nrAparitii(TElem elem) const {
+int Colectie::nrAparitii(TElem elem) const { // o(n)
 	int poz = dispersie(elem);
 
 	PNod nod = tabela[poz];
@@ -127,7 +153,7 @@ int Colectie::nrAparitii(TElem elem) const {
 }
 
 
-int Colectie::dim() const {
+int Colectie::dim() const { // teta(cardinal(tabela[i]), i=0,CAP;
 
 	int nr = 0;
 	
@@ -146,7 +172,7 @@ int Colectie::dim() const {
 }
 
 
-bool Colectie::vida() const {
+bool Colectie::vida() const { //o(n)
 	int nr = 0;
 	PNod nod;
 	for (int i = 0; i < m; i++) {

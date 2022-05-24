@@ -1,0 +1,5 @@
+﻿  MDO.cpp
+C:\Users\Denis\Desktop\Multidictionar\Multidictionar\MDO.cpp(92,17): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\Denis\Desktop\Multidictionar\Multidictionar\MDO.cpp(151,34): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Denis\Desktop\Multidictionar\Multidictionar\MDO.cpp(43): warning C4715: 'MDO::cauta_rec': not all control paths return a value
+  Multidictionar.vcxproj -> C:\Users\Denis\Desktop\Multidictionar\x64\Debug\Multidictionar.exe

@@ -42,6 +42,9 @@ public:
 	//constructorul implicit
 	Colectie();
 
+	//elimina toate elementele care se repeta
+	int stergeToateElementeleRepetitive();
+
 	//adauga un element in colectie
 	void adauga(TElem e);
 

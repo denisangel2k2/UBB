@@ -9,8 +9,23 @@
 
 void testAll() { //apelam fiecare functie sa vedem daca exista
 	Colectie c;
+
 	assert(c.vida() == true);
 	assert(c.dim() == 0); //adaug niste elemente
+	c.adauga(3);
+	c.adauga(3);
+	c.adauga(3);
+	c.adauga(13);
+	c.adauga(13);
+	c.adauga(15);
+	c.adauga(5);
+	c.adauga(5);
+	c.adauga(1);
+	assert(c.stergeToateElementeleRepetitive() == 7);
+	assert(c.dim() == 2);
+	c.sterge(1);
+	c.sterge(15);
+
 	c.adauga(5);
 	c.adauga(1);
 	c.adauga(10);
@@ -33,4 +48,5 @@ void testAll() { //apelam fiecare functie sa vedem daca exista
 		TElem e = ic.element();
 		ic.urmator();
 	}	 
+
 }
