@@ -22,6 +22,7 @@ public class SortingTask extends Task {
         sort();
         for (int number : numbers)
             System.out.print(number + " ");
+        System.out.println();
 
     }
 }

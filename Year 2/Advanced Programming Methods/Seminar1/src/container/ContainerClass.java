@@ -19,9 +19,10 @@ public class ContainerClass{
         if (tasks.length == size) {
             Task[] t = new Task[tasks.length * 2];
             System.arraycopy(tasks, 0, t, 0, tasks.length);
+        }
             tasks[size] = task;
             size++;
-        }
+
     }
 
     public int size() {
