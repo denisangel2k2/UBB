@@ -6,7 +6,7 @@ Here you will find all my projects I do throughout my university years
 
 
 ## [Semester 1]
-> "Every beggining is confusing at first"
+
 
 Passed subjects: 
 
@@ -18,7 +18,6 @@ Passed subjects:
 
 
 ## [Semester 2]
-> "In order to become a man, you have to face your fears!"
 
 Passed subjects:
 - Object Oriented Programming
