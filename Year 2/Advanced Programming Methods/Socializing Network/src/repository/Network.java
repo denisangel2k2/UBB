@@ -14,6 +14,12 @@ public class Network {
         network.put(user.getId(), new LinkedList<Integer>());
     }
 
+    /**
+     * Tests if there is a friendship between 2 users
+     * @param u1 User
+     * @param u2 User
+     * @return True/False
+     */
     private boolean isThereFriendship(User u1, User u2){
         boolean sw = false;
         for (int identificator : network.get(u1.getId()))
@@ -24,6 +30,12 @@ public class Network {
 
     }
 
+    /**
+     * Removes a friendship from the network
+     * @param u1 User
+     * @param u2 User
+     * @throws NetworkException if there is already no friendship
+     */
     public void removeFriendship(User u1, User u2) throws NetworkException{
         if (network.containsKey(u1.getId()) && network.containsKey(u2.getId())) {
             if (isThereFriendship(u1, u2)) {
@@ -38,6 +50,12 @@ public class Network {
 
     }
 
+    /**
+     * Adds a friendship to the network
+     * @param u1
+     * @param u2
+     * @throws NetworkException if the friendship already exists
+     */
     public void addFriendship(User u1, User u2) throws NetworkException {
 
 
@@ -54,6 +72,10 @@ public class Network {
         network.get(u2.getId()).add(u1.getId());
     }
 
+    /**
+     *
+     * @return List with ids of users from the most sociable community
+     */
     public List<Integer> mostSociableCommunity() {
         AtomicInteger maxLevel = new AtomicInteger(0);
         var community_indexes = getCommunities();
@@ -61,20 +83,29 @@ public class Network {
         Arrays.fill(visited, 0);
         int highestLevel = 0;
         int indexOfSociableCom = 0;
+        int node;
         for (int communityIndex : community_indexes.keySet()) {
-            maxLevel.set(0);
-            int node = community_indexes.get(communityIndex).get(0);
-            longest_road(node, visited, 0, maxLevel);
+            for (int index : community_indexes.get(communityIndex)){
+                node = index;
+                maxLevel.set(0);
+                longest_road(node, visited, 0, maxLevel);
 
-            if (highestLevel < maxLevel.get()) {
-                highestLevel = maxLevel.get();
-                indexOfSociableCom = communityIndex;
+                if (highestLevel < maxLevel.get()) {
+                    highestLevel = maxLevel.get();
+                    indexOfSociableCom = communityIndex;
+                }
             }
+
+
         }
 
         return community_indexes.get(indexOfSociableCom);
     }
 
+    /**
+     *
+     * @return The number of communities
+     */
     public int getNumberOfCommunities() {
         int community_number = 0;
         var indexes=getCommunityIndexes();
@@ -86,6 +117,13 @@ public class Network {
 
     }
 
+    /**
+     * Calculates the longest road on a network where the starting position is given as parameter node
+     * @param node int
+     * @param visited int[]
+     * @param level int
+     * @param maxLevel AtomicInteger
+     */
     private void longest_road(int node, int[] visited, int level, AtomicInteger maxLevel) {
         visited[node] = 1;
         maxLevel.set(Math.max(level, maxLevel.get()));
@@ -95,6 +133,12 @@ public class Network {
 
     }
 
+    /**
+     * DFS on a given network
+     * @param node int
+     * @param visited int[]
+     * @param number int
+     */
     private void dfs_util(int node, int[] visited, int number) {
         visited[node] = number;
         for (int neighbor : network.get(node))
@@ -102,12 +146,21 @@ public class Network {
                 dfs_util(neighbor, visited, number);
     }
 
+    /**
+     *
+     * @return the maximum id in the network
+     */
     private int maxNode(){
         int size=1;
         for (int key : network.keySet())
             size=Math.max(size,key);
         return size;
     }
+
+    /**
+     *
+     * @return community indexes for every id of user, where the index of the vector is user id
+     */
     private int[] getCommunityIndexes() {
 
 
@@ -123,6 +176,10 @@ public class Network {
         return visited;
     }
 
+    /**
+     *
+     * @return Map< UserID(Integer), List< UserID(Integer) >  all the communities
+     */
     public HashMap<Integer, List<Integer>> getCommunities() {
 
         int[] comm_indexes = getCommunityIndexes();
@@ -136,7 +193,6 @@ public class Network {
             }
         }
         return communities;
-
     }
 
 

@@ -8,6 +8,12 @@ public class UserValidator implements Validator<User>{
         return instance;
     }
     private UserValidator(){}
+
+    /**
+     * Validates the user
+     * @param Obj
+     * @throws ValidationException if it is not valid
+     */
     @Override
     public void validate(User Obj) throws ValidationException {
         String errors="";

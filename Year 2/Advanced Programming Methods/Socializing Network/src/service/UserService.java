@@ -20,12 +20,20 @@ public class UserService implements Service {
     private final Repository<User> repository;
     private final Validator<User> validator;
 
+
     public UserService(Repository<User> repository, Validator<User> validator) {
         this.repository = repository;
         this.validator = validator;
     }
 
 
+    /**
+     * Adds a friendship between the users with given ids
+     * @param id1 int
+     * @param id2 int
+     * @throws NetworkException if there already exists a friendship
+     * @throws RepoException if the users do not exist
+     */
     @Override
     public void addFriendship(int id1, int id2) throws NetworkException, RepoException {
         User u1 = repository.findElement(id1);
@@ -35,6 +43,13 @@ public class UserService implements Service {
 
     }
 
+    /**
+     * Removes a friendship from the system
+     * @param id1 int
+     * @param id2 int
+     * @throws if friendship does not exist
+     * @throws RepoException if the users do not exist
+     */
     @Override
     public void removeFriendship(int id1,int id2) throws NetworkException,RepoException {
         User u1=repository.findElement(id1);
@@ -42,11 +57,19 @@ public class UserService implements Service {
         network.removeFriendship(u1,u2);
     }
 
+    /**
+     *
+     * @return number of communities
+     */
     @Override
     public int numberOfCommunities() {
         return network.getNumberOfCommunities();
     }
 
+    /**
+     *
+     * @return list with the users from the most sociable community
+     */
     @Override
     public List<User> mostSociableCommunity() {
         var lista = network.mostSociableCommunity();
@@ -61,6 +84,10 @@ public class UserService implements Service {
         return userList;
     }
 
+    /**
+     *
+     * @return the maximum id of a user from the system
+     */
     private int getLastID() {
         Vector<User> list = repository.getAll();
         int ID = -1;
@@ -70,11 +97,23 @@ public class UserService implements Service {
         else return ID;
     }
 
+    /**
+     * Removes a user by id
+     * @param id int
+     * @throws Exception if the user with given id does not exist
+     */
     @Override
     public void remove(int id) throws Exception {
         repository.remove(id);
     }
 
+    /**
+     * Adds a user to the system with given information
+     * @param firstName String
+     * @param lastName String
+     * @param email String
+     * @throws Exception if the given paramaters are not valid
+     */
     @Override
     public void add(String firstName, String lastName, String email) throws Exception {
         int id = getLastID() + 1;
@@ -84,6 +123,10 @@ public class UserService implements Service {
     }
 
 
+    /**
+     *
+     * @return a list with all the users
+     */
     @Override
     public Vector<User> getAll() {
         return repository.getAll();
