@@ -3,9 +3,12 @@ package presentation;
 import domain.User;
 import exceptions.NetworkException;
 import exceptions.RepoException;
+import exceptions.ValidationException;
 import service.Service;
 
 import java.io.Console;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -32,6 +35,7 @@ public class UI {
             else if (input.equals("5")) showUsers();
             else if (input.equals("7")) numberOfCommunities();
             else if (input.equals("8")) mostSociableCommunity();
+            else if (input.equals("9")) friendList();
         }
     }
 
@@ -44,9 +48,27 @@ public class UI {
         System.out.println("6 - Show menu");
         System.out.println("7 - Number of communities");
         System.out.println("8 - Most sociable community");
+        System.out.println("9 - See friend list of a user");
         System.out.println("99 - Exit");
 
 
+    }
+    private void friendList(){
+        showUsers();
+        System.out.println("Select the user you want to see the friend list of");
+        System.out.print("ID: ");
+        String idString=in.nextLine();
+        try{
+            int id=Integer.parseInt(idString);
+            HashMap<User,String> list=service.getFriends(id);
+            System.out.println("\tFriend list:");
+            for (User user : list.keySet())
+                System.out.println(user.printPatternString()+" \t\tFriends since: "+list.get(user));
+
+        }
+        catch (NumberFormatException ex){
+            System.out.println("ID invalid!");
+        }
     }
     private void addFriendship(){
         showUsers();
@@ -72,6 +94,9 @@ public class UI {
         catch (RepoException ex){
             System.out.println(ex.getMessage());
         }
+        catch (ValidationException ex){
+            System.out.println(ex.getMessage());
+        }
     }
     private void removeFriendship(){
         System.out.println("Select two users you want to remove a friendship between by using their ids: ");
@@ -89,10 +114,7 @@ public class UI {
         catch (NumberFormatException nex){
             System.out.println("ID invalid!");
         }
-        catch (NetworkException ex){
-            System.out.println(ex.getMessage());
-        }
-        catch (RepoException ex){
+        catch (Exception ex){
             System.out.println(ex.getMessage());
         }
 

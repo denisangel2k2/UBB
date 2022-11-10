@@ -1,38 +1,51 @@
-package repository;
+package old_versions;
 import domain.User;
 import exceptions.RepoException;
+import repository.Repository;
 import utils.Constants;
 
-
+/*
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Vector;
 
-public class FileRepository implements Repository<User>{
+public class UserFileRepo implements Repository<User> {
     private Vector<User> userList;
     private static String filepath;
 
-    public FileRepository(String _filepath) {
-        userList=new Vector<User>();
+    public UserFileRepo(String _filepath) {
+        userList=new Vector<>();
         filepath=_filepath;
         loadData();
     }
 
-    /**
-     * Loads data in memory from the persistence of application
-     */
-    private void loadData(){
+
+    private User extractEntity(String line) {
+        String[] words = line.split(";");
+        User user = new User(words[1], words[2], words[3]);
+        user.setId(Integer.parseInt(words[0]));
+        return user;
+
+    }
+
+
+
+
+
+    public void loadData(){
         userList.clear();
         Path path= Paths.get(filepath);
         try {
             List<String> lines = Files.readAllLines(path);
             for (String line : lines) {
                 String[] words = line.split(";");
-                User user = new User(Integer.parseInt(words[0]), words[1], words[2], words[3]);
+                User user = new User(words[1], words[2], words[3]);
+                user.setId(Integer.parseInt(words[0]));
                 userList.add(user);
             }
         } catch (IOException e){
@@ -40,10 +53,9 @@ public class FileRepository implements Repository<User>{
         }
     }
 
-    /**
-     * Stores data from memory to the persistence layer
-     */
-    private void storeData(){
+
+    @Override
+    public void storeData(){
         Path path=Paths.get(filepath);
 
         try{
@@ -66,10 +78,7 @@ public class FileRepository implements Repository<User>{
         }
     }
 
-    /**
-     * Adds an user to the repository
-     * @param obj User
-     */
+
     @Override
     public void add(User obj) {
 
@@ -78,12 +87,7 @@ public class FileRepository implements Repository<User>{
         storeData();
     }
 
-    /**
-     * Removes an user from the repository by giving its id, returns the deleted user
-     * @param id int
-     * @return User
-     * @throws RepoException if there is no user with given id
-     */
+
     @Override
     public User remove(int id) throws RepoException {
         loadData();
@@ -97,12 +101,7 @@ public class FileRepository implements Repository<User>{
         else throw new RepoException(Constants.REPO_REMOVE_USER);
     }
 
-    /**
-     * Finds the user with given id in the repository and returns it
-     * @param id int
-     * @return User
-     * @throws RepoException if the user doesn't exist in the repository
-     */
+
     @Override
     public User findElement(int id) throws RepoException{
         User user=find(id);
@@ -111,11 +110,7 @@ public class FileRepository implements Repository<User>{
         else return user;
     }
 
-    /**
-     * Returns the user with given id as parameter exists in the repository or null if not
-     * @param id int
-     * @return True/False
-     */
+
     private User find(int id) {
         loadData();
         Optional<User> usersWithGivenID=userList.stream().filter(user -> user.getId()==id).findFirst();
@@ -124,13 +119,11 @@ public class FileRepository implements Repository<User>{
         else return null;
     }
 
-    /**
-     *
-     * @return vector of all users
-     */
+
     @Override
     public Vector<User> getAll() {
         return userList;
     }
 
 }
+*/

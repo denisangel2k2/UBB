@@ -1,5 +1,6 @@
 package repository;
 
+import domain.Friendship;
 import domain.User;
 import exceptions.NetworkException;
 import utils.Constants;
@@ -9,6 +10,14 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Network {
     private Map<Integer, List<Integer>> network = new HashMap();
+
+    public Network(Vector<Friendship> friendships){
+        createNetwork(friendships);
+    }
+    private void createNetwork(Vector<Friendship> friendships){
+        for (Friendship friendship : friendships)
+            addFriendship(friendship.getUser1(),friendship.getUser2());
+    }
 
     private void addUserToNetwork(User user) {
         network.put(user.getId(), new LinkedList<Integer>());
@@ -36,6 +45,7 @@ public class Network {
      * @param u2 User
      * @throws NetworkException if there is already no friendship
      */
+    /*
     public void removeFriendship(User u1, User u2) throws NetworkException{
         if (network.containsKey(u1.getId()) && network.containsKey(u2.getId())) {
             if (isThereFriendship(u1, u2)) {
@@ -49,6 +59,25 @@ public class Network {
         }
 
     }
+    public void removeFriendship(Friendship f1) throws NetworkException{
+        User u1=f1.getUser1();
+        User u2=f1.getUser2();
+        if (network.containsKey(u1.getId()) && network.containsKey(u2.getId())) {
+            if (isThereFriendship(u1, u2)) {
+                var list=network.get(u1.getId());
+                list.removeIf(integer -> integer==u2.getId());
+                list=network.get(u2.getId());
+                list.removeIf(integer -> integer==u1.getId());
+
+            }
+            else throw new NetworkException(Constants.NETWORK_NO_FRIENDSHIP);
+        }
+
+    }
+    */
+
+
+
 
     /**
      * Adds a friendship to the network
@@ -56,7 +85,7 @@ public class Network {
      * @param u2
      * @throws NetworkException if the friendship already exists
      */
-    public void addFriendship(User u1, User u2) throws NetworkException {
+    public void addFriendship(User u1, User u2) {
 
 
         if (!network.containsKey(u1.getId()))
@@ -65,11 +94,11 @@ public class Network {
         if (!network.containsKey(u2.getId()))
             addUserToNetwork(u2);
 
-        if (isThereFriendship(u1, u2))
-            throw new NetworkException(Constants.NETWORK_EXISTS_FRIENDSHIP);
-
+        //if (!isThereFriendship(u1, u2))
         network.get(u1.getId()).add(u2.getId());
         network.get(u2.getId()).add(u1.getId());
+
+
     }
 
     /**
@@ -118,7 +147,7 @@ public class Network {
     }
 
     /**
-     * Calculates the longest road on a network where the starting position is given as parameter node
+     * Calculates the intest road on a network where the starting position is given as parameter node
      * @param node int
      * @param visited int[]
      * @param level int
@@ -162,8 +191,6 @@ public class Network {
      * @return community indexes for every id of user, where the index of the vector is user id
      */
     private int[] getCommunityIndexes() {
-
-
 
         int visited[] = new int[maxNode()+1];
         Arrays.fill(visited, 0);
