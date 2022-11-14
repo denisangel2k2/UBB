@@ -42,6 +42,16 @@ public class FriendshipRepo extends AbstractRepo<Friendship> {
         try {
             Connection connection = DriverManager.getConnection(super.url, super.userName, super.password);
 
+            for (int i=0; i<friendships.size(); i++){
+                if (friendships.get(i).getUser1().getId()==user.getId() ||
+                        friendships.get(i).getUser2().getId()== user.getId()){
+                    deleteEntity(friendships.get(i), connection);
+                    friendships.remove(i);
+                    i--;
+                }
+            }
+
+            /*
             for (Friendship friendship : friendships)
                 if (friendship.getUser1().getId() == user.getId()) {
                     deleteEntity(friendship, connection);
@@ -55,7 +65,7 @@ public class FriendshipRepo extends AbstractRepo<Friendship> {
                     friendships.remove(friendship);
                 }
 
-
+            */
         } catch (SQLException ex) {
             ex.printStackTrace();
         }

@@ -86,7 +86,7 @@ public class AppService implements Service {
         Vector<Friendship> friendships=repository_friendship.getAll();
         for (Friendship friendship : friendships){
             if (friendship.getUser1().getId()==id)
-                users.put(friendship.getUser1(),friendship.getFriendsFrom());
+                users.put(friendship.getUser2(),friendship.getFriendsFrom());
         }
         return users;
     }
