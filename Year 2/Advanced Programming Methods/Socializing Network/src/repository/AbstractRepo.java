@@ -27,7 +27,7 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
 
     }
     protected abstract E extractEntity(String line);
-    protected abstract E extractEntity();
+
 
     @Override
     public void loadData(){
@@ -60,6 +60,10 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
             ex.printStackTrace();
         }
 
+    }
+    @Override
+    public int size(){
+        return entities.size();
     }
     @Override
     public void add(E obj) throws RepoException{

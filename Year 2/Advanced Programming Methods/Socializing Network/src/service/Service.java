@@ -1,5 +1,6 @@
 package service;
 
+import domain.Friendship;
 import domain.User;
 import exceptions.NetworkException;
 import exceptions.RepoException;
@@ -8,7 +9,6 @@ import exceptions.ValidationException;
 import java.util.HashMap;
 import java.util.Vector;
 import java.util.List;
-import java.util.Vector;
 
 public interface Service {
 
@@ -18,7 +18,11 @@ public interface Service {
     void removeFriendship(int id1, int id2) throws Exception;
     HashMap<User,String> getFriends(int id);
     int numberOfCommunities();
+    void update(int idToChange, String firstName, String lastName, String email) throws RepoException, ValidationException;
     List<User> mostSociableCommunity();
-    Vector<User> getAll();
+    int sizeUsers();
+    int sizeFriendships();
+    Vector<User> getAllUsers();
+    Iterable<Friendship> getAllFriendships();
 
 }

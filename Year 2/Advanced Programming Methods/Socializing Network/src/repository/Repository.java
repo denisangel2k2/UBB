@@ -14,6 +14,7 @@ public interface Repository<E extends Entity<Integer>> {
     E remove(int id) throws Exception;
     E remove(E entity) throws Exception;
     void loadData();
+    int size();
     void storeData();
     E findElement(int id) throws RepoException;
     Vector<E> getAll();

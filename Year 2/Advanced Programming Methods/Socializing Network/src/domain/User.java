@@ -16,6 +16,18 @@ public class User extends Entity<Integer> {
         return email;
     }
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     private String lastName;
     private String firstName;
     private String email;

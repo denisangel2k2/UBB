@@ -86,7 +86,7 @@ public class AppService implements Service {
         Vector<Friendship> friendships=repository_friendship.getAll();
         for (Friendship friendship : friendships){
             if (friendship.getUser1().getId()==id)
-                users.put(friendship.getUser1(),friendship.getFriendsFrom());
+                users.put(friendship.getUser2(),friendship.getFriendsFrom());
         }
         return users;
     }
@@ -126,10 +126,31 @@ public class AppService implements Service {
     }
 
     /**
-     *
-     * @return the maximum id of a user from the system
+     * @throws RepoException
      */
+    @Override
+    public void update(int idToChange, String firstName, String lastName, String email) throws RepoException, ValidationException {
+        User u1=new User(firstName,lastName,email);
+        u1.setId(idToChange);
+        validator.validate(u1);
+        repository_user.update(u1);
+    }
 
+    /**
+     * @return
+     */
+    @Override
+    public int sizeUsers() {
+        return repository_user.size();
+    }
+
+    /**
+     * @return
+     */
+    @Override
+    public int sizeFriendships() {
+        return repository_friendship.size();
+    }
 
     /**
      * Removes a user by id
@@ -164,7 +185,15 @@ public class AppService implements Service {
      * @return a list with all the users
      */
     @Override
-    public Vector<User> getAll() {
+    public Vector<User> getAllUsers() {
         return repository_user.getAll();
+    }
+
+    /**
+     * @return
+     */
+    @Override
+    public Iterable<Friendship> getAllFriendships() {
+        return repository_friendship.getAll();
     }
 }

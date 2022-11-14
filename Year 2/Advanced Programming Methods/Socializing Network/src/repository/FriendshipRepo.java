@@ -25,10 +25,7 @@ public class FriendshipRepo extends AbstractRepo<Friendship> {
         return null;
     }
 
-    @Override
-    protected Friendship extractEntity() {
-        return null;
-    }
+
 
     public FriendshipRepo(String filepath, UserRepo repoUser) {
         super(filepath);
@@ -37,15 +34,13 @@ public class FriendshipRepo extends AbstractRepo<Friendship> {
     }
     public void removeAllFriendshipsByUser(User user){
         Vector<Friendship> friendships=super.getAll();
-        for (Friendship friendship : friendships)
-            if (friendship.getUser1().getId() == user.getId())
-                friendships.remove(friendship);
+        for (int i=0; i<friendships.size(); i++)
+            if (friendships.get(i).getUser1().getId() == user.getId() || friendships.get(i).getUser2().getId() == user.getId()){
+                friendships.remove(i);
+                i--;
+            }
 
-        for (Friendship friendship : friendships)
-            if (friendship.getUser2().getId()==user.getId())
-                friendships.remove(friendship);
-
-        storeData();
+        super.storeData();
     }
 
 
