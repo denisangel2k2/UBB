@@ -5,6 +5,7 @@ import exceptions.RepoException;
 import utils.Constants;
 
 import java.sql.*;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Vector;
@@ -13,14 +14,14 @@ import java.util.Vector;
 
 
 public abstract class AbstractRepo<E extends Entity<Integer>> implements Repository<E>{
-    private Vector<E> entities;
+    private List<E> entities;
     protected String url;
     protected String userName;
     protected String password;
 
 
     public AbstractRepo(String url, String userName, String password) {
-        entities=new Vector<>();
+        entities=new LinkedList<>();
         this.url = url;
         this.userName = userName;
         this.password = password;
@@ -45,13 +46,32 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
             ex.printStackTrace();
         }
     }
+
+    /**
+     * @param obj
+     * @throws Exception
+     */
     @Override
-    public void storeData(){
+    public void update(E obj) throws RepoException {
+        loadData();
+        try {
+            Connection connection=DriverManager.getConnection(url,userName,password);
+            E entity=findElement(obj.getId());
+            updateEntity(obj,connection);
+            entity.set(obj);
 
 
+        }
+        catch (SQLException ex){
+            throw new RepoException(Constants.REPO_DATABASE_ERROR);
+        }
     }
+
+    @Override
+    public void storeData(){}
     protected abstract void storeEntity(E entity, Connection connection) throws SQLException;
     protected abstract void deleteEntity(E entity, Connection connection) throws SQLException;
+    protected abstract void updateEntity(E entity, Connection connection) throws SQLException;
 
     @Override
     public void add(E obj) throws RepoException{
@@ -135,7 +155,7 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
     }
 
     @Override
-    public Vector<E> getAll() {
+    public List<E> getAll() {
         return entities;
     }
 
@@ -149,5 +169,11 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
         else return ID;
     }
 
-
+    /**
+     * @return
+     */
+    @Override
+    public int size() {
+        return entities.size();
+    }
 }

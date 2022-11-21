@@ -57,4 +57,25 @@ public class User extends Entity<Integer> {
     }
     */
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    /**
+     * @param other
+     */
+    @Override
+    public void set(Entity other) {
+        this.email= ((User) other).email;
+        this.firstName= ((User) other).firstName;
+        this.lastName= ((User) other).lastName;
+    }
 }

@@ -1,14 +1,14 @@
 package service;
 
+import domain.Friendship;
 import domain.User;
 import exceptions.NetworkException;
 import exceptions.RepoException;
 import exceptions.ValidationException;
 
 import java.util.HashMap;
-import java.util.Vector;
 import java.util.List;
-import java.util.Vector;
+
 
 public interface Service {
 
@@ -19,6 +19,11 @@ public interface Service {
     HashMap<User,String> getFriends(int id);
     int numberOfCommunities();
     List<User> mostSociableCommunity();
-    Vector<User> getAll();
+    List<User> getAllUsers();
+
+    List<Friendship> getAllFriendships();
+    int sizeFriendships();
+    int sizeUsers();
+    void update(int idToChange, String firstName, String lastName, String email) throws RepoException, ValidationException;
 
 }

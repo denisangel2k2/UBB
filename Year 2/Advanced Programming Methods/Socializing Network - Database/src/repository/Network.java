@@ -11,10 +11,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Network {
     private Map<Integer, List<Integer>> network = new HashMap();
 
-    public Network(Vector<Friendship> friendships){
+    public Network(List<Friendship> friendships){
         createNetwork(friendships);
     }
-    private void createNetwork(Vector<Friendship> friendships){
+    private void createNetwork(List<Friendship> friendships){
         for (Friendship friendship : friendships)
             addFriendship(friendship.getUser1(),friendship.getUser2());
     }

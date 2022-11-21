@@ -14,7 +14,7 @@ public abstract class Entity<ID> implements Serializable{
         this.id = id;
     }
     public abstract String fileCsvPatternString();
-
+    public abstract void set(Entity other);
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -1,6 +1,8 @@
 package repository;
 
 import domain.User;
+import exceptions.RepoException;
+import utils.Constants;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -46,6 +48,8 @@ public class UserRepo extends AbstractRepo<User>{
        return connection.prepareStatement("SELECT * FROM users");
     }
 
+
+
     /**
      * @param entity
      */
@@ -59,6 +63,22 @@ public class UserRepo extends AbstractRepo<User>{
         ps.setInt(4,entity.getId());
         ps.executeUpdate();
 
+    }
+
+    /**
+     * @param entity
+     * @param connection
+     * @throws SQLException
+     */
+    @Override
+    protected void updateEntity(User entity, Connection connection) throws SQLException {
+        String sql="UPDATE users SET first_name=?, last_name=?, email=? WHERE id=?";
+        PreparedStatement ps=connection.prepareStatement(sql);
+        ps.setString(1,entity.getFirstName());
+        ps.setString(2,entity.getLastName());
+        ps.setString(3,entity.getEmail());
+        ps.setInt(4,entity.getId());
+        ps.executeUpdate();
     }
 
     /**

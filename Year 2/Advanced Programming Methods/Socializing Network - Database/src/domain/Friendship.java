@@ -10,6 +10,15 @@ public class Friendship extends Entity<Integer>{
     User user2;
 
     LocalDateTime friendsFrom;
+
+    /**
+     * @param other
+     */
+    @Override
+    public void set(Entity other) {
+
+    }
+
     public Friendship(User user1, User user2) {
         this.user1 = user1;
         this.user2 = user2;

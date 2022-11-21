@@ -10,8 +10,6 @@ import exceptions.ValidationException;
 import repository.FriendshipRepo;
 import repository.Network;
 import repository.UserRepo;
-
-import java.security.KeyPair;
 import java.util.*;
 
 public class AppService implements Service {
@@ -20,6 +18,8 @@ public class AppService implements Service {
     private final Validator<Friendship> validator_fr;
     private  FriendshipRepo repository_friendship;
 
+    private int lastIdUser;
+    private int lastIdFriendship;
 
 
     public AppService(UserRepo repository_user,FriendshipRepo repository_friendship, Validator<User> validator, Validator<Friendship> validator2) {
@@ -27,8 +27,9 @@ public class AppService implements Service {
         this.validator = validator;
         this.validator_fr=validator2;
         this.repository_friendship=repository_friendship;
+        lastIdUser=this.repository_user.getLastID();
+        lastIdFriendship=this.repository_friendship.getLastID();
     }
-
 
     /**
      * Adds a friendship between the users with given ids
@@ -38,7 +39,7 @@ public class AppService implements Service {
      * @throws RepoException if the users do not exist
      */
     @Override
-    public void addFriendship(int id1, int id2) throws NetworkException, RepoException, ValidationException {
+    public void addFriendship(int id1, int id2) throws RepoException, ValidationException {
 
         User u1 = repository_user.findElement(id1);
         User u2 = repository_user.findElement(id2);
@@ -48,8 +49,9 @@ public class AppService implements Service {
         validator_fr.validate(f1);
         validator_fr.validate(f2);
 
-        f1.setId(repository_friendship.getLastID()+1);
-        f2.setId(repository_friendship.getLastID()+2);
+        f1.setId(lastIdFriendship+1);
+        f2.setId(lastIdFriendship+2);
+        lastIdFriendship+=2;
         repository_friendship.add(f1);
         repository_friendship.add(f2);
 
@@ -83,7 +85,7 @@ public class AppService implements Service {
     public HashMap<User,String> getFriends(int id) {
 
         HashMap<User,String> users=new HashMap<>();
-        Vector<Friendship> friendships=repository_friendship.getAll();
+        List<Friendship> friendships=repository_friendship.getAll();
         for (Friendship friendship : friendships){
             if (friendship.getUser1().getId()==id)
                 users.put(friendship.getUser2(),friendship.getFriendsFrom());
@@ -153,7 +155,8 @@ public class AppService implements Service {
      */
     @Override
     public void add(String firstName, String lastName, String email) throws Exception {
-        int id = repository_user.getLastID() + 1;
+        int id = lastIdUser + 1;
+        lastIdUser++;
         User user = new User(lastName, firstName, email);
         user.setId(id);
         validator.validate(user);
@@ -161,13 +164,44 @@ public class AppService implements Service {
 
     }
 
+    @Override
+    public void update(int idToChange, String firstName, String lastName, String email) throws RepoException, ValidationException {
+        User u1=new User(firstName,lastName,email);
+        u1.setId(idToChange);
+        validator.validate(u1);
+        repository_user.update(u1);
+    }
+
+    /**
+     * @return
+     */
+    @Override
+    public List<Friendship> getAllFriendships() {
+        return repository_friendship.getAll();
+    }
+
+    /**
+     * @return
+     */
+    @Override
+    public int sizeFriendships() {
+        return repository_friendship.size();
+    }
+
+    /**
+     * @return
+     */
+    @Override
+    public int sizeUsers() {
+        return repository_user.size();
+    }
 
     /**
      *
      * @return a list with all the users
      */
     @Override
-    public Vector<User> getAll() {
+    public List<User> getAllUsers() {
         return repository_user.getAll();
     }
 }

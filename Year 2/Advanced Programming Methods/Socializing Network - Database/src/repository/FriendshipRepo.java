@@ -36,8 +36,18 @@ public class FriendshipRepo extends AbstractRepo<Friendship> {
         loadData();
     }
 
+    /**
+     * @param entity
+     * @param connection
+     * @throws SQLException
+     */
+    @Override
+    protected void updateEntity(Friendship entity, Connection connection) throws SQLException {
+
+    }
+
     public void removeAllFriendshipsByUser(User user) {
-        Vector<Friendship> friendships = super.getAll();
+        List<Friendship> friendships = super.getAll();
 
         try {
             Connection connection = DriverManager.getConnection(super.url, super.userName, super.password);
@@ -51,21 +61,6 @@ public class FriendshipRepo extends AbstractRepo<Friendship> {
                 }
             }
 
-            /*
-            for (Friendship friendship : friendships)
-                if (friendship.getUser1().getId() == user.getId()) {
-                    deleteEntity(friendship, connection);
-                    friendships.remove(friendship);
-                }
-
-
-            for (Friendship friendship : friendships)
-                if (friendship.getUser2().getId() == user.getId()) {
-                    deleteEntity(friendship, connection);
-                    friendships.remove(friendship);
-                }
-
-            */
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
