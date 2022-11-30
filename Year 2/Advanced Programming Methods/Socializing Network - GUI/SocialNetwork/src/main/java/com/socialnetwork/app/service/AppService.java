@@ -32,7 +32,7 @@ public class AppService implements Service, Observable {
         this.repository_friendship = repository_friendship;
         lastIdUser = this.repository_user.getLastID();
         lastIdFriendship = this.repository_friendship.getLastID();
-        observers=new ArrayList<>();
+        observers = new ArrayList<>();
     }
 
     /**
@@ -49,18 +49,27 @@ public class AppService implements Service, Observable {
         User u1 = repository_user.findElement(id1);
         User u2 = repository_user.findElement(id2);
         Friendship f1 = new Friendship(u1, u2);
-        //  Friendship f2=new Friendship(u2,u1);
-
         validator_fr.validate(f1);
-        // validator_fr.validate(f2);
+        Friendship friendship =existPendingFriendship(f1);
+        if (friendship==null) {
+            f1.setId(lastIdFriendship + 1);
+            lastIdFriendship += 2;
+            repository_friendship.add(f1);
+        } else repository_friendship.acceptFriendshipInDB(friendship);
+        notifyObserevers();
 
-        f1.setId(lastIdFriendship + 1);
-        //  f2.setId(lastIdFriendship+2);
-        lastIdFriendship += 2;
-        repository_friendship.add(f1);
-        //  repository_friendship.add(f2);
 
+    }
+    public Friendship existPendingFriendship(Friendship f1){
+        List<Friendship> friendships = repository_friendship.getAll();
+        Optional<Friendship> optionalFriendship=friendships.stream()
+                .filter(friendship -> friendship.getUser1().getId()==f1.getUser2().getId() && friendship.getUser2().getId()==f1.getUser1().getId())
+                .findFirst();
 
+        boolean isPresent=optionalFriendship.isPresent();
+        if (isPresent)
+            return optionalFriendship.get();
+        else return null;
     }
 
     /**
@@ -97,12 +106,14 @@ public class AppService implements Service, Observable {
 
         HashMap<User, String> users = new HashMap<>();
         List<Friendship> friendships = repository_friendship.getAll();
-        for (Friendship friendship : friendships) {
-            if (friendship.getUser1().getId() == id)
-                users.put(friendship.getUser2(), friendship.getFriendsFrom());
-            else if (friendship.getUser2().getId() == id)
-                users.put(friendship.getUser1(), friendship.getFriendsFrom());
-        }
+        for (Friendship friendship : friendships)
+            if (friendship.getStatus() == "ACCEPTED") {
+                if (friendship.getUser1().getId() == id)
+                    users.put(friendship.getUser2(), friendship.getFriendsFrom());
+                else if (friendship.getUser2().getId() == id)
+                    users.put(friendship.getUser1(), friendship.getFriendsFrom());
+            }
+
         return users;
     }
 
@@ -223,7 +234,8 @@ public class AppService implements Service, Observable {
         return repository_user.getAll();
     }
 
-    List<Observer>observers;
+    List<Observer> observers;
+
     @Override
     public void addObserver(Observer observer) {
         observers.add(observer);

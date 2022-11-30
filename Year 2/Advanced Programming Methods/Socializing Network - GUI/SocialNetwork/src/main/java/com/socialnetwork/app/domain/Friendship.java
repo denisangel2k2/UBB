@@ -6,11 +6,12 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Friendship extends Entity<Integer>{
-    User user1;
-    User user2;
+    private User user1;
+    private User user2;
 
-    LocalDateTime friendsFrom;
+    private LocalDateTime friendsFrom=null;
 
+    private String status;
     /**
      * @param other
      */
@@ -19,19 +20,34 @@ public class Friendship extends Entity<Integer>{
 
     }
 
+    public String getStatus() {
+        return status;
+    }
+
     public Friendship(User user1, User user2) {
         this.user1 = user1;
         this.user2 = user2;
+        status="PENDING";
+    }
+
+    public void acceptFriend() {
+        this.status = "ACCEPTED";
         friendsFrom=LocalDateTime.now();
-
-
-
     }
 
     public void setFriendsFrom(String time){
-        friendsFrom=LocalDateTime.parse(time,Constants.FORMATTER);
+        if (!time.isEmpty())
+            friendsFrom=LocalDateTime.parse(time,Constants.FORMATTER);
+        else friendsFrom=null;
     }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public String getFriendsFrom(){
+        if (friendsFrom==null)
+            return "";
         return friendsFrom.format(Constants.FORMATTER);
     }
     public User getUser1() {

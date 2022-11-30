@@ -6,6 +6,7 @@ import com.socialnetwork.app.domain.User;
 import com.socialnetwork.app.domain.validation.FriendshipValidator;
 import com.socialnetwork.app.domain.validation.UserValidator;
 import com.socialnetwork.app.domain.validation.Validator;
+import com.socialnetwork.app.presentation.UI;
 import com.socialnetwork.app.repository.AbstractRepo;
 import com.socialnetwork.app.repository.FriendshipRepo;
 import com.socialnetwork.app.repository.Repository;
@@ -30,6 +31,7 @@ public class Main extends Application {
     private static AbstractRepo<Friendship> friendshipRepo =new FriendshipRepo(url,username,password, (UserRepo) userRepository);
     private static Service service=new AppService((UserRepo) userRepository, (FriendshipRepo) friendshipRepo,userValidator,friendshipValidator);
 
+    private static UI ui=new UI(service);
 
 
     @Override
@@ -40,7 +42,17 @@ public class Main extends Application {
         controller.setService((AppService) service);
         stage.setTitle("Hello!");
         stage.setScene(scene);
+        try{
+
+        service.addFriendship(9,8);
+        }
+        catch (Exception ex)
+        {
+            ex.getStackTrace();
+        }
         stage.show();
+
+
     }
 
     public static void main(String[] args) {

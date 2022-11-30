@@ -31,11 +31,11 @@ public class UsersFriendshipsController implements Observer{
     TableColumn<User,String>emailColumn;
 
     @FXML
-    TableColumn<User,String>user1Column;
+    TableColumn<Friendship,String>user1Column;
     @FXML
-    TableColumn<User,String>user2Column;
+    TableColumn<Friendship,String>user2Column;
     @FXML
-    TableColumn<User,String>sinceColumn;
+    TableColumn<Friendship,String>sinceColumn;
 
 
     @Override
@@ -55,6 +55,7 @@ public class UsersFriendshipsController implements Observer{
         firstNameColumn.setCellValueFactory(new PropertyValueFactory<User,String>("firstName"));
         lastNameColumn.setCellValueFactory(new PropertyValueFactory<User,String>("lastName"));
         emailColumn.setCellValueFactory(new PropertyValueFactory<User,String>("email"));
+
         usersTableView.setItems(usersList);
     }
 }
