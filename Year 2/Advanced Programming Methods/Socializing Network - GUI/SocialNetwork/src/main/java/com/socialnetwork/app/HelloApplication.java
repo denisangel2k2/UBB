@@ -1,4 +1,4 @@
-package com.socialnetwork.socialnetwork;
+package com.socialnetwork.app;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

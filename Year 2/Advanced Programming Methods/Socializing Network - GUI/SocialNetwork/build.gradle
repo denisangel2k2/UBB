@@ -24,8 +24,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'com.socialnetwork.socialnetwork'
-    mainClass = 'com.socialnetwork.socialnetwork.HelloApplication'
+    mainModule = 'com.socialnetwork.app'
+    mainClass = 'com.socialnetwork.app.HelloApplication'
 }
 
 javafx {
