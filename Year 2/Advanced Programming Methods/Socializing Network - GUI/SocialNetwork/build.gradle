@@ -25,7 +25,7 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'com.socialnetwork.app'
-    mainClass = 'com.socialnetwork.app.HelloApplication'
+    mainClass = 'com.socialnetwork.app.Main'
 }
 
 javafx {
@@ -42,6 +42,7 @@ dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.0'
 }
 
 test {

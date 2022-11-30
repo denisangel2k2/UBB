@@ -1,4 +1,4 @@
-module com.socialnetwork.socialnetwork {
+module com.socialnetwork.app {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -10,5 +10,7 @@ module com.socialnetwork.socialnetwork {
     opens com.socialnetwork.app to javafx.fxml;
     exports com.socialnetwork.app;
     exports com.socialnetwork.app.controllers;
+    exports com.socialnetwork.app.domain;
     opens com.socialnetwork.app.controllers to javafx.fxml;
+    opens com.socialnetwork.app.domain to javafx.base;
 }

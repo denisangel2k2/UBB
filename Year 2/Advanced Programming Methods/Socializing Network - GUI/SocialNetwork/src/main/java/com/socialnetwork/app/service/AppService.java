@@ -10,10 +10,12 @@ import com.socialnetwork.app.exceptions.ValidationException;
 import com.socialnetwork.app.repository.FriendshipRepo;
 import com.socialnetwork.app.repository.Network;
 import com.socialnetwork.app.repository.UserRepo;
+import com.socialnetwork.app.utils.Observer.Observable;
+import com.socialnetwork.app.utils.Observer.Observer;
 
 import java.util.*;
 
-public class AppService implements Service {
+public class AppService implements Service, Observable {
     private UserRepo repository_user;
     private final Validator<User> validator;
     private final Validator<Friendship> validator_fr;
@@ -30,6 +32,7 @@ public class AppService implements Service {
         this.repository_friendship = repository_friendship;
         lastIdUser = this.repository_user.getLastID();
         lastIdFriendship = this.repository_friendship.getLastID();
+        observers=new ArrayList<>();
     }
 
     /**
@@ -218,5 +221,21 @@ public class AppService implements Service {
     @Override
     public List<User> getAllUsers() {
         return repository_user.getAll();
+    }
+
+    List<Observer>observers;
+    @Override
+    public void addObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObserevers() {
+        observers.stream().forEach(observer -> observer.update());
     }
 }
