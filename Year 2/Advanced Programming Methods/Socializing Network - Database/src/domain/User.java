@@ -26,6 +26,7 @@ public class User extends Entity<Integer> {
         this.email = email;
     }
 
+
     @Override
     public String toString() {
         return "id=" + getId() +
@@ -34,28 +35,21 @@ public class User extends Entity<Integer> {
                 ", email='" + email + '\'';
     }
 
+    /**
+     * @return String print format
+     */
     public String printPatternString() {
         return "ID: " + getId() + " First Name: " + firstName + " Last Name: " + lastName + " Email: " + email;
     }
+
+    /**
+     * @return String csv format
+     */
     @Override
-    public String fileCsvPatternString(){
-        return getId()+";"+lastName+";"+firstName+";"+email+"\n";
-    }
-/*
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        User user = (User) o;
-        return Objects.equals(email, user.email);
+    public String fileCsvPatternString() {
+        return getId() + ";" + lastName + ";" + firstName + ";" + email + "\n";
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), email);
-    }
-    */
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
@@ -74,8 +68,8 @@ public class User extends Entity<Integer> {
      */
     @Override
     public void set(Entity other) {
-        this.email= ((User) other).email;
-        this.firstName= ((User) other).firstName;
-        this.lastName= ((User) other).lastName;
+        this.email = ((User) other).email;
+        this.firstName = ((User) other).firstName;
+        this.lastName = ((User) other).lastName;
     }
 }

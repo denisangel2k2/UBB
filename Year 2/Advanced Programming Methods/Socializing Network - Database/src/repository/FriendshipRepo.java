@@ -3,13 +3,12 @@ package repository;
 import domain.Friendship;
 import domain.User;
 import exceptions.RepoException;
-import utils.Constants;
+
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.Vector;
+
 
 public class FriendshipRepo extends AbstractRepo<Friendship> {
     private UserRepo repoUser;
@@ -46,15 +45,20 @@ public class FriendshipRepo extends AbstractRepo<Friendship> {
 
     }
 
+    /**
+     * Removes all the friendships that involve current users
+     *
+     * @param user
+     */
     public void removeAllFriendshipsByUser(User user) {
         List<Friendship> friendships = super.getAll();
 
         try {
             Connection connection = DriverManager.getConnection(super.url, super.userName, super.password);
 
-            for (int i=0; i<friendships.size(); i++){
-                if (friendships.get(i).getUser1().getId()==user.getId() ||
-                        friendships.get(i).getUser2().getId()== user.getId()){
+            for (int i = 0; i < friendships.size(); i++) {
+                if (friendships.get(i).getUser1().getId() == user.getId() ||
+                        friendships.get(i).getUser2().getId() == user.getId()) {
                     deleteEntity(friendships.get(i), connection);
                     friendships.remove(i);
                     i--;
