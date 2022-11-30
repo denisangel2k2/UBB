@@ -1,12 +1,11 @@
-module com.example.socialnetwork {
+module com.socialnetwork.socialnetwork {
     requires javafx.controls;
     requires javafx.fxml;
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
-    requires java.sql;
 
-    opens com.example.socialnetwork to javafx.fxml;
-    exports com.example.socialnetwork;
+    opens com.socialnetwork.socialnetwork to javafx.fxml;
+    exports com.socialnetwork.socialnetwork;
 }
