@@ -64,7 +64,8 @@ public class Friendship extends Entity<Integer>{
         if (o == null || getClass() != o.getClass()) return false;
        // if (!super.equals(o)) return false;
         Friendship that = (Friendship) o;
-        return Objects.equals(user1, that.user1) && Objects.equals(user2, that.user2);
+        return Objects.equals(user1, that.user1) && Objects.equals(user2, that.user2) ||
+                Objects.equals(user1,that.user2) &&  Objects.equals(user2,that.user1);
     }
 
     @Override

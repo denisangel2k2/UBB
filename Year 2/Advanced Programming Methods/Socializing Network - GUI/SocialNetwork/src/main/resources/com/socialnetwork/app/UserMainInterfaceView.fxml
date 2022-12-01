@@ -7,38 +7,36 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="648.0" scaleShape="false" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.socialnetwork.app.controllers.UserMainInterfaceController">
+<AnchorPane prefHeight="400.0" prefWidth="709.0" scaleShape="false" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.socialnetwork.app.controllers.UserMainInterfaceController">
    <children>
-      <SplitPane dividerPositions="0.29797979797979796" prefHeight="400.0" prefWidth="646.0" scaleShape="false">
+      <SplitPane dividerPositions="0.34498787388843977" focusTraversable="false" pickOnBounds="false" prefHeight="400.0" prefWidth="709.0" scaleShape="false" snapToPixel="false">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="200.0" SplitPane.resizableWithParent="false">
                <children>
-                  <SplitPane fx:id="UserInfoPane" dividerPositions="0.21587643678160923" layoutX="-1.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="189.0" scaleShape="false">
+                  <SplitPane fx:id="UserInfoPane" dividerPositions="0.21587643678160923" layoutX="-1.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="241.0" scaleShape="false">
                     <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="94.0" prefWidth="239.0" SplitPane.resizableWithParent="false">
                            <children>
-                              <Label fx:id="connectedUserLabel" layoutX="14.0" layoutY="14.0" text="User name">
+                              <Label fx:id="connectedUserLabel" layoutX="93.0" layoutY="14.0" text="User name">
                                  <font>
-                                    <Font size="15.0" />
+                                    <Font size="14.0" />
                                  </font></Label>
-                              <Label fx:id="emailUserLabel" layoutX="14.0" layoutY="42.0" text="Email">
-                                 <font>
-                                    <Font size="17.0" />
-                                 </font>
-                              </Label>
+                              <Label fx:id="emailUserLabel" layoutX="93.0" layoutY="42.0" text="Email" />
+                              <ImageView fx:id="profileImageView" fitHeight="68.0" fitWidth="73.0" layoutX="4.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="309.0" prefWidth="192.0">
                            <children>
-                              <Button fx:id="removeFriendButton" layoutX="112.0" layoutY="280.0" mnemonicParsing="false" text="Remove" />
-                              <TableView fx:id="friendsTableView" prefHeight="273.0" prefWidth="175.0">
+                              <Button fx:id="removeFriendButton" layoutX="169.0" layoutY="279.0" mnemonicParsing="false" onAction="#onRemoveFriendButton" text="Remove" />
+                              <TableView fx:id="friendsTableView" prefHeight="273.0" prefWidth="239.0">
                                 <columns>
-                                  <TableColumn fx:id="friendNameColumn" prefWidth="75.0" text="Name" />
-                                  <TableColumn fx:id="friendsSinceColumn" prefWidth="93.14283752441406" text="Friends since" />
+                                  <TableColumn fx:id="friendNameColumn" prefWidth="97.71425545215607" text="Name" />
+                                  <TableColumn fx:id="friendsSinceColumn" prefWidth="139.42860412597656" text="Friends since" />
                                 </columns>
                               </TableView>
                            </children>
@@ -49,16 +47,16 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="567.0">
                <children>
-                  <AnchorPane fx:id="friendRequestsPane" layoutX="239.0" layoutY="-1.0" prefHeight="400.0" prefWidth="243.0">
+                  <AnchorPane fx:id="friendRequestsPane" layoutX="239.0" layoutY="-1.0" prefHeight="400.0" prefWidth="225.0">
                      <children>
-                        <ListView fx:id="friendRequestsListView" layoutY="29.0" prefHeight="309.0" prefWidth="224.0" />
+                        <ListView fx:id="friendRequestsListView" layoutX="-2.0" layoutY="27.0" prefHeight="309.0" prefWidth="215.0" />
                         <HBox alignment="CENTER" layoutY="338.0" prefHeight="56.0" prefWidth="224.0" spacing="20.0">
                            <children>
                               <Button fx:id="acceptFriendButton" mnemonicParsing="false" onAction="#onAcceptButton" prefHeight="37.0" prefWidth="78.0" text="Accept" />
-                              <Button fx:id="rejectFriendButton" mnemonicParsing="false" prefHeight="37.0" prefWidth="78.0" text="Reject" />
+                              <Button fx:id="rejectFriendButton" mnemonicParsing="false" onAction="#onRejectFriendrequestButton" prefHeight="37.0" prefWidth="78.0" text="Reject" />
                            </children>
                         </HBox>
-                        <Label layoutX="31.0" layoutY="1.0" text="Friend Requests" textFill="#c92929">
+                        <Label layoutX="29.0" text="Friend Requests" textFill="#c92929">
                            <font>
                               <Font name="Arial" size="22.0" />
                            </font>
@@ -72,12 +70,14 @@
                         <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email" />
                     </columns>
                   </TableView>
-                  <Button fx:id="addFriendshipButton" layoutX="14.0" layoutY="327.0" mnemonicParsing="false" text="Add friend" />
+                  <Button fx:id="addFriendshipButton" layoutX="14.0" layoutY="327.0" mnemonicParsing="false" onAction="#onAddFriendButton" text="Add friend" />
                   <TextField fx:id="searchUserTextField" layoutX="9.0" layoutY="294.0" prefHeight="25.0" prefWidth="224.0" promptText="Search a user">
                      <font>
                         <Font name="Berlin Sans FB" size="15.0" />
                      </font>
                   </TextField>
+                  <Button fx:id="showFriendRequestsButton" layoutX="14.0" layoutY="358.0" mnemonicParsing="false" onAction="#onShowFriendrequestsButton" text="Show friendrequests" />
+                  <Button fx:id="refreshButton" layoutX="147.0" layoutY="358.0" mnemonicParsing="false" onAction="#update" text="Refresh" />
                </children>
             </AnchorPane>
         </items>

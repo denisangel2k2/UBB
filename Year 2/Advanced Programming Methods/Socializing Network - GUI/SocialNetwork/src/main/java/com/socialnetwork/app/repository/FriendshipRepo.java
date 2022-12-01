@@ -42,6 +42,7 @@ public class FriendshipRepo extends AbstractRepo<Friendship> {
             ps.setString(2,f1.getFriendsFrom());
             ps.setInt(3,f1.getId());
             ps.executeUpdate();
+            connection.close();
             super.loadData();
         }
         catch (SQLException ex){
@@ -84,6 +85,7 @@ public class FriendshipRepo extends AbstractRepo<Friendship> {
                     i--;
                 }
             }
+            connection.close();
 
         } catch (SQLException ex) {
             ex.printStackTrace();

@@ -7,6 +7,8 @@ import com.socialnetwork.app.utils.Constants;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.function.Predicate;
 
 public class UserRepo extends AbstractRepo<User>{
 
@@ -54,14 +56,24 @@ public class UserRepo extends AbstractRepo<User>{
      * @param entity
      */
     @Override
-    protected void storeEntity(User entity,Connection connection) throws SQLException{
-        String sql="INSERT INTO users (first_name,last_name,email,id) VALUES (?,?,?,?)";
-        PreparedStatement ps=connection.prepareStatement(sql);
-        ps.setString(1,entity.getFirstName());
-        ps.setString(2,entity.getLastName());
-        ps.setString(3,entity.getEmail());
-        ps.setInt(4,entity.getId());
-        ps.executeUpdate();
+    protected void storeEntity(User entity,Connection connection) throws SQLException,RepoException{
+
+        boolean foundUserWithSameEmail=false;
+        try{
+            findUserByEmail(entity.getEmail());
+            foundUserWithSameEmail=true;
+        }
+        catch (RepoException ex){
+            String sql="INSERT INTO users (first_name,last_name,email,id) VALUES (?,?,?,?)";
+            PreparedStatement ps=connection.prepareStatement(sql);
+            ps.setString(1,entity.getFirstName());
+            ps.setString(2,entity.getLastName());
+            ps.setString(3,entity.getEmail());
+            ps.setInt(4,entity.getId());
+            ps.executeUpdate();
+        }
+        if (foundUserWithSameEmail==true)
+            throw new RepoException(Constants.REPO_ALREADY_EXISTS);
 
     }
 
@@ -93,6 +105,16 @@ public class UserRepo extends AbstractRepo<User>{
         ps.setInt(1,entity.getId());
         ps.executeUpdate();
 
+    }
+    public User findUserByEmail(String email) throws RepoException{
+        Predicate<User> matchEmail = user -> user.getEmail().equals(email);
+
+        Optional<User> optionalUser=super.getAll().stream()
+                .filter(matchEmail)
+                .findFirst();
+        if (optionalUser.isPresent())
+            return optionalUser.get();
+        throw new RepoException(Constants.REPO_NO_ELEMENT_FOUND);
     }
 
 

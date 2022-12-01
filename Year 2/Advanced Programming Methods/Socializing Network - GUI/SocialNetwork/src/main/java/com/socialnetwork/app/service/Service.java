@@ -27,4 +27,6 @@ public interface Service {
     int sizeUsers();
     void update(int idToChange, String firstName, String lastName, String email) throws RepoException, ValidationException;
 
+    User findUserByEmail(String email) throws RepoException;
+    User findUserById(int id);
 }

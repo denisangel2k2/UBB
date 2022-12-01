@@ -42,6 +42,7 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
             ResultSet resultSet = ps.executeQuery();
 
             List<E> list = extractEntity(resultSet);
+            connection.close();
             list.forEach(entity -> entities.add(entity));
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -63,6 +64,7 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
             updateEntity(obj, connection);
             entity.set(obj);
 
+            connection.close();
 
         } catch (SQLException ex) {
             throw new RepoException(Constants.REPO_DATABASE_ERROR);
@@ -79,7 +81,7 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
      * @param connection Connect
      * @throws SQLException if the prepared statement throws an error
      */
-    protected abstract void storeEntity(E entity, Connection connection) throws SQLException;
+    protected abstract void storeEntity(E entity, Connection connection) throws SQLException, RepoException;
 
     /**
      * Must create a prepared statement that delete the given entity and executes it
@@ -112,16 +114,19 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
                 Connection connection = DriverManager.getConnection(url, userName, password);
                 storeEntity(obj, connection);
                 entities.add(obj);
+                connection.close();
+
             } catch (SQLException ex) {
                 ex.getStackTrace();
                 throw new RepoException(Constants.REPO_DATABASE_ERROR);
             }
+
         } else throw new RepoException(Constants.REPO_ALREADY_EXISTS);
     }
 
     private E find(int id) {
-
-        //loadData();
+//poate trb comentat
+       // loadData();
         Optional<E> optionalEntities = entities.stream()
                 .filter(entity -> entity.getId() == id)
                 .findFirst();
@@ -146,6 +151,7 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
                 Connection connection = DriverManager.getConnection(url, userName, password);
                 deleteEntity(entity, connection);
                 entities.remove(entity);
+                connection.close();
 
             } catch (SQLException ex) {
                 ex.printStackTrace();
@@ -174,6 +180,7 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
             Connection connection = DriverManager.getConnection(url, userName, password);
             deleteEntity(optionalE.get(), connection);
             entities.remove(optionalE.get());
+            connection.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
             throw new RepoException(Constants.REPO_DATABASE_ERROR);
@@ -201,6 +208,7 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
 
     @Override
     public List<E> getAll() {
+        loadData();
         return entities;
     }
 
