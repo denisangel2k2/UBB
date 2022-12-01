@@ -13,4 +13,5 @@ module com.socialnetwork.app {
     exports com.socialnetwork.app.domain;
     opens com.socialnetwork.app.controllers to javafx.fxml;
     opens com.socialnetwork.app.domain to javafx.base;
+
 }

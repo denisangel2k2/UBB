@@ -17,6 +17,7 @@ public interface Service {
     void addFriendship(int id1, int id2) throws NetworkException, RepoException, ValidationException;
     void removeFriendship(int id1, int id2) throws Exception;
     HashMap<User,String> getFriends(int id);
+    List<User> getFriendRequests(int id);
     int numberOfCommunities();
     List<User> mostSociableCommunity();
     List<User> getAllUsers();

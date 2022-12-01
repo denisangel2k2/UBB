@@ -93,6 +93,7 @@ public class AppService implements Service, Observable {
         repository_friendship.remove(f1);
         // repository_friendship.remove(f2);
 
+        notifyObserevers();
     }
 
     /**
@@ -107,7 +108,7 @@ public class AppService implements Service, Observable {
         HashMap<User, String> users = new HashMap<>();
         List<Friendship> friendships = repository_friendship.getAll();
         for (Friendship friendship : friendships)
-            if (friendship.getStatus() == "ACCEPTED") {
+            if (friendship.getStatus().equals("ACCEPTED")) {
                 if (friendship.getUser1().getId() == id)
                     users.put(friendship.getUser2(), friendship.getFriendsFrom());
                 else if (friendship.getUser2().getId() == id)
@@ -117,6 +118,21 @@ public class AppService implements Service, Observable {
         return users;
     }
 
+    /**
+     * Retruns list of the pending friendships of user with given id
+     * @param id - int
+     * @return List<User>
+     */
+    @Override
+    public List<User> getFriendRequests(int id) {
+        List<User> friendRequests=new ArrayList<>();
+        for (Friendship friendship : repository_friendship.getAll())
+            if (friendship.getStatus().equals("PENDING")){
+                if (friendship.getUser2().getId()==id)
+                    friendRequests.add(friendship.getUser1());
+            }
+        return friendRequests;
+    }
 
     /**
      * @return a network based on the current friendships
@@ -163,6 +179,7 @@ public class AppService implements Service, Observable {
         User user = repository_user.findElement(id);
         repository_user.remove(user);
         repository_friendship.removeAllFriendshipsByUser(user);
+        notifyObserevers();
     }
 
     /**
@@ -181,6 +198,7 @@ public class AppService implements Service, Observable {
         user.setId(id);
         validator.validate(user);
         repository_user.add(user);
+        notifyObserevers();
 
     }
 
@@ -200,6 +218,7 @@ public class AppService implements Service, Observable {
         u1.setId(idToChange);
         validator.validate(u1);
         repository_user.update(u1);
+        notifyObserevers();
     }
 
     /**
