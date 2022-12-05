@@ -1,5 +1,6 @@
 package com.socialnetwork.app;
 
+import com.socialnetwork.app.controllers.LoginInterfaceController;
 import com.socialnetwork.app.controllers.UserMainInterfaceController;
 import com.socialnetwork.app.controllers.UsersFriendshipsController;
 import com.socialnetwork.app.domain.Friendship;
@@ -34,7 +35,7 @@ public class Main extends Application {
     private static AbstractRepo<Friendship> friendshipRepo =new FriendshipRepo(url,username,password, (UserRepo) userRepository);
     private static Service service=new AppService((UserRepo) userRepository, (FriendshipRepo) friendshipRepo,userValidator,friendshipValidator);
 
-    private static UI ui=new UI(service);
+
 
 
 
@@ -42,24 +43,15 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("UserMainInterfaceView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 648, 400);
-        UserMainInterfaceController controller = fxmlLoader.getController();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("LoginInterfaceView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 286, 400);
+        LoginInterfaceController controller = fxmlLoader.getController();
         controller.setService((AppService) service);
-        stage.setTitle("Hello!");
         stage.setScene(scene);
-        try{
-            service.addFriendship(12,8);
-            service.removeFriendship(8,8);
-        }
-        catch (Exception ex){
-            ex.getStackTrace();
-        }
-
+        stage.setTitle("HI6");
+        stage.setResizable(false);
         stage.show();
-
-
-
     }
 
     public static void main(String[] args) {

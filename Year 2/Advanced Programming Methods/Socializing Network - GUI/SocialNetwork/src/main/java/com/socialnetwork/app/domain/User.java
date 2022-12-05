@@ -1,6 +1,8 @@
 package com.socialnetwork.app.domain;
 
 
+import java.util.Objects;
+
 public class User extends Entity<Integer> {
 
     public String getLastName() {
@@ -28,10 +30,11 @@ public class User extends Entity<Integer> {
 
     @Override
     public String toString() {
-        return "id=" + getId() +
-                ", lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", email='" + email + '\'';
+//        return "id=" + getId() +
+//                ", lastName='" + lastName + '\'' +
+//                ", firstName='" + firstName + '\'' +
+//                ", email='" + email + '\'';
+        return firstName+" "+lastName+"\n";
     }
 
     /**
@@ -70,5 +73,19 @@ public class User extends Entity<Integer> {
         this.email = ((User) other).email;
         this.firstName = ((User) other).firstName;
         this.lastName = ((User) other).lastName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        User user = (User) o;
+        return Objects.equals(email, user.email);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), email);
     }
 }

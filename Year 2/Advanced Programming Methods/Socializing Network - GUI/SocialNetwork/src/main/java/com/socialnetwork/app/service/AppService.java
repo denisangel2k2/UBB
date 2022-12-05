@@ -50,8 +50,8 @@ public class AppService implements Service, Observable {
         User u2 = repository_user.findElement(id2);
         Friendship f1 = new Friendship(u1, u2);
         validator_fr.validate(f1);
-        Friendship friendship =existPendingFriendship(f1);
-        if (friendship==null) {
+        Friendship friendship = existPendingFriendship(f1);
+        if (friendship == null) {
             f1.setId(lastIdFriendship + 1);
             lastIdFriendship += 2;
             repository_friendship.add(f1);
@@ -60,13 +60,14 @@ public class AppService implements Service, Observable {
 
 
     }
-    public Friendship existPendingFriendship(Friendship f1){
+
+    public Friendship existPendingFriendship(Friendship f1) {
         List<Friendship> friendships = repository_friendship.getAll();
-        Optional<Friendship> optionalFriendship=friendships.stream()
-                .filter(friendship -> friendship.getUser1().getId()==f1.getUser2().getId() && friendship.getUser2().getId()==f1.getUser1().getId())
+        Optional<Friendship> optionalFriendship = friendships.stream()
+                .filter(friendship -> friendship.getUser1().getId() == f1.getUser2().getId() && friendship.getUser2().getId() == f1.getUser1().getId())
                 .findFirst();
 
-        boolean isPresent=optionalFriendship.isPresent();
+        boolean isPresent = optionalFriendship.isPresent();
         if (isPresent)
             return optionalFriendship.get();
         else return null;
@@ -120,15 +121,16 @@ public class AppService implements Service, Observable {
 
     /**
      * Retruns list of the pending friendships of user with given id
+     *
      * @param id - int
      * @return List<User>
      */
     @Override
     public List<User> getFriendRequests(int id) {
-        List<User> friendRequests=new ArrayList<>();
+        List<User> friendRequests = new ArrayList<>();
         for (Friendship friendship : repository_friendship.getAll())
-            if (friendship.getStatus().equals("PENDING")){
-                if (friendship.getUser2().getId()==id)
+            if (friendship.getStatus().equals("PENDING")) {
+                if (friendship.getUser2().getId() == id)
                     friendRequests.add(friendship.getUser1());
             }
         return friendRequests;
@@ -200,6 +202,21 @@ public class AppService implements Service, Observable {
         repository_user.add(user);
         notifyObserevers();
 
+    }
+
+    @Override
+    public User findUserById(int id) {
+        Optional<User> optionalFriend = repository_user.getAll().stream()
+                .filter(user -> user.getId() == id)
+                .findFirst();
+        if (optionalFriend.isPresent())
+            return optionalFriend.get();
+        else return null;
+    }
+
+    @Override
+    public User findUserByEmail(String email) throws RepoException{
+        return repository_user.findUserByEmail(email);
     }
 
     /**

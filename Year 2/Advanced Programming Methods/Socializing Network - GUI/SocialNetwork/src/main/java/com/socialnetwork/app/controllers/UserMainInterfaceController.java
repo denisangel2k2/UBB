@@ -10,12 +10,12 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class UserMainInterfaceController implements Observer {
@@ -61,16 +61,26 @@ public class UserMainInterfaceController implements Observer {
     @FXML
     public TableColumn<User, String> emailColumn;
 
-    AppService service;
+    @FXML
+    public Button refreshButton;
+    @FXML
+    public Button showFriendRequestsButton;
 
-    public void setService(AppService service) {
+    @FXML
+    public ImageView profileImageView;
+    private AppService service;
 
+    public void setService(AppService service, User user) {
+
+
+        friendRequestsPane.setVisible(visibleFriendrequestsPane);
         this.service = service;
         this.service.addObserver(this);
-        this.loggedUser = this.service.getAllUsers().get(0);
+        this.loggedUser = user;
 
         connectedUserLabel.setText(loggedUser.getFirstName() + " " + loggedUser.getLastName());
         emailUserLabel.setText(loggedUser.getEmail());
+        profileImageView.setImage(new Image("https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png"));
         initLists();
     }
 
@@ -92,8 +102,7 @@ public class UserMainInterfaceController implements Observer {
         friendRequestsList.setAll(friendReqTemp);
 
         List<User> allUsers = service.getAllUsers();
-        List<User> allUsersTempList = new ArrayList<>();
-        allUsersTempList = allUsers.stream()
+        List<User> allUsersTempList = allUsers.stream()
                 .filter(user -> user.getId() != loggedUser.getId())
                 .collect(Collectors.toList());
 
@@ -107,14 +116,90 @@ public class UserMainInterfaceController implements Observer {
         try {
             int id = friendRequestsListView.getSelectionModel().getSelectedItem().getId();
             service.addFriendship(loggedUser.getId(), id);
+        } catch (NullPointerException npe) {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "No user selected!", ButtonType.OK);
+            alert.show();
         } catch (Exception ex) {
             Alert alert = new Alert(Alert.AlertType.ERROR, ex.getMessage(), ButtonType.OK);
+            alert.show();
+        }
+    }
+
+
+    @FXML
+    public void onRejectFriendrequestButton() {
+        try {
+            int userID = friendRequestsListView.getSelectionModel().getSelectedItem().getId();
+            service.removeFriendship(loggedUser.getId(), userID);
+        } catch (NullPointerException npe) {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "No user selected!", ButtonType.OK);
+            alert.show();
+        } catch (Exception ex) {
+            Alert alert = new Alert(Alert.AlertType.ERROR, ex.getMessage(), ButtonType.OK);
+            alert.show();
+        }
+    }
+
+    @FXML
+    public void onAddFriendButton() {
+        try {
+            User userToAskFriendship = usersTable.getSelectionModel().getSelectedItem();
+            service.addFriendship(loggedUser.getId(), userToAskFriendship.getId());
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Sent friendrequest", ButtonType.OK);
+            alert.show();
+
+        } catch (NullPointerException npe) {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "No user selected!", ButtonType.OK);
+            alert.show();
+        } catch (Exception ex) {
+            Alert alert = new Alert(Alert.AlertType.ERROR, ex.getMessage(), ButtonType.OK);
+            alert.show();
+        }
+
+    }
+
+    private boolean visibleFriendrequestsPane = false;
+
+    @FXML
+    public void onShowFriendrequestsButton() {
+        if (visibleFriendrequestsPane == false) {
+            visibleFriendrequestsPane = true;
+            showFriendRequestsButton.setText("Hide friendrequests");
+
+        } else {
+            visibleFriendrequestsPane = false;
+            showFriendRequestsButton.setText("Show friendrequests");
+        }
+        friendRequestsPane.setVisible(visibleFriendrequestsPane);
+    }
+
+    @FXML
+    public void onRemoveFriendButton() {
+
+        try {
+            int friendID = friendsTableView.getSelectionModel().getSelectedItem().getUID();
+            service.removeFriendship(friendID, loggedUser.getId());
+        } catch (NullPointerException npe) {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "No friend selected!", ButtonType.OK);
+            alert.show();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR, ex.getMessage(), ButtonType.OK);
+            alert.show();
         }
     }
 
     @FXML
     public void onSearchUserTextField() {
-
+        List<User> users = service.getAllUsers();
+        List<User> usersTemp = new ArrayList<>();
+        for (User user : users) {
+            String name = user.getFirstName() + " " + user.getLastName();
+            if (name.startsWith(searchUserTextField.getText()) && user.getId() != loggedUser.getId())
+                usersTemp.add(user);
+        }
+        usersList.setAll(usersTemp);
+        usersTable.setItems(usersList);
     }
 
     @FXML
@@ -132,8 +217,8 @@ public class UserMainInterfaceController implements Observer {
         friendsTableView.setItems(friendList);
 
 
+        searchUserTextField.textProperty().addListener(o -> onSearchUserTextField());
     }
-
 
     @Override
     public void update() {
