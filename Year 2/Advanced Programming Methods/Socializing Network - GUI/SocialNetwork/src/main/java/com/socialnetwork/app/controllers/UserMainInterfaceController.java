@@ -1,5 +1,6 @@
 package com.socialnetwork.app.controllers;
 
+import com.socialnetwork.app.Main;
 import com.socialnetwork.app.domain.Friendship;
 import com.socialnetwork.app.domain.User;
 import com.socialnetwork.app.domain.UserDTOFriend;
@@ -8,11 +9,14 @@ import com.socialnetwork.app.utils.Observer.Observer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 
 import java.util.*;
@@ -67,9 +71,43 @@ public class UserMainInterfaceController implements Observer {
     public Button showFriendRequestsButton;
 
     @FXML
+    public Button removeAccountButton;
+
+    @FXML
     public ImageView profileImageView;
     private AppService service;
 
+
+    @FXML
+    public void onRemoveAccountAction(){
+        try {
+            service.remove(loggedUser.getId());
+
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("LoginInterfaceView.fxml"));
+            Scene scene;
+            try{
+                scene = new Scene(loader.load(), 286, 400);
+            }
+            catch (Exception ex){
+                ex.printStackTrace();
+                return;
+            }
+            LoginInterfaceController controller=loader.getController();
+            controller.setService(service);
+            Stage currentStage= (Stage) removeAccountButton.getScene().getWindow();
+
+            Stage newStage = new Stage();
+            newStage.setScene(scene);
+            newStage.setResizable(false);
+            newStage.setTitle("HI6");
+            currentStage.close();
+            newStage.show();
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
+            Alert alert=new Alert(Alert.AlertType.ERROR,"No action finished!",ButtonType.OK);
+        }
+    }
     public void setService(AppService service, User user) {
 
 

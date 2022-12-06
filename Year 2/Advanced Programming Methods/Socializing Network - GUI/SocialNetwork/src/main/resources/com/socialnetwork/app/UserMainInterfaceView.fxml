@@ -39,6 +39,7 @@
                                   <TableColumn fx:id="friendsSinceColumn" prefWidth="139.42860412597656" text="Friends since" />
                                 </columns>
                               </TableView>
+                              <Button fx:id="removeAccountButton" layoutX="14.0" layoutY="279.0" mnemonicParsing="false" onAction="#onRemoveAccountAction" text="Delete account" />
                            </children>
                         </AnchorPane>
                     </items>
