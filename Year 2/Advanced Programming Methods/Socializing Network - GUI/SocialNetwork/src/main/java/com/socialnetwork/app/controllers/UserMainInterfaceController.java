@@ -74,10 +74,36 @@ public class UserMainInterfaceController implements Observer {
     public Button removeAccountButton;
 
     @FXML
+    public Button logoutButton;
+
+    @FXML
     public ImageView profileImageView;
     private AppService service;
 
 
+
+    @FXML
+    public void onLogoutButtonAction(){
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("LoginInterfaceView.fxml"));
+        Scene scene;
+        try{
+            scene = new Scene(loader.load(), 286, 400);
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+            return;
+        }
+        LoginInterfaceController controller=loader.getController();
+        controller.setService(service);
+        Stage currentStage= (Stage) removeAccountButton.getScene().getWindow();
+
+        Stage newStage = new Stage();
+        newStage.setScene(scene);
+        newStage.setResizable(false);
+        newStage.setTitle("HI6");
+        currentStage.close();
+        newStage.show();
+    }
     @FXML
     public void onRemoveAccountAction(){
         try {
