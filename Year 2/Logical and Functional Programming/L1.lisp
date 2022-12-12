@@ -13,7 +13,7 @@
 
 ;e - elementul cu care facem perechi
 ;l - lista cu care facem perechile
-(defun pereche(e l)
+(defun pereche(e l) 
     (cond
         ((null l) ())
         (T (cons (list e (car l)) (pereche e (cdr l))))
