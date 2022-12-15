@@ -179,8 +179,9 @@ public class AppService implements Service, Observable {
     public void remove(int id) throws Exception {
         // User user=repository_user.remove(id);
         User user = repository_user.findElement(id);
-        repository_user.remove(user);
+
         repository_friendship.removeAllFriendshipsByUser(user);
+        repository_user.remove(user);
         notifyObserevers();
     }
 
