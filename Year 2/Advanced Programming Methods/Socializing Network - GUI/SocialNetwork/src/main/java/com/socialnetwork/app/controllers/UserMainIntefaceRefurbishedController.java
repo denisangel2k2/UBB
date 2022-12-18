@@ -1,7 +1,6 @@
 package com.socialnetwork.app.controllers;
 
 import com.socialnetwork.app.Main;
-import com.socialnetwork.app.domain.Friendship;
 import com.socialnetwork.app.domain.User;
 import com.socialnetwork.app.domain.UserDTOFriend;
 import com.socialnetwork.app.service.AppService;
@@ -15,14 +14,15 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.stream.Collectors;
 
-public class UserMainInterfaceController implements Observer {
+public class UserMainIntefaceRefurbishedController implements Observer {
 
     private ObservableList<User> usersList = FXCollections.observableArrayList();
     private ObservableList<UserDTOFriend> friendList = FXCollections.observableArrayList();
@@ -30,60 +30,79 @@ public class UserMainInterfaceController implements Observer {
     private ObservableList<User> friendRequestsList = FXCollections.observableArrayList();
     private User loggedUser = null;
     @FXML
-    public AnchorPane friendRequestsPane;
-    @FXML
-    public Button acceptFriendButton;
-    @FXML
-    public Button rejectFriendButton;
+    private ImageView acceptFriendButton;
 
     @FXML
-    public Button removeFriendButton;
+    private Label connectedUserLabel;
 
     @FXML
-    public Button addFriendshipButton;
-    @FXML
-    public TextField searchUserTextField;
+    private Button deleteAccountButton;
 
     @FXML
-    public Label connectedUserLabel;
-    @FXML
-    public Label emailUserLabel;
-    @FXML
-    public TableView<UserDTOFriend> friendsTableView;
-    @FXML
-    public ListView<User> friendRequestsListView;
-    @FXML
-    public TableView<User> usersTable;
-    @FXML
-    public TableColumn<UserDTOFriend, String> friendNameColumn;
-    @FXML
-    public TableColumn<UserDTOFriend, String> friendsSinceColumn;
-    @FXML
-    public TableColumn<User, String> firstNameColumn;
-    @FXML
-    public TableColumn<User, String> lastNameColumn;
-    @FXML
-    public TableColumn<User, String> emailColumn;
+    private TableColumn<User, String> emailColumn;
+
 
     @FXML
-    public Button refreshButton;
+    private TableColumn<UserDTOFriend, String> friendNameColumn;
     @FXML
-    public Button showFriendRequestsButton;
+    private TableColumn<UserDTOFriend, String> friendsSinceColumn;
+    @FXML
+    private Label emailUserLabel;
 
     @FXML
-    public Button removeAccountButton;
+    private TableColumn<User, String> firstNameColumn;
 
     @FXML
-    public Button logoutButton;
+    private VBox friendsPane;
 
     @FXML
-    public Button showMessagesButton;
+    private TableView<UserDTOFriend> friendsTableView;
+    @FXML
+    private ListView<User> friendRequestsListView;
 
     @FXML
-    public ImageView profileImageView;
+    private TableColumn<User, String> lastNameColumn;
+
+    @FXML
+    private VBox messagesListPane;
+
+    @FXML
+    private ImageView profileImageView;
+
+    @FXML
+    private ImageView rejectFriendButton;
+
+    @FXML
+    private Button removeFriendButton;
+
+    @FXML
+    private VBox searchPane;
+
+    @FXML
+    private TextField searchUserTextField;
+
+    @FXML
+    private VBox settingsPane;
+
+    @FXML
+    private TableView<User> usersTable;
+
+    @FXML
+    private ImageView settingsPaneButton;
+
+    @FXML
+    private ImageView usersPaneButton;
+
+    @FXML
+    private ImageView logoutButton;
+
+    @FXML
+    private ImageView messagesListPaneButton;
+
+    @FXML
+    private ImageView friendsPaneButton;
+
     private AppService service;
-
-
 
     @FXML
     public void onLogoutButtonAction(){
@@ -98,7 +117,7 @@ public class UserMainInterfaceController implements Observer {
         }
         LoginInterfaceController controller=loader.getController();
         controller.setService(service);
-        Stage currentStage= (Stage) removeAccountButton.getScene().getWindow();
+        Stage currentStage= (Stage) deleteAccountButton.getScene().getWindow();
 
         Stage newStage = new Stage();
         newStage.setScene(scene);
@@ -123,7 +142,7 @@ public class UserMainInterfaceController implements Observer {
             }
             LoginInterfaceController controller=loader.getController();
             controller.setService(service);
-            Stage currentStage= (Stage) removeAccountButton.getScene().getWindow();
+            Stage currentStage= (Stage) deleteAccountButton.getScene().getWindow();
 
             Stage newStage = new Stage();
             newStage.setScene(scene);
@@ -140,14 +159,14 @@ public class UserMainInterfaceController implements Observer {
     public void setService(AppService service, User user) {
 
 
-        friendRequestsPane.setVisible(visibleFriendrequestsPane);
+        settingsPane.setVisible(true);
         this.service = service;
         this.service.addObserver(this);
         this.loggedUser = user;
 
         connectedUserLabel.setText(loggedUser.getFirstName() + " " + loggedUser.getLastName());
         emailUserLabel.setText(loggedUser.getEmail());
-        profileImageView.setImage(new Image("https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png"));
+        profileImageView.setImage(new Image("https://i.imgur.com/DnozCSK.png"));
         initLists();
     }
 
@@ -225,20 +244,8 @@ public class UserMainInterfaceController implements Observer {
 
     }
 
-    private boolean visibleFriendrequestsPane = false;
 
-    @FXML
-    public void onShowFriendrequestsButton() {
-        if (visibleFriendrequestsPane == false) {
-            visibleFriendrequestsPane = true;
-            showFriendRequestsButton.setText("Hide friendrequests");
 
-        } else {
-            visibleFriendrequestsPane = false;
-            showFriendRequestsButton.setText("Show friendrequests");
-        }
-        friendRequestsPane.setVisible(visibleFriendrequestsPane);
-    }
 
     @FXML
     public void onRemoveFriendButton() {
@@ -285,11 +292,43 @@ public class UserMainInterfaceController implements Observer {
 
 
         searchUserTextField.textProperty().addListener(o -> onSearchUserTextField());
+
+
     }
 
     @Override
     public void update() {
         initLists();
+
+    }
+
+    @FXML
+    private void onFriendsButton(){
+        settingsPane.setVisible(false);
+        friendsPane.setVisible(true);
+        messagesListPane.setVisible(false);
+        searchPane.setVisible(false);
+    }
+    @FXML
+    private void onMessagesButton(){
+        settingsPane.setVisible(false);
+        friendsPane.setVisible(false);
+        messagesListPane.setVisible(true);
+        searchPane.setVisible(false);
+    }
+    @FXML
+    private void onSearchButton(){
+        settingsPane.setVisible(false);
+        friendsPane.setVisible(false);
+        messagesListPane.setVisible(false);
+        searchPane.setVisible(true);
+    }
+    @FXML
+    private void onSettingsButton(){
+        settingsPane.setVisible(true);
+        friendsPane.setVisible(false);
+        messagesListPane.setVisible(false);
+        searchPane.setVisible(false);
     }
 
 }

@@ -40,7 +40,7 @@
                                 </columns>
                               </TableView>
                               <Button fx:id="removeAccountButton" layoutX="14.0" layoutY="279.0" mnemonicParsing="false" onAction="#onRemoveAccountAction" text="Delete account" />
-                              <Button fx:id="logoutButton" layoutX="112.0" layoutY="279.0"  onAction="#onLogoutButtonAction" mnemonicParsing="false" text="Logout" />
+                              <Button fx:id="logoutButton" layoutX="112.0" layoutY="279.0" mnemonicParsing="false" onAction="#onLogoutButtonAction" text="Logout" />
                            </children>
                         </AnchorPane>
                     </items>
@@ -79,7 +79,8 @@
                      </font>
                   </TextField>
                   <Button fx:id="showFriendRequestsButton" layoutX="14.0" layoutY="358.0" mnemonicParsing="false" onAction="#onShowFriendrequestsButton" text="Show friendrequests" />
-                  <Button fx:id="refreshButton" layoutX="147.0" layoutY="358.0" mnemonicParsing="false" onAction="#update" text="Refresh" />
+                  <Button fx:id="refreshButton" layoutX="174.0" layoutY="358.0" mnemonicParsing="false" onAction="#update" text="Refresh" />
+                  <Button fx:id="showMessagesButton" layoutX="184.0" layoutY="327.0" mnemonicParsing="false" text="Chats" />
                </children>
             </AnchorPane>
         </items>

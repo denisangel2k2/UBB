@@ -83,7 +83,7 @@ public class LoginInterfaceController {
         try{
             String email=emailLoginTextField.getText();
             currentUser=service.findUserByEmail(email);
-            FXMLLoader loader=new FXMLLoader(Main.class.getResource("UserMainInterfaceView.fxml"));
+            FXMLLoader loader=new FXMLLoader(Main.class.getResource("UserMainInterfaceRefurbished.fxml"));
             Scene scene;
             try{
                 scene = new Scene(loader.load(), 710, 400);
@@ -92,7 +92,7 @@ public class LoginInterfaceController {
                 ex.printStackTrace();
                 return;
             }
-            UserMainInterfaceController controller = loader.getController();
+            UserMainIntefaceRefurbishedController controller = loader.getController();
             controller.setService(service,currentUser);
             Stage currentStage=(Stage) signInLoginButton.getScene().getWindow();
 

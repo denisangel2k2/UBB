@@ -10,6 +10,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class MessageRepo extends AbstractRepo<Message> {
+    public MessageRepo(String url, String userName, String password) {
+        super(url, userName, password);
+    }
+
     @Override
     protected Message extractEntity(String line) {
         return null;

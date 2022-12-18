@@ -2,7 +2,7 @@ package com.socialnetwork.app;
 
 import com.socialnetwork.app.controllers.LoginInterfaceController;
 import com.socialnetwork.app.controllers.UserMainInterfaceController;
-import com.socialnetwork.app.controllers.UsersFriendshipsController;
+
 import com.socialnetwork.app.domain.Friendship;
 import com.socialnetwork.app.domain.User;
 import com.socialnetwork.app.domain.validation.FriendshipValidator;
