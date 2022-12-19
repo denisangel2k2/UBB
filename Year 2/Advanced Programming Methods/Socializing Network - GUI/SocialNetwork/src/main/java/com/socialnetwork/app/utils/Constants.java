@@ -12,6 +12,7 @@ public class Constants {
     public static final String REPO_DATABASE_ERROR="We encountered a database error!\n";
 
     public static DateTimeFormatter FORMATTER =DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+    public static DateTimeFormatter FORMATTER_MESSAGE =DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
 
 }

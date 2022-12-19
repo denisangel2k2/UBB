@@ -1,6 +1,7 @@
 package com.socialnetwork.app.domain;
 
 import com.socialnetwork.app.repository.MessageRepo;
+import com.socialnetwork.app.utils.Constants;
 
 import java.time.LocalDateTime;
 
@@ -15,6 +16,7 @@ public class Message extends Entity<Integer>{
         this.sender = sender;
         this.receiver = receiver;
         this.message = message;
+        timeSent=LocalDateTime.now();
     }
 
     public User getSender() {
@@ -29,6 +31,12 @@ public class Message extends Entity<Integer>{
         return message;
     }
 
+    public String getTimeSentString(){
+        return timeSent.format(Constants.FORMATTER);
+    }
+    public void setTimeSent(String time){
+        timeSent=LocalDateTime.parse(time,Constants.FORMATTER);
+    }
     public LocalDateTime getTimeSent() {
         return timeSent;
     }

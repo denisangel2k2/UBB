@@ -103,7 +103,10 @@
                               </HBox>
                            </children>
                         </VBox>
-                        <VBox fx:id="messagesListPane" layoutX="-1.0" layoutY="4.0" prefHeight="400.0" prefWidth="225.0" visible="false" />
+                        <VBox fx:id="messagesListPane" layoutX="-1.0" layoutY="4.0" prefHeight="400.0" prefWidth="225.0" visible="false">
+                           <children>
+                              <ListView fx:id="usersMessageList" prefHeight="408.0" prefWidth="226.0" visible="false" />
+                           </children></VBox>
                         <VBox fx:id="settingsPane" layoutX="-1.0" layoutY="4.0" prefHeight="400.0" prefWidth="225.0">
                            <children>
                               <Label fx:id="connectedUserLabel" text="User name" textFill="WHITE">
@@ -181,9 +184,36 @@
             </HBox>
          </left>
          <center>
-            <AnchorPane prefHeight="400.0" prefWidth="333.0" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="424.0" prefWidth="304.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label layoutX="113.0" layoutY="153.0" text="HI6" textAlignment="CENTER" textFill="#8fdd99">
+                  <VBox prefHeight="400.0" prefWidth="303.0">
+                     <children>
+                        <TableView fx:id="chatTable" prefHeight="360.0" prefWidth="305.0">
+                          <columns>
+                            <TableColumn fx:id="messageFromUserColumn" prefWidth="152.0" text="From" />
+                            <TableColumn fx:id="messageToUserColumn" minWidth="0.0" prefWidth="151.20001220703125" text="To" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox prefHeight="28.0" prefWidth="303.0">
+                           <children>
+                              <TextField fx:id="messageTextField" prefHeight="26.0" prefWidth="242.0" promptText="Send message">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button fx:id="sendMessageButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Send">
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label fx:id="logoLabel" layoutX="113.0" layoutY="153.0" text="HI6" textAlignment="CENTER" textFill="#8fdd99" visible="false">
                      <font>
                         <Font name="Impact" size="57.0" />
                      </font>

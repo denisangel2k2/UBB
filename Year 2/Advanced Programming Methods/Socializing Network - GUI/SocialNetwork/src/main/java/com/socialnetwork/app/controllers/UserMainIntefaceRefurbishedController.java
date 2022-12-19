@@ -1,8 +1,11 @@
 package com.socialnetwork.app.controllers;
 
 import com.socialnetwork.app.Main;
+import com.socialnetwork.app.domain.Message;
+import com.socialnetwork.app.domain.MessageDTO;
 import com.socialnetwork.app.domain.User;
 import com.socialnetwork.app.domain.UserDTOFriend;
+import com.socialnetwork.app.exceptions.RepoException;
 import com.socialnetwork.app.service.AppService;
 import com.socialnetwork.app.utils.Observer.Observer;
 import javafx.collections.FXCollections;
@@ -26,6 +29,7 @@ public class UserMainIntefaceRefurbishedController implements Observer {
 
     private ObservableList<User> usersList = FXCollections.observableArrayList();
     private ObservableList<UserDTOFriend> friendList = FXCollections.observableArrayList();
+    private ObservableList<MessageDTO> messagesList = FXCollections.observableArrayList();
 
     private ObservableList<User> friendRequestsList = FXCollections.observableArrayList();
     private User loggedUser = null;
@@ -102,22 +106,40 @@ public class UserMainIntefaceRefurbishedController implements Observer {
     @FXML
     private ImageView friendsPaneButton;
 
+    @FXML
+    private TableColumn<MessageDTO, String> messageToUserColumn;
+
+    @FXML
+    private TableColumn<MessageDTO, String> messageFromUserColumn;
+
+    @FXML
+    private TableView<MessageDTO> chatTable;
+
+    @FXML
+    private TextField messageTextField;
+
+    @FXML
+    private Button sendMessageButton;
+
+    @FXML
+    private ListView<UserDTOFriend> usersMessageList;
+
+
     private AppService service;
 
     @FXML
-    public void onLogoutButtonAction(){
+    public void onLogoutButtonAction() {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("LoginInterfaceView.fxml"));
         Scene scene;
-        try{
+        try {
             scene = new Scene(loader.load(), 286, 400);
-        }
-        catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
             return;
         }
-        LoginInterfaceController controller=loader.getController();
+        LoginInterfaceController controller = loader.getController();
         controller.setService(service);
-        Stage currentStage= (Stage) deleteAccountButton.getScene().getWindow();
+        Stage currentStage = (Stage) deleteAccountButton.getScene().getWindow();
 
         Stage newStage = new Stage();
         newStage.setScene(scene);
@@ -126,23 +148,23 @@ public class UserMainIntefaceRefurbishedController implements Observer {
         currentStage.close();
         newStage.show();
     }
+
     @FXML
-    public void onRemoveAccountAction(){
+    public void onRemoveAccountAction() {
         try {
             service.remove(loggedUser.getId());
 
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("LoginInterfaceView.fxml"));
             Scene scene;
-            try{
+            try {
                 scene = new Scene(loader.load(), 286, 400);
-            }
-            catch (Exception ex){
+            } catch (Exception ex) {
                 ex.printStackTrace();
                 return;
             }
-            LoginInterfaceController controller=loader.getController();
+            LoginInterfaceController controller = loader.getController();
             controller.setService(service);
-            Stage currentStage= (Stage) deleteAccountButton.getScene().getWindow();
+            Stage currentStage = (Stage) deleteAccountButton.getScene().getWindow();
 
             Stage newStage = new Stage();
             newStage.setScene(scene);
@@ -150,12 +172,12 @@ public class UserMainIntefaceRefurbishedController implements Observer {
             newStage.setTitle("HI6");
             currentStage.close();
             newStage.show();
-        }
-        catch(Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
-            Alert alert=new Alert(Alert.AlertType.ERROR,"No action finished!",ButtonType.OK);
+            Alert alert = new Alert(Alert.AlertType.ERROR, "No action finished!", ButtonType.OK);
         }
     }
+
     public void setService(AppService service, User user) {
 
 
@@ -193,6 +215,7 @@ public class UserMainIntefaceRefurbishedController implements Observer {
                 .collect(Collectors.toList());
 
         usersList.setAll(allUsersTempList);
+
 
     }
 
@@ -245,8 +268,6 @@ public class UserMainIntefaceRefurbishedController implements Observer {
     }
 
 
-
-
     @FXML
     public void onRemoveFriendButton() {
 
@@ -276,11 +297,14 @@ public class UserMainIntefaceRefurbishedController implements Observer {
         usersTable.setItems(usersList);
     }
 
+
     @FXML
     public void initialize() {
         friendNameColumn.setCellValueFactory(new PropertyValueFactory<UserDTOFriend, String>("name_user"));
         friendsSinceColumn.setCellValueFactory(new PropertyValueFactory<UserDTOFriend, String>("friendsSince"));
 
+        messageFromUserColumn.setCellValueFactory(new PropertyValueFactory<MessageDTO, String>("toMessage"));
+        messageFromUserColumn.setCellValueFactory(new PropertyValueFactory<MessageDTO, String>("fromMessage"));
 
         firstNameColumn.setCellValueFactory(new PropertyValueFactory<User, String>("firstName"));
         lastNameColumn.setCellValueFactory(new PropertyValueFactory<User, String>("lastName"));
@@ -289,11 +313,46 @@ public class UserMainIntefaceRefurbishedController implements Observer {
 
         friendRequestsListView.setItems(friendRequestsList);
         friendsTableView.setItems(friendList);
+        usersMessageList.setItems(friendList);
 
 
         searchUserTextField.textProperty().addListener(o -> onSearchUserTextField());
 
 
+    }
+
+
+    @FXML
+    public void onUserMessageClick() {
+        int fromUserID = usersMessageList.getSelectionModel().getSelectedItem().getUID();
+
+        User fromUser = service.findUserById(fromUserID);
+        List<Message> messageList = service.getMessagesBetweenUsers(loggedUser.getId(), fromUserID);
+
+
+        List<MessageDTO> messages = new ArrayList<>();
+        for (Message message : messageList) {
+            MessageDTO messageDTO;
+            if (message.getSender().getId() == loggedUser.getId()) {
+                messageDTO = new MessageDTO("", message.getMessage());
+            } else {
+                messageDTO = new MessageDTO(message.getMessage(), "");
+            }
+            messages.add(messageDTO);
+        }
+
+        messagesList.setAll(messages);
+
+
+    }
+
+    @FXML
+    public void onSendMessageButton(){
+        String messageText = messageTextField.getText();
+        try{
+
+        }
+        catch ()
     }
 
     @Override
@@ -303,28 +362,31 @@ public class UserMainIntefaceRefurbishedController implements Observer {
     }
 
     @FXML
-    private void onFriendsButton(){
+    private void onFriendsButton() {
         settingsPane.setVisible(false);
         friendsPane.setVisible(true);
         messagesListPane.setVisible(false);
         searchPane.setVisible(false);
     }
+
     @FXML
-    private void onMessagesButton(){
+    private void onMessagesButton() {
         settingsPane.setVisible(false);
         friendsPane.setVisible(false);
         messagesListPane.setVisible(true);
         searchPane.setVisible(false);
     }
+
     @FXML
-    private void onSearchButton(){
+    private void onSearchButton() {
         settingsPane.setVisible(false);
         friendsPane.setVisible(false);
         messagesListPane.setVisible(false);
         searchPane.setVisible(true);
     }
+
     @FXML
-    private void onSettingsButton(){
+    private void onSettingsButton() {
         settingsPane.setVisible(true);
         friendsPane.setVisible(false);
         messagesListPane.setVisible(false);

@@ -12,6 +12,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.util.Objects;
+
 public class LoginInterfaceController {
 
     @FXML
@@ -93,6 +95,7 @@ public class LoginInterfaceController {
                 return;
             }
             UserMainIntefaceRefurbishedController controller = loader.getController();
+
             controller.setService(service,currentUser);
             Stage currentStage=(Stage) signInLoginButton.getScene().getWindow();
 
@@ -100,6 +103,7 @@ public class LoginInterfaceController {
 
             Stage newStage = new Stage();
             newStage.setScene(scene);
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/mainStyle.css")).toExternalForm());
             newStage.setResizable(false);
             newStage.setTitle("HI6");
             currentStage.close();

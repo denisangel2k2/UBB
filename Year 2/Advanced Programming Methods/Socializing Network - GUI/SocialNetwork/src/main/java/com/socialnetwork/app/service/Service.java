@@ -1,6 +1,7 @@
 package com.socialnetwork.app.service;
 
 import com.socialnetwork.app.domain.Friendship;
+import com.socialnetwork.app.domain.Message;
 import com.socialnetwork.app.domain.User;
 import com.socialnetwork.app.exceptions.NetworkException;
 import com.socialnetwork.app.exceptions.RepoException;
@@ -29,4 +30,8 @@ public interface Service {
 
     User findUserByEmail(String email) throws RepoException;
     User findUserById(int id);
+    List<Message> getMessagesForUser(int id_user);
+    List<Message> getMessagesBetweenUsers(int id_user1, int id_user2);
+    void addMessage(int id_sender, int id_receiver, String message) throws RepoException;
+
 }

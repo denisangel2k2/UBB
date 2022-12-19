@@ -1,6 +1,7 @@
 package com.socialnetwork.app.service;
 
 import com.socialnetwork.app.domain.Friendship;
+import com.socialnetwork.app.domain.Message;
 import com.socialnetwork.app.domain.User;
 
 import com.socialnetwork.app.domain.validation.*;
@@ -8,12 +9,14 @@ import com.socialnetwork.app.exceptions.NetworkException;
 import com.socialnetwork.app.exceptions.RepoException;
 import com.socialnetwork.app.exceptions.ValidationException;
 import com.socialnetwork.app.repository.FriendshipRepo;
+import com.socialnetwork.app.repository.MessageRepo;
 import com.socialnetwork.app.repository.Network;
 import com.socialnetwork.app.repository.UserRepo;
 import com.socialnetwork.app.utils.Observer.Observable;
 import com.socialnetwork.app.utils.Observer.Observer;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class AppService implements Service, Observable {
     private UserRepo repository_user;
@@ -21,15 +24,18 @@ public class AppService implements Service, Observable {
     private final Validator<Friendship> validator_fr;
     private FriendshipRepo repository_friendship;
 
+    private MessageRepo repository_message;
+
     private int lastIdUser;
     private int lastIdFriendship;
 
 
-    public AppService(UserRepo repository_user, FriendshipRepo repository_friendship, Validator<User> validator, Validator<Friendship> validator2) {
+    public AppService(UserRepo repository_user, FriendshipRepo repository_friendship, MessageRepo repository_message,Validator<User> validator, Validator<Friendship> validator2) {
         this.repository_user = repository_user;
         this.validator = validator;
         this.validator_fr = validator2;
         this.repository_friendship = repository_friendship;
+        this.repository_message=repository_message;
         lastIdUser = this.repository_user.getLastID();
         lastIdFriendship = this.repository_friendship.getLastID();
         observers = new ArrayList<>();
@@ -286,5 +292,38 @@ public class AppService implements Service, Observable {
     @Override
     public void notifyObserevers() {
         observers.stream().forEach(observer -> observer.update());
+    }
+
+
+    @Override
+    public List<Message> getMessagesForUser(int id_user){
+        List<Message> messages=repository_message.getAll().stream()
+                .filter(message -> message.getReceiver().getId()==id_user || message.getSender().getId()==id_user)
+                .collect(Collectors.toList());
+
+        Comparator<Message> comparator = new Comparator<Message>() {
+            @Override
+            public int compare(Message o1, Message o2) {
+                return o1.getTimeSent().compareTo(o2.getTimeSent());
+            }
+        };
+        messages.sort(comparator);
+
+        return messages;
+    }
+    @Override
+    public void addMessage(int id_sender, int id_receiver, String message) throws RepoException {
+        User sender=repository_user.findElement(id_sender);
+        User receiver=repository_user.findElement(id_receiver);
+        Message newMessage=new Message(sender,receiver,message);
+
+        repository_message.add(newMessage);
+    }
+
+    @Override
+    public List<Message> getMessagesBetweenUsers(int id_user1, int id_user2) {
+        return getMessagesForUser(id_user1).stream()
+                .filter(message -> message.getSender().getId() == id_user2 || message.getReceiver().getId()==id_user2)
+                .collect(Collectors.toList());
     }
 }
