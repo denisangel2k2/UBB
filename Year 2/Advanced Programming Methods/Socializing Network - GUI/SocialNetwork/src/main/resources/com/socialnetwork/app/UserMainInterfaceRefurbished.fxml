@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.socialnetwork.app.controllers.UserMainIntefaceRefurbishedController">
@@ -30,7 +29,6 @@
                               <Insets bottom="13.0" />
                            </VBox.margin>
                         </ImageView>
-                        <Line endX="-30.707107543945312" endY="0.4142006039619446" startX="-100.0" />
                         <ImageView fx:id="usersPaneButton" fitHeight="45.0" fitWidth="45.0" onMouseClicked="#onSearchButton" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:/C:/Users/Denis/Documents/GitHub/UBB/Year%202/Advanced%20Programming%20Methods/Socializing%20Network%20-%20GUI/SocialNetwork/src/utilities/users.png" />
@@ -105,7 +103,7 @@
                         </VBox>
                         <VBox fx:id="messagesListPane" layoutX="-1.0" layoutY="4.0" prefHeight="400.0" prefWidth="225.0" visible="false">
                            <children>
-                              <ListView fx:id="usersMessageList" prefHeight="408.0" prefWidth="226.0" visible="false" />
+                              <ListView fx:id="usersMessageList" onMouseClicked="#onUserFromUserMessageListClick" prefHeight="408.0" prefWidth="226.0" />
                            </children></VBox>
                         <VBox fx:id="settingsPane" layoutX="-1.0" layoutY="4.0" prefHeight="400.0" prefWidth="225.0">
                            <children>
@@ -126,6 +124,11 @@
                                  </font>
                               </Label>
                               <Pane prefHeight="305.0" prefWidth="225.0" />
+                              <Button fx:id="refreshButton" mnemonicParsing="false" text="Refresh" onAction="#update">
+                                 <VBox.margin>
+                                    <Insets bottom="7.0" left="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </Button>
                               <Button fx:id="deleteAccountButton" mnemonicParsing="false" onAction="#onRemoveAccountAction" styleClass="darkPane" stylesheets="@../../../styles/mainStyle.css" text="Delete account" textFill="RED">
                                  <font>
                                     <Font name="Arial Bold" size="13.0" />
@@ -186,7 +189,7 @@
          <center>
             <AnchorPane prefHeight="424.0" prefWidth="304.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox prefHeight="400.0" prefWidth="303.0">
+                  <VBox fx:id="chatPane" prefHeight="400.0" prefWidth="303.0" visible="false">
                      <children>
                         <TableView fx:id="chatTable" prefHeight="360.0" prefWidth="305.0">
                           <columns>
@@ -204,7 +207,7 @@
                                     <Insets bottom="5.0" left="5.0" right="10.0" top="10.0" />
                                  </HBox.margin>
                               </TextField>
-                              <Button fx:id="sendMessageButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Send">
+                              <Button fx:id="sendMessageButton" mnemonicParsing="false" onAction="#onSendMessageButton" prefHeight="26.0" prefWidth="50.0" text="Send">
                                  <HBox.margin>
                                     <Insets top="10.0" />
                                  </HBox.margin>

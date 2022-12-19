@@ -36,7 +36,8 @@ public class Friendship extends Entity<Integer>{
     }
 
     public void setFriendsFrom(String time){
-        if (!time.isEmpty())
+       // if (!time.isEmpty())
+        if (!time.equals("Waiting..."))
             friendsFrom=LocalDateTime.parse(time,Constants.FORMATTER);
         else friendsFrom=null;
     }
@@ -47,7 +48,7 @@ public class Friendship extends Entity<Integer>{
 
     public String getFriendsFrom(){
         if (friendsFrom==null)
-            return "";
+            return "Waiting...";
         return friendsFrom.format(Constants.FORMATTER);
     }
     public User getUser1() {

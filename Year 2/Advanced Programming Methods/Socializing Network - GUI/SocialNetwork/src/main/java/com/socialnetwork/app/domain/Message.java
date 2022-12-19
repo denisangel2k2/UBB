@@ -32,10 +32,10 @@ public class Message extends Entity<Integer>{
     }
 
     public String getTimeSentString(){
-        return timeSent.format(Constants.FORMATTER);
+        return timeSent.format(Constants.FORMATTER_MESSAGE);
     }
     public void setTimeSent(String time){
-        timeSent=LocalDateTime.parse(time,Constants.FORMATTER);
+        timeSent=LocalDateTime.parse(time,Constants.FORMATTER_MESSAGE);
     }
     public LocalDateTime getTimeSent() {
         return timeSent;

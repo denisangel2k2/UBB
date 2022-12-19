@@ -65,6 +65,7 @@ public class MessageRepo extends AbstractRepo<Message> {
         ps.setInt(3,entity.getReceiver().getId());
         ps.setString(4, entity.getTimeSentString());
         ps.setString(5,entity.getMessage());
+        ps.executeUpdate();
     }
 
     @Override

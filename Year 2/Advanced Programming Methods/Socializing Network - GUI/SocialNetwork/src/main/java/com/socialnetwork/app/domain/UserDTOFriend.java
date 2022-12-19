@@ -23,4 +23,9 @@ public class UserDTOFriend {
     public String getName_user() {
         return name_user;
     }
+
+    @Override
+    public String toString() {
+        return name_user;
+    }
 }

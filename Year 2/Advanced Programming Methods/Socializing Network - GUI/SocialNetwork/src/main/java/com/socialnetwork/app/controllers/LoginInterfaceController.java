@@ -88,7 +88,7 @@ public class LoginInterfaceController {
             FXMLLoader loader=new FXMLLoader(Main.class.getResource("UserMainInterfaceRefurbished.fxml"));
             Scene scene;
             try{
-                scene = new Scene(loader.load(), 710, 400);
+                scene = new Scene(loader.load(), 600, 400);
             }
             catch (Exception ex){
                 ex.printStackTrace();

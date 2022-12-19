@@ -28,6 +28,7 @@ public class AppService implements Service, Observable {
 
     private int lastIdUser;
     private int lastIdFriendship;
+    private int lastIdMessage;
 
 
     public AppService(UserRepo repository_user, FriendshipRepo repository_friendship, MessageRepo repository_message,Validator<User> validator, Validator<Friendship> validator2) {
@@ -38,6 +39,7 @@ public class AppService implements Service, Observable {
         this.repository_message=repository_message;
         lastIdUser = this.repository_user.getLastID();
         lastIdFriendship = this.repository_friendship.getLastID();
+        lastIdMessage=this.repository_message.getLastID();
         observers = new ArrayList<>();
     }
 
@@ -115,7 +117,7 @@ public class AppService implements Service, Observable {
         HashMap<User, String> users = new HashMap<>();
         List<Friendship> friendships = repository_friendship.getAll();
         for (Friendship friendship : friendships)
-            if (friendship.getStatus().equals("ACCEPTED")) {
+            if (friendship.getStatus().equals("ACCEPTED") || friendship.getStatus().equals("PENDING")) {
                 if (friendship.getUser1().getId() == id)
                     users.put(friendship.getUser2(), friendship.getFriendsFrom());
                 else if (friendship.getUser2().getId() == id)
@@ -313,11 +315,14 @@ public class AppService implements Service, Observable {
     }
     @Override
     public void addMessage(int id_sender, int id_receiver, String message) throws RepoException {
+
         User sender=repository_user.findElement(id_sender);
         User receiver=repository_user.findElement(id_receiver);
         Message newMessage=new Message(sender,receiver,message);
-
+        newMessage.setId(lastIdMessage+1);
+        lastIdMessage++;
         repository_message.add(newMessage);
+        notifyObserevers();
     }
 
     @Override

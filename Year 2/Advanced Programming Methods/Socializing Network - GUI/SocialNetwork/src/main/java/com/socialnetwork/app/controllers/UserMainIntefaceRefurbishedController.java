@@ -124,8 +124,14 @@ public class UserMainIntefaceRefurbishedController implements Observer {
     @FXML
     private ListView<UserDTOFriend> usersMessageList;
 
+    @FXML
+    private VBox chatPane;
+
+    @FXML
+    private Button refreshButton;
 
     private AppService service;
+
 
     @FXML
     public void onLogoutButtonAction() {
@@ -197,14 +203,17 @@ public class UserMainIntefaceRefurbishedController implements Observer {
 
         List<UserDTOFriend> friendsTemp = new ArrayList<>();
 
-        for (User user : friendsOfUser.keySet()) {
-            UserDTOFriend friend = new UserDTOFriend(user, friendsOfUser.get(user));
-            friendsTemp.add(friend);
-        }
+
         List<User> friendReqTemp = new ArrayList<>();
         List<User> friendReqOfUsers = service.getFriendRequests(loggedUser.getId());
         for (User user : friendReqOfUsers) {
             friendReqTemp.add(user);
+        }
+
+        for (User user : friendsOfUser.keySet()) {
+            UserDTOFriend friend = new UserDTOFriend(user, friendsOfUser.get(user));
+            if (!friendReqTemp.contains(user))
+                friendsTemp.add(friend);
         }
         friendList.setAll(friendsTemp);
         friendRequestsList.setAll(friendReqTemp);
@@ -303,8 +312,9 @@ public class UserMainIntefaceRefurbishedController implements Observer {
         friendNameColumn.setCellValueFactory(new PropertyValueFactory<UserDTOFriend, String>("name_user"));
         friendsSinceColumn.setCellValueFactory(new PropertyValueFactory<UserDTOFriend, String>("friendsSince"));
 
-        messageFromUserColumn.setCellValueFactory(new PropertyValueFactory<MessageDTO, String>("toMessage"));
+        messageToUserColumn.setCellValueFactory(new PropertyValueFactory<MessageDTO, String>("toMessage"));
         messageFromUserColumn.setCellValueFactory(new PropertyValueFactory<MessageDTO, String>("fromMessage"));
+
 
         firstNameColumn.setCellValueFactory(new PropertyValueFactory<User, String>("firstName"));
         lastNameColumn.setCellValueFactory(new PropertyValueFactory<User, String>("lastName"));
@@ -313,8 +323,9 @@ public class UserMainIntefaceRefurbishedController implements Observer {
 
         friendRequestsListView.setItems(friendRequestsList);
         friendsTableView.setItems(friendList);
-        usersMessageList.setItems(friendList);
 
+        usersMessageList.setItems(friendList);
+        chatTable.setItems(messagesList);
 
         searchUserTextField.textProperty().addListener(o -> onSearchUserTextField());
 
@@ -323,7 +334,9 @@ public class UserMainIntefaceRefurbishedController implements Observer {
 
 
     @FXML
-    public void onUserMessageClick() {
+    public void onUserFromUserMessageListClick() {
+        //make visibile pane
+        chatPane.setVisible(true);
         int fromUserID = usersMessageList.getSelectionModel().getSelectedItem().getUID();
 
         User fromUser = service.findUserById(fromUserID);
@@ -350,9 +363,15 @@ public class UserMainIntefaceRefurbishedController implements Observer {
     public void onSendMessageButton(){
         String messageText = messageTextField.getText();
         try{
+            int id_receipentUser = usersMessageList.getSelectionModel().getSelectedItem().getUID();
+            service.addMessage(loggedUser.getId(),id_receipentUser,messageText);
+
 
         }
-        catch ()
+        catch (RepoException ex){
+            Alert alert=new Alert(Alert.AlertType.ERROR, ex.getMessage(),ButtonType.OK);
+            alert.show();
+        }
     }
 
     @Override
@@ -364,6 +383,7 @@ public class UserMainIntefaceRefurbishedController implements Observer {
     @FXML
     private void onFriendsButton() {
         settingsPane.setVisible(false);
+        chatPane.setVisible(false);
         friendsPane.setVisible(true);
         messagesListPane.setVisible(false);
         searchPane.setVisible(false);
@@ -372,6 +392,7 @@ public class UserMainIntefaceRefurbishedController implements Observer {
     @FXML
     private void onMessagesButton() {
         settingsPane.setVisible(false);
+        chatPane.setVisible(false);
         friendsPane.setVisible(false);
         messagesListPane.setVisible(true);
         searchPane.setVisible(false);
@@ -380,6 +401,7 @@ public class UserMainIntefaceRefurbishedController implements Observer {
     @FXML
     private void onSearchButton() {
         settingsPane.setVisible(false);
+        chatPane.setVisible(false);
         friendsPane.setVisible(false);
         messagesListPane.setVisible(false);
         searchPane.setVisible(true);
@@ -388,6 +410,7 @@ public class UserMainIntefaceRefurbishedController implements Observer {
     @FXML
     private void onSettingsButton() {
         settingsPane.setVisible(true);
+        chatPane.setVisible(false);
         friendsPane.setVisible(false);
         messagesListPane.setVisible(false);
         searchPane.setVisible(false);
