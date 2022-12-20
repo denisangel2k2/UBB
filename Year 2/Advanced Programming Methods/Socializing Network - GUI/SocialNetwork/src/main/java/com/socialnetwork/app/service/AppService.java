@@ -213,6 +213,11 @@ public class AppService implements Service, Observable {
 
     }
 
+    /**
+     * Finds a user by given id
+     * @param id Integer
+     * @return User
+     */
     @Override
     public User findUserById(int id) {
         Optional<User> optionalFriend = repository_user.getAll().stream()
@@ -223,6 +228,12 @@ public class AppService implements Service, Observable {
         else return null;
     }
 
+    /**
+     * Finds a user by given email
+     * @param email
+     * @return
+     * @throws RepoException
+     */
     @Override
     public User findUserByEmail(String email) throws RepoException{
         return repository_user.findUserByEmail(email);
@@ -281,22 +292,38 @@ public class AppService implements Service, Observable {
 
     List<Observer> observers;
 
+    /**
+     * Adds an observer to the observer list
+     * @param observer Observer
+     */
     @Override
     public void addObserver(Observer observer) {
         observers.add(observer);
     }
 
+    /**
+     * Removes an observer from the observer list
+     * @param observer Observer
+     */
     @Override
     public void removeObserver(Observer observer) {
         observers.remove(observer);
     }
 
+    /**
+     * Executes update method of all observers
+     */
     @Override
     public void notifyObserevers() {
         observers.stream().forEach(observer -> observer.update());
     }
 
 
+    /**
+     * Get all the messages for the given user
+     * @param id_user Integer
+     * @return List < Message >
+     */
     @Override
     public List<Message> getMessagesForUser(int id_user){
         List<Message> messages=repository_message.getAll().stream()
@@ -313,6 +340,14 @@ public class AppService implements Service, Observable {
 
         return messages;
     }
+
+    /**
+     * Adds a message to the message database
+     * @param id_sender - Integer
+     * @param id_receiver - Integer
+     * @param message - String
+     * @throws RepoException
+     */
     @Override
     public void addMessage(int id_sender, int id_receiver, String message) throws RepoException {
 
@@ -325,6 +360,12 @@ public class AppService implements Service, Observable {
         notifyObserevers();
     }
 
+    /**
+     * Gets all the messages between the users who have the given id
+     * @param id_user1 - Integer
+     * @param id_user2 - Integer
+     * @return List < Message >
+     */
     @Override
     public List<Message> getMessagesBetweenUsers(int id_user1, int id_user2) {
         return getMessagesForUser(id_user1).stream()

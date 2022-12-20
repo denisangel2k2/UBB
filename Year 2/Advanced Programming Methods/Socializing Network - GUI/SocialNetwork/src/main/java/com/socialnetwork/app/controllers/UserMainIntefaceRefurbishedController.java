@@ -23,6 +23,7 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class UserMainIntefaceRefurbishedController implements Observer {
@@ -309,16 +310,16 @@ public class UserMainIntefaceRefurbishedController implements Observer {
 
     @FXML
     public void initialize() {
-        friendNameColumn.setCellValueFactory(new PropertyValueFactory<UserDTOFriend, String>("name_user"));
-        friendsSinceColumn.setCellValueFactory(new PropertyValueFactory<UserDTOFriend, String>("friendsSince"));
+        friendNameColumn.setCellValueFactory(new PropertyValueFactory<>("name_user"));
+        friendsSinceColumn.setCellValueFactory(new PropertyValueFactory<>("friendsSince"));
 
-        messageToUserColumn.setCellValueFactory(new PropertyValueFactory<MessageDTO, String>("toMessage"));
-        messageFromUserColumn.setCellValueFactory(new PropertyValueFactory<MessageDTO, String>("fromMessage"));
+        messageToUserColumn.setCellValueFactory(new PropertyValueFactory<>("toMessage"));
+        messageFromUserColumn.setCellValueFactory(new PropertyValueFactory<>("fromMessage"));
 
 
-        firstNameColumn.setCellValueFactory(new PropertyValueFactory<User, String>("firstName"));
-        lastNameColumn.setCellValueFactory(new PropertyValueFactory<User, String>("lastName"));
-        emailColumn.setCellValueFactory(new PropertyValueFactory<User, String>("email"));
+        firstNameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
+        lastNameColumn.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+        emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
         usersTable.setItems(usersList);
 
         friendRequestsListView.setItems(friendRequestsList);
@@ -346,7 +347,7 @@ public class UserMainIntefaceRefurbishedController implements Observer {
         List<MessageDTO> messages = new ArrayList<>();
         for (Message message : messageList) {
             MessageDTO messageDTO;
-            if (message.getSender().getId() == loggedUser.getId()) {
+            if (Objects.equals(message.getSender().getId(), loggedUser.getId())) {
                 messageDTO = new MessageDTO("", message.getMessage());
             } else {
                 messageDTO = new MessageDTO(message.getMessage(), "");
