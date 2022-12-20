@@ -9,6 +9,7 @@ import com.socialnetwork.app.exceptions.RepoException;
 import com.socialnetwork.app.service.AppService;
 import com.socialnetwork.app.utils.Observer.Observer;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,8 +19,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -330,8 +334,29 @@ public class UserMainIntefaceRefurbishedController implements Observer {
 
         searchUserTextField.textProperty().addListener(o -> onSearchUserTextField());
 
+        setWrappingTextForColumns(messageFromUserColumn);
+        setWrappingTextForColumns(messageToUserColumn);
+
 
     }
+    private <E> void setWrappingTextForColumns(TableColumn<E, String> t) {
+        t.setCellFactory(param -> new TableCell<>() {
+            @Override
+            protected void updateItem(String item, boolean empty) {
+                super.updateItem(item, empty);
+                if (item == null || empty) {
+                    setText(null);
+                    setStyle("");
+                } else {
+                    Text text = new Text(item);
+                    text.setStyle("-fx-text-alignment:justify;");
+                    text.wrappingWidthProperty().bind(getTableColumn().widthProperty().subtract(35));
+                    setGraphic(text);
+                }
+            }
+        });
+    }
+
 
 
     @FXML
