@@ -76,8 +76,6 @@ public class MessageRepo extends AbstractRepo<Message> {
         ps.executeUpdate();
     }
 
-    @Override
-    protected void updateEntity(Message entity, Connection connection) throws SQLException {
 
-    }
+
 }

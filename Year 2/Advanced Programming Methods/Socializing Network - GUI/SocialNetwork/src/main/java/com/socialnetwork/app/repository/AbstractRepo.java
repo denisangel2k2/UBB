@@ -48,13 +48,14 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
             ex.printStackTrace();
         }
     }
-
+/*
     /**
      * Updates an entity
      *
      * @param obj Entity
      * @throws RepoException if the entity does not exist
-     */
+
+
     @Override
     public void update(E obj) throws RepoException {
         loadData();
@@ -71,6 +72,8 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
         }
     }
 
+
+    */
     @Override
     public void storeData() {
     }
@@ -97,7 +100,7 @@ public abstract class AbstractRepo<E extends Entity<Integer>> implements Reposit
      * @param connection Connect
      * @throws SQLException if the prepared statement throws an error
      */
-    protected abstract void updateEntity(E entity, Connection connection) throws SQLException;
+    //protected abstract void updateEntity(E entity, Connection connection) throws SQLException;
 
     /**
      * Adds an entity to the entity list

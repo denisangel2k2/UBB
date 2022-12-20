@@ -61,7 +61,7 @@ public class FriendshipRepo extends AbstractRepo<Friendship> {
      * @param connection
      * @throws SQLException
      */
-    @Override
+
     protected void updateEntity(Friendship entity, Connection connection) throws SQLException {
 
     }

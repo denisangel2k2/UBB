@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
 
-public class UserRepo extends AbstractRepo<User>{
+public class UserRepo extends AbstractRepo<User> implements UpdatableRepository<User>{
 
     public UserRepo(String url, String userName, String password) {
         super(url, userName, password);
@@ -82,7 +82,7 @@ public class UserRepo extends AbstractRepo<User>{
      * @param connection
      * @throws SQLException
      */
-    @Override
+
     protected void updateEntity(User entity, Connection connection) throws SQLException {
         String sql="UPDATE users SET first_name=?, last_name=?, email=? WHERE id=?";
         PreparedStatement ps=connection.prepareStatement(sql);
@@ -118,4 +118,19 @@ public class UserRepo extends AbstractRepo<User>{
     }
 
 
+    @Override
+    public void update(User obj) throws RepoException {
+        loadData();
+        try {
+            Connection connection = DriverManager.getConnection(url, userName, password);
+            User entity = findElement(obj.getId());
+            updateEntity(obj, connection);
+            entity.set(obj);
+
+            connection.close();
+
+        } catch (SQLException ex) {
+            throw new RepoException(Constants.REPO_DATABASE_ERROR);
+        }
+    }
 }

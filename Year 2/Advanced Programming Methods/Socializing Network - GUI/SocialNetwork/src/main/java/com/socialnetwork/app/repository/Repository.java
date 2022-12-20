@@ -15,7 +15,7 @@ public interface Repository<E extends Entity<Integer>> {
     E remove(E entity) throws Exception;
     void loadData();
     void storeData();
-    void update(E obj) throws Exception;
+   //void update(E obj) throws Exception;
     E findElement(int id) throws RepoException;
     List<E> getAll();
     int getLastID();
