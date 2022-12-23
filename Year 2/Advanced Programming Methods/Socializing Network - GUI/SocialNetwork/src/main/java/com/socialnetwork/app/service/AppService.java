@@ -333,7 +333,7 @@ public class AppService implements Service, Observable {
         Comparator<Message> comparator = new Comparator<Message>() {
             @Override
             public int compare(Message o1, Message o2) {
-                return o1.getTimeSent().compareTo(o2.getTimeSent());
+                return o1.getId()- o2.getId();
             }
         };
         messages.sort(comparator);
