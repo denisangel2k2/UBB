@@ -1,4 +1,5 @@
-﻿using BasketRomania.repository;
+﻿using BasketRomania.domain;
+using BasketRomania.repository;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -32,5 +33,82 @@ namespace BasketRomania.service
 
             return filepaths;
         }
+
+
+        //cerinta 1
+        public List<Jucator<ID>> getJucatoriPentruEchipa(string nume_echipa)
+        {
+            List<Jucator<ID>> jucatori = (List<Jucator<ID>>)jucatoriRepo.GetAll();
+            List<Jucator<ID>> jucatoriPentruEchipa = new List<Jucator<ID>>();
+            jucatoriPentruEchipa = jucatori.FindAll(x => x.Team.Nume.Equals(nume_echipa));
+            return jucatoriPentruEchipa;
+
+        }
+
+        //cerinta 2
+
+        public List<JucatorActiv<ID>> getJucatoriActiviPentruEchipaLaMeci(string nume_echipa, ID id_meci)
+        {
+
+            List<JucatorActiv<ID>> jucatoriActivi = (List<JucatorActiv<ID>>)jucatoriActiviRepo.GetAll();
+            List<JucatorActiv<ID>>jucatoriPtEchipaLaMeci = new List<JucatorActiv<ID>>();
+
+            Meci<ID> meci=meciRepo.findByID(id_meci);
+
+            jucatoriPtEchipaLaMeci = jucatoriActivi.FindAll(
+                jucator => jucator.IdMeci.Equals(id_meci) &&
+                jucatoriRepo.findByID(jucator.IdJucator).Team.Nume.Equals(nume_echipa)
+            );
+
+            return jucatoriPtEchipaLaMeci;
+
+        }
+
+        //cerinta 3
+
+        public List<Meci<ID>> getMeciuriBetweenDates(string date1S, string date2S)
+        {
+            DateTime date1=DateTime.Parse(date1S);
+            DateTime date2=DateTime.Parse(date2S);
+            List<Meci<ID>> meciuri = (List<Meci<ID>>)meciRepo.GetAll();
+            List<Meci<ID>> meciuriInPerioada = new List<Meci<ID>>();
+
+            meciuriInPerioada=meciuri.FindAll(meci => date1.CompareTo(meci.Time)<=0 && date2.CompareTo(meci.Time)>=0);
+
+            return meciuriInPerioada;
+
+        }
+
+        //cerinta 4
+        public string getScorPentruMeci(ID idMeci)
+        {
+            Meci<ID> meci = meciRepo.findByID(idMeci);
+            List<JucatorActiv<ID>> jucatoriActivi = (List<JucatorActiv<ID>>)jucatoriActiviRepo.GetAll();
+            List<JucatorActiv<ID>> jucatoriInMeci=new List<JucatorActiv<ID>>();
+            jucatoriInMeci = jucatoriActivi.FindAll(jucator => jucator.IdMeci.Equals(idMeci));
+
+            Dictionary<string, int> scor = new Dictionary<string, int>();
+
+
+            scor.Add(meci.Echipa1.Nume, 0);
+            scor.Add(meci.Echipa2.Nume, 0);
+
+
+            foreach(JucatorActiv<ID> jucator in jucatoriInMeci) {
+                string numeEchipa = jucatoriRepo.findByID(jucator.IdJucator).Team.Nume;
+                    scor[numeEchipa]+=jucator.NrPuncteInscrise;
+                
+            }
+
+            string scor_string = scor.Keys.ToArray()[0] + "-" + scor.Keys.ToArray()[1] + " | ";
+            foreach (string key in scor.Keys.ToArray())
+            {
+                scor_string+= scor[key].ToString()+" ";
+            }
+            scor_string+= "\n";
+            Console.WriteLine(scor_string);
+            return scor_string;
+        }
+
     }
 }

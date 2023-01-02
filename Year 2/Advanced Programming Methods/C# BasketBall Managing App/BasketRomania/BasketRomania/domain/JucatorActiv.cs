@@ -23,7 +23,7 @@ namespace BasketRomania.domain
             
         }
 
-        public ID IDidJucator { get { return idJucator; } set { idJucator = value; } }
+        public ID IdJucator { get { return idJucator; } set { idJucator = value; } }
         public ID IdMeci { get { return idMeci; } set { idMeci = value; } }
         public int NrPuncteInscrise { get { return nrPuncteInscrise; } set { nrPuncteInscrise = value; } }
         public string Tip { 
