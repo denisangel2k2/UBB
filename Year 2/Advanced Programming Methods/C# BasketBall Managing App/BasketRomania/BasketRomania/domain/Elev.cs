@@ -19,5 +19,9 @@ namespace BasketRomania.domain
             this.scoala = scoala;
         }
 
+        public override string? ToString()
+        {
+            return base.ToString()+" "+nume+" "+scoala+"\n";
+        }
     }
 }

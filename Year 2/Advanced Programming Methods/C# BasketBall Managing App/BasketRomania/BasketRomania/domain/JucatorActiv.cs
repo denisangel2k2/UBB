@@ -36,5 +36,11 @@ namespace BasketRomania.domain
                 else tip = domain.Tip.Participant;
             } 
         }
+
+        public override string? ToString()
+        {
+            return base.ToString() + "ID jucator:"+idJucator.ToString()+" ID meci: " +idMeci.ToString()+" Nr. inscrieri: "+nrPuncteInscrise.ToString()+" Tip: "+Tip+"\n";
+
+        }
     }
 }

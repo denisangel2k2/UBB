@@ -18,6 +18,11 @@ namespace BasketRomania.domain
         public Entity(ID givenId) {
             id = givenId;
         }
+
+        public override string? ToString()
+        {
+            return id.ToString()+" ";
+        }
     }
    
 }

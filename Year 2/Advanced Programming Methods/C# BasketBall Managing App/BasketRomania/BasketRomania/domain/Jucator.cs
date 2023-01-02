@@ -14,5 +14,10 @@ namespace BasketRomania.domain
         {
             this.team = echipa;
         }
+
+        public override string? ToString()
+        {
+            return base.ToString()+" "+team.ToString()+"\n";
+        }
     }
 }

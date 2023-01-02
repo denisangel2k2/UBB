@@ -23,5 +23,7 @@ namespace BasketRomania.repository
             jucatorActiv.Tip = values[4];
             return jucatorActiv;
         }
+
+        
     }
 }

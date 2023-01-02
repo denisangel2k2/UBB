@@ -23,5 +23,10 @@ namespace BasketRomania.domain
             this.time = time;
 
         }
+
+        public override string? ToString()
+        {
+            return base.ToString()+"Echipa 1: "+echipa1.ToString()+"\tEchipa 2: "+echipa2.ToString()+" "+time.ToString()+"\n";
+        }
     }
 }

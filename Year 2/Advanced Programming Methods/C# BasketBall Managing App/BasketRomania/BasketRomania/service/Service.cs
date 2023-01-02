@@ -55,10 +55,18 @@ namespace BasketRomania.service
 
             Meci<ID> meci=meciRepo.findByID(id_meci);
 
+            foreach(var jucator in jucatoriActivi)
+            {
+                if (jucator.IdMeci.Equals(id_meci) && jucatoriRepo.findByID(jucator.IdJucator).Team.Nume.Equals(nume_echipa))
+                    jucatoriPtEchipaLaMeci.Add(jucator);
+            }
+
+            /*
             jucatoriPtEchipaLaMeci = jucatoriActivi.FindAll(
                 jucator => jucator.IdMeci.Equals(id_meci) &&
                 jucatoriRepo.findByID(jucator.IdJucator).Team.Nume.Equals(nume_echipa)
             );
+            */
 
             return jucatoriPtEchipaLaMeci;
 
@@ -106,8 +114,25 @@ namespace BasketRomania.service
                 scor_string+= scor[key].ToString()+" ";
             }
             scor_string+= "\n";
-            Console.WriteLine(scor_string);
+            //Console.WriteLine(scor_string);
             return scor_string;
+        }
+
+        public List<Echipa<ID>> getEchipe()
+        {
+            return (List<Echipa<ID>>)echipeRepo.GetAll();
+        }
+        public List<JucatorActiv<ID>> getJucatoriActivi()
+        {
+            return (List<JucatorActiv<ID>>)jucatoriActiviRepo.GetAll();
+        }
+        public List<Meci<ID>> getMeciuri()
+        {
+            return (List<Meci<ID>>)meciRepo.GetAll();
+        }
+        public List<Jucator<ID>> getJucatori()
+        {
+            return (List<Jucator<ID>>)jucatoriRepo.GetAll();
         }
 
     }

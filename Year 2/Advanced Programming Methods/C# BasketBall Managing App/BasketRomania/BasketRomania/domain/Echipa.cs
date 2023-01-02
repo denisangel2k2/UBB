@@ -14,5 +14,10 @@ namespace BasketRomania.domain
         {
             this.nume = nume;
         }
+
+        public override string? ToString()
+        {
+            return base.ToString() + " " + nume + "\n";
+        }
     }
 }
