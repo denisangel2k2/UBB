@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\BasketRomania.csproj",
+      "projectUniqueName": "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Semester 1\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\BasketRomania.csproj",
       "projectName": "BasketRomania",
-      "projectPath": "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\BasketRomania.csproj",
+      "projectPath": "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Semester 1\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\BasketRomania.csproj",
       "packagesPath": "C:\\Users\\Denis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\obj\\",
+      "outputPath": "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Semester 1\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Denis\\AppData\\Roaming\\NuGet\\NuGet.Config",

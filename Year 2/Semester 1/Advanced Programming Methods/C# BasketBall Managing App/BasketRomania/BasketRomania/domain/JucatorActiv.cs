@@ -39,7 +39,7 @@ namespace BasketRomania.domain
 
         public override string? ToString()
         {
-            return base.ToString() + "ID jucator:"+idJucator.ToString()+" ID meci: " +idMeci.ToString()+" Nr. inscrieri: "+nrPuncteInscrise.ToString()+" Tip: "+Tip+"\n";
+            return base.ToString() + "ID jucator:"+idJucator.ToString()+" ID meci: " +idMeci.ToString()+" Nr. inscrieri: "+nrPuncteInscrise.ToString()+" Tip: "+Tip;
 
         }
     }

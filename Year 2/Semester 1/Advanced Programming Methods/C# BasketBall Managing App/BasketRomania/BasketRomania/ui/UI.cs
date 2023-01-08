@@ -108,7 +108,7 @@ namespace BasketRomania.ui
                     Console.WriteLine(jucator);
                 }
             }
-            catch (Exception ex) { Console.WriteLine("Wrong input!\n"); }
+            catch (Exception ex) { Console.WriteLine("Wrong input!"); }
         }
 
         private void task3()
@@ -131,7 +131,7 @@ namespace BasketRomania.ui
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Wrong input!\n");
+                Console.WriteLine("Wrong input!");
             }
         }
         private void task4()

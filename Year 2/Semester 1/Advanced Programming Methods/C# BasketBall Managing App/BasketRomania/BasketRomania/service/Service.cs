@@ -113,7 +113,7 @@ namespace BasketRomania.service
             {
                 scor_string+= scor[key].ToString()+" ";
             }
-            scor_string+= "\n";
+            scor_string+= "";
             //Console.WriteLine(scor_string);
             return scor_string;
         }

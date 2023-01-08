@@ -9,10 +9,10 @@ class Application
 {
     public static void Main(String[] args)
     {
-        string filepathJucatori = "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\data\\jucatori.csv";
-        string filepathJucatoriActivi = "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\data\\jucatoriActivi.csv";
-        string filepathMeci = "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\data\\meciuri.csv";
-        string filepathEchipe = "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\data\\echipe.csv";
+        string filepathJucatori = "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Semester 1\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\data\\jucatori.csv";
+        string filepathJucatoriActivi = "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Semester 1\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\data\\jucatoriActivi.csv";
+        string filepathMeci = "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Semester 1\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\data\\meciuri.csv";
+        string filepathEchipe = "C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Semester 1\\Advanced Programming Methods\\C# BasketBall Managing App\\BasketRomania\\BasketRomania\\data\\echipe.csv";
         
         AbstractRepository<int, Echipa<int>> echipaRepo = new EchipeRepo<int>(filepathEchipe);
         AbstractRepository<int, Jucator<int>> jucatorRepo = new JucatoriRepo<int>(filepathJucatori,(EchipeRepo<int>)echipaRepo);

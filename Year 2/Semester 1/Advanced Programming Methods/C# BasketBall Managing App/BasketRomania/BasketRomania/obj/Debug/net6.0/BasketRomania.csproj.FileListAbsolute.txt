@@ -43,3 +43,18 @@ C:\Users\Denis\Documents\GitHub\UBB\Year 2\Advanced Programming Methods\C# Baske
 C:\Users\Denis\Documents\GitHub\UBB\Year 2\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\BasketRomania.pdb
 C:\Users\Denis\Documents\GitHub\UBB\Year 2\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\BasketRomania.genruntimeconfig.cache
 C:\Users\Denis\Documents\GitHub\UBB\Year 2\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\ref\BasketRomania.dll
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\bin\Debug\net6.0\BasketRomania.exe
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\bin\Debug\net6.0\BasketRomania.deps.json
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\bin\Debug\net6.0\BasketRomania.runtimeconfig.json
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\bin\Debug\net6.0\BasketRomania.dll
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\bin\Debug\net6.0\BasketRomania.pdb
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\BasketRomania.csproj.AssemblyReference.cache
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\BasketRomania.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\BasketRomania.AssemblyInfoInputs.cache
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\BasketRomania.AssemblyInfo.cs
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\BasketRomania.csproj.CoreCompileInputs.cache
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\BasketRomania.dll
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\refint\BasketRomania.dll
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\BasketRomania.pdb
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\BasketRomania.genruntimeconfig.cache
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 1\Advanced Programming Methods\C# BasketBall Managing App\BasketRomania\BasketRomania\obj\Debug\net6.0\ref\BasketRomania.dll

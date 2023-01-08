@@ -17,7 +17,7 @@ namespace BasketRomania.domain
 
         public override string? ToString()
         {
-            return base.ToString()+" "+team.ToString()+"\n";
+            return base.ToString()+" "+team.ToString();
         }
     }
 }
