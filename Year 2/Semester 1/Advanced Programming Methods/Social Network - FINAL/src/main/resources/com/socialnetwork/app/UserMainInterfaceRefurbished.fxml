@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.socialnetwork.app.controllers.UserMainIntefaceRefurbishedController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.socialnetwork.app.controllers.UserMainIntefaceRefurbishedController">
    <children>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <left>
@@ -124,7 +124,7 @@
                                  </font>
                               </Label>
                               <Pane prefHeight="305.0" prefWidth="225.0" />
-                              <Button fx:id="refreshButton" mnemonicParsing="false" text="Refresh" onAction="#update">
+                              <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#update" text="Refresh">
                                  <VBox.margin>
                                     <Insets bottom="7.0" left="5.0" top="10.0" />
                                  </VBox.margin>
@@ -189,12 +189,12 @@
          <center>
             <AnchorPane prefHeight="424.0" prefWidth="304.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox fx:id="chatPane" prefHeight="400.0" prefWidth="303.0" visible="false">
+                  <VBox fx:id="chatPane" prefHeight="400.0" prefWidth="303.0">
                      <children>
-                        <TableView fx:id="chatTable" prefHeight="360.0" prefWidth="305.0">
+                        <TableView fx:id="chatTable" prefHeight="360.0" prefWidth="313.0">
                           <columns>
-                            <TableColumn fx:id="messageFromUserColumn" prefWidth="152.0" text="From" />
-                            <TableColumn fx:id="messageToUserColumn" minWidth="0.0" prefWidth="151.20001220703125" text="To" />
+                            <TableColumn fx:id="messageFromUserColumn" prefWidth="155.199951171875" text="From" />
+                            <TableColumn fx:id="messageToUserColumn" minWidth="0.0" prefWidth="148.00006103515625" text="To" />
                           </columns>
                            <VBox.margin>
                               <Insets />

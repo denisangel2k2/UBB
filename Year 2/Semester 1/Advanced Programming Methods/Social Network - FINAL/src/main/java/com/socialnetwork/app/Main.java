@@ -1,6 +1,7 @@
 package com.socialnetwork.app;
 
 import com.socialnetwork.app.controllers.LoginInterfaceController;
+import com.socialnetwork.app.controllers.UserMainIntefaceRefurbishedController;
 import com.socialnetwork.app.controllers.UserMainInterfaceController;
 
 import com.socialnetwork.app.domain.Friendship;
@@ -41,6 +42,7 @@ public class Main extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("LoginInterfaceView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 286, 400);
+
         LoginInterfaceController controller = fxmlLoader.getController();
         controller.setService((AppService) service);
         stage.setScene(scene);

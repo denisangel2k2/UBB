@@ -88,7 +88,9 @@ public class LoginInterfaceController {
             FXMLLoader loader=new FXMLLoader(Main.class.getResource("UserMainInterfaceRefurbished.fxml"));
             Scene scene;
             try{
-                scene = new Scene(loader.load(), 600, 400);
+                scene = new Scene(loader.load(), 311, 400);
+                String css = Objects.requireNonNull(Main.class.getResource("style.css")).toExternalForm();
+                scene.getStylesheets().add(css);
             }
             catch (Exception ex){
                 ex.printStackTrace();
@@ -103,7 +105,7 @@ public class LoginInterfaceController {
 
             Stage newStage = new Stage();
             newStage.setScene(scene);
-            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/styles/mainStyle.css")).toExternalForm());
+            //scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("C:\\Users\\Denis\\Documents\\GitHub\\UBB\\Year 2\\Semester 1\\Advanced Programming Methods\\Social Network - FINAL\\src\\main\\resources\\styles\\mainStyle.css")).toExternalForm());
             newStage.setResizable(false);
             newStage.setTitle("HI6");
             currentStage.close();

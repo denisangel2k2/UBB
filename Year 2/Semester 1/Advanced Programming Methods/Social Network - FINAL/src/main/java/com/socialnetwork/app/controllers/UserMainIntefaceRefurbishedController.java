@@ -156,6 +156,7 @@ public class UserMainIntefaceRefurbishedController implements Observer {
         logoutButton.setImage(new Image("https://i.imgur.com/qF6YY2t.png"));
         acceptFriendButton.setImage(new Image("https://i.imgur.com/9uXrBHl.png"));
         rejectFriendButton.setImage(new Image("https://i.imgur.com/ZFMYPBu.png"));
+        chatTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         initLists();
     }
 
@@ -358,7 +359,7 @@ public class UserMainIntefaceRefurbishedController implements Observer {
                     setStyle("");
                 } else {
                     Text text = new Text(item);
-                    text.setStyle("-fx-text-alignment:justify;");
+                    text.setStyle("-fx-text-alignment:justify; -fx-text-fill: white;");
                     text.wrappingWidthProperty().bind(getTableColumn().widthProperty().subtract(35));
                     setGraphic(text);
                 }
@@ -372,6 +373,9 @@ public class UserMainIntefaceRefurbishedController implements Observer {
     public void onUserFromUserMessageListClick() {
         //make visibile pane
         chatPane.setVisible(true);
+        Scene currentScene=settingsPane.getScene();
+        Stage stage=(Stage) currentScene.getWindow();
+        stage.setWidth(620);
         int fromUserID = usersMessageList.getSelectionModel().getSelectedItem().getUID();
 
         User fromUser = service.findUserById(fromUserID);
@@ -417,6 +421,9 @@ public class UserMainIntefaceRefurbishedController implements Observer {
 
     @FXML
     private void onFriendsButton() {
+        Scene currentScene=settingsPane.getScene();
+        Stage stage=(Stage) currentScene.getWindow();
+        stage.setWidth(311);
         settingsPane.setVisible(false);
         chatPane.setVisible(false);
         friendsPane.setVisible(true);
@@ -426,6 +433,9 @@ public class UserMainIntefaceRefurbishedController implements Observer {
 
     @FXML
     private void onMessagesButton() {
+        Scene currentScene=settingsPane.getScene();
+        Stage stage=(Stage) currentScene.getWindow();
+        stage.setWidth(311);
         settingsPane.setVisible(false);
         chatPane.setVisible(false);
         friendsPane.setVisible(false);
@@ -435,6 +445,9 @@ public class UserMainIntefaceRefurbishedController implements Observer {
 
     @FXML
     private void onSearchButton() {
+        Scene currentScene=settingsPane.getScene();
+        Stage stage=(Stage) currentScene.getWindow();
+        stage.setWidth(311);
         settingsPane.setVisible(false);
         chatPane.setVisible(false);
         friendsPane.setVisible(false);
@@ -444,6 +457,9 @@ public class UserMainIntefaceRefurbishedController implements Observer {
 
     @FXML
     private void onSettingsButton() {
+        Scene currentScene=settingsPane.getScene();
+        Stage stage=(Stage) currentScene.getWindow();
+        stage.setWidth(311);
         settingsPane.setVisible(true);
         chatPane.setVisible(false);
         friendsPane.setVisible(false);
