@@ -92,7 +92,7 @@ namespace BasketRomania.ui
         }
         private void task2()
         {
-            showMeciuri();
+           // showMeciuri();
             showTeams();
             Console.WriteLine("Enter the name of the team: ");
             string echipa=Console.ReadLine();

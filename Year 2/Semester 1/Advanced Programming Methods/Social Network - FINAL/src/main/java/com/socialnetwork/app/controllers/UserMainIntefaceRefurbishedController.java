@@ -355,11 +355,15 @@ public class UserMainIntefaceRefurbishedController implements Observer {
             protected void updateItem(String item, boolean empty) {
                 super.updateItem(item, empty);
                 if (item == null || empty) {
+                    t.setStyle(null);
+                    setStyle("-fx-text-fill: white");
                     setText(null);
-                    setStyle("");
                 } else {
+                    setText(null);
                     Text text = new Text(item);
-                    text.setStyle("-fx-text-alignment:justify; -fx-text-fill: white;");
+                    text.setStyle("-fx-text-alignment:justify; -fx-text-fill: white");
+                    t.setStyle("-fx-background-color: #90EDB4; -fx-control-inner-background: #212121;");
+
                     text.wrappingWidthProperty().bind(getTableColumn().widthProperty().subtract(35));
                     setGraphic(text);
                 }
@@ -372,6 +376,9 @@ public class UserMainIntefaceRefurbishedController implements Observer {
     @FXML
     public void onUserFromUserMessageListClick() {
         //make visibile pane
+        chatTable.getItems().clear();
+        messagesList.clear();
+        chatTable.refresh();
         chatPane.setVisible(true);
         Scene currentScene=settingsPane.getScene();
         Stage stage=(Stage) currentScene.getWindow();

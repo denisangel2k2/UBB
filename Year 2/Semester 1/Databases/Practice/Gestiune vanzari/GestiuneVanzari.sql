@@ -105,7 +105,7 @@ select * from ProduseFacturi
 --3)
 create or alter view ViewShaorme
 as
-select C.denumire,F.numar,F.data_emitere,SUM(PF.pret) as Pret from Clienti C
+select C.denumire,F.numar,F.data_emitere,SUM(PF.pret*PF.cantitate) as Pret from Clienti C
 inner join Facturi F on F.id_client=C.id_client
 inner join ProduseFacturi PF on PF.id_factura=F.id_factura
 inner join Produse P on P.id_produs=PF.id_produs
@@ -114,7 +114,25 @@ group by C.denumire,F.numar,F.data_emitere
 
 select * from ViewShaorme
 
+select * from ProduseFacturi
+Se
+create or alter view ViewShaormeTotal
+as
+select Denumire, Numar, DataE, SUM(PF.pret*PF.cantitate) as Valoare 
+from(
+	select F.id_factura, C.denumire as Denumire, F.numar as Numar, F.data_emitere as DataE
+	from ProduseFacturi PF
+	inner join Produse P on P.id_produs=PF.id_produs
+	inner join Facturi F on F.id_factura=PF.id_factura
+	inner join Clienti C on C.id_client=F.id_client
+	where P.denumire='Produs1'
+) as Tabel
+	inner join ProduseFacturi PF on PF.id_factura=Tabel.id_factura
+	group by Denumire, Numar, DataE
+	having SUM(PF.pret*PF.cantitate)<75
+
 --4)
+use GestiuneVanzari
 create or alter function Raport(@an int)
 returns @tab table
 (
@@ -125,7 +143,7 @@ returns @tab table
 )
 as
 begin
-	insert into @tab select month(F.data_emitere),A.nume,A.prenume,sum(PF.pret) from Facturi F
+	insert into @tab select month(F.data_emitere),A.nume,A.prenume,sum(PF.pret*PF.cantitate) from Facturi F
 	inner join Agenti A on F.id_agent=A.id_agent
 	inner join ProduseFacturi PF on PF.id_factura=F.id_factura
 	where year(F.data_emitere)=@an
