@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>FORM4</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content="Description of the page">
+    <meta name="author" content="Denis Moldovan">
+</head>
+<body>
+	<img src="http://www.cs.ubbcluj.ro/mos/img/siglaUBB.jpg" alt="UBB SIGLA" width="50" height="50">
+	<a href="https://www.cs.ubbcluj.ro/~bufny/programare-web/laborator-html/" target="_blank">TEMA WEB</a>
+	<table border="3px solid black">
+
+		<tbody>
+			<tr>
+				<th colspan="4" bgcolor="yellow" rowspan="1">
+					<div align="center">
+						<h1>FORMULAR</h1>
+						
+            <p><span>Înscriere la maraton</span></p>
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<td colspan="1">
+					<label for="nume0">Nume</label>
+					<input type="text" id="nume0" name="name0">
+				</td>
+				<td colspan="1">
+					<label for="nume1">Prenume</label>
+					<input type="text" id="nume1" name="name1">
+				</td>
+				<td colspan="2">
+					<label for="nume2"><strong>CNP</strong></label>
+					<input type="text" id="nume2" name="name2" maxlength="13">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<label for="adr">Adresa</label>
+					<input type="text" id="adr" name="adresa" size="100%">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="1">
+					<label for="jud">Judet</label>
+					<input type="text" id="jud">
+				</td>
+				<td colspan="1">
+					<label for="jud">Oraș</label>
+					<input type="text" id="oras">
+				</td>
+				<td colspan="2">
+					<label for="jud">Cod Poștal</label>
+					<input type="text" id="cpostal">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+					<b>Alegeți sexul:</b>
+					</center>
+				</td>
+			
+				<td colspan="1">
+					<center>
+					<label for="male">M</label>
+					<input type="radio" id="male"  name="sex">
+					</center>	
+				</td>
+				<td colspan="1">
+					<center>
+					<label for="female">F</label>
+					<input type="radio" id="female" name="sex">
+					</center>
+				</td>
+				<td colspan="1">
+					<center>
+					<label for="other">Other</label>
+					<input type="radio" id="other"  name="sex" disabled>
+					</center>
+				</td>				
+			</tr>
+			<tr>
+
+				<td colspan="4">
+					<center>
+						<label for="born">Data nașterii</label>
+						<input type="text" id="born" name="born">
+					</center>
+				</td>
+			</tr>
+			<tr>
+				
+				<td colspan="2">
+					<center>
+						<label for="tel">Telefon</label>
+						<input type="text" id="tel" name="teln" size="50%">
+					</center>
+				</td>
+				<td colspan="2">
+					<center>
+						<label for="telf">Telefon fix</label>
+						<input type="text" id="telf" name="telf" size="50%">
+					</center>
+				</td>
+				
+			</tr>
+
+			<tr>
+				<th colspan="4" bgcolor="purple">
+					<div align="center">
+						<h3>Social</h3>
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<table>
+						<tbody>
+							<tr>
+								<td colspan="2">
+									<label for="user">Username</label>
+									<input type="text" id="user"  size="50%">
+								</td>
+								<td colspan="2">
+									<label for="pass">Password</label>
+									<input type="password" id="pass" size="50%">
+								</td>
+							</tr>
+							<tr>
+								<td colspan="4">
+									<label for="email">Email</label>
+									<input type="text" id="email" size="120%">
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<center>
+						<table>
+							<tbody>
+								<tr>
+									<td colspan="1">
+										<center><h2>Terms</h2></center>
+									</td>	
+								</tr>
+								<tr>
+									<td colspan="2">
+										<ol type="1" start="3">
+											<li>Term1</li>
+											<li>
+												Term2
+												<ol type="I">
+													<li>
+														Term1.1
+													</li>
+													<li>
+														Term1.2
+													</li>
+													<li>
+														Term1.3
+														<ul>
+															<li>
+																Term1.3.1
+															</li>
+															<li>
+																Term1.3.2
+																<ol type="A">
+																	<li>Term1.3.1.1</li>
+																	<li>Term1.3.1.2</li>
+																	<li>Term1.3.1.3 â</li>
+																</ol>
+															</li>
+														</ul>
+													</li>
+												</ol>
+											</li>			
+											<li>Term3</li>
+										</ol>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</center>
+				</td>
+				<td>
+					<textarea id="txtarea" rows="10" cols="20">ADAUGĂ CEVA</textarea>
+					<br>
+					<label for="checkk">Sunt de acord</label>
+					<input type="checkbox" id="checkk" checked>
+
+				</td>
+				<td>
+					<center>
+						<label for="part">Ai mai participat?</label>
+						<br>
+						<select multiple size=2 name="participare" id="part">
+							<option>DA</option>
+							<option>NU</option>
+						</select>
+					</center>
+				</td>
+			</tr>
+			<tr>
+				
+				<td colspan="4" valign="baseline">
+					<center>
+						<form action="form4.html" method="post">
+							<fieldset>
+								<legend>Abonează-te</legend>
+								<label for="yesr">Yes</label>
+								<input type="radio" id="yesr" name="subscr" value="yes" checked>
+								<label for="nor">No</label>
+								<input type="radio" id="nor" name="subscr" value="no">
+							</fieldset>
+								<input type="submit" value="Trimite">
+						</form>
+					</center>
+				</td>
+			
+			</tr>
+
+		</tbody>
+	</table>
+    
+</body>
+</html>

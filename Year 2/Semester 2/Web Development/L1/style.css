@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+header {
+    margin: 25px 0px;
+}
+
+body {
+    background: rgb(237, 252, 253);
+    display: flex;
+    margin-top: 10vh;
+    text-align: center;
+	justify-content: center;
+}
+
+ul {
+    list-style: none;
+    margin: 1px auto 0 auto;
+    width: 500px;
+    padding: 0;
+
+}
+
+details {
+	position:sticky;
+    font-size: 1.5rem;
+    font-family: 'Bebas Neue', cursive;
+}
+
+a {
+    padding: 10px;
+    margin:auto;
+    text-decoration: none;
+    color: rgb(17, 110, 217);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(12, 109, 138);
+}
+
+.main_title {
+    font-family: 'Silkscreen', cursive;
+    font-size: 3rem;
+}
+
+.info {
+    font-family: 'Dosis', sans-serif;
+}
+.content a{
+	position: relative;
+}
+.content h2 {
+
+    text-align: center;
+	color: #fff;
+	font-size: 3em;
+    font-family: 'Arial', sans-serif;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 2px #a8c5fb;
+}
+
+.content h2:nth-child(2) {
+	color: #70baff;
+	animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+.homework{
+	position:absolute;
+    margin-top: 25px;
+}
+
+
