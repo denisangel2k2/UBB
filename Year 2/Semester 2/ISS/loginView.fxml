@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="260.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField layoutX="56.0" layoutY="80.0" promptText="Username" />
+      <TextField layoutX="56.0" layoutY="118.0" promptText="Password" />
+      <ComboBox layoutX="55.0" layoutY="157.0" prefWidth="150.0" promptText="EMPLOYEE" />
+      <Button layoutX="107.0" layoutY="195.0" mnemonicParsing="false" text="Login" />
+   </children>
+</AnchorPane>
