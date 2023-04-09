@@ -1,0 +1,40 @@
+body{
+    padding: 0;
+    margin: 0;
+    
+}
+header{
+    background-color: red;
+    height: 8em;
+    display: flex;
+    align-items: center;
+}
+.nav{
+    float: left;
+    background-color: yellow;
+    width: 150px;
+    height: 36.9vw;
+}
+.nav ul{
+    margin: 0;
+    padding: 0;
+}
+.nav li{
+    list-style-type: none;
+    border-bottom: 2px solid black;
+
+}
+
+
+main{
+    background-color: darkgreen;
+    height: 36.9vw;
+    display: flex;
+    align-items: center;
+}
+footer{
+    background-color: pink;
+    height: 5em;
+    display: flex;
+    align-items: center;
+}

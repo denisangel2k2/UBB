@@ -1,0 +1,102 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+#facebook{
+    width: 84px;
+    background: url(sprites.png) 0 84px;
+}
+#facebook:hover{
+    width: 84px;
+    background: url(sprites.png) 0 0;
+}
+#puncte{
+    width: 84px;
+    background: url(sprites.png) -84px 84px;
+}
+#puncte:hover{
+    width: 84px;
+    background: url(sprites.png) -84px 0;
+}
+#basket{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 2)  84px;
+}
+#basket:hover{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 2)  0;
+}
+#google{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 3)  84px;
+}
+#google:hover{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 3)  0;
+}
+#linkedin{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 4)  84px;
+}
+#linkedin:hover{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 4)  0;
+}
+#pinterest{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 5)  84px;
+}
+#pinterest:hover{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 5)  0;
+}
+#wifi{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 6)  84px;
+}
+#wifi:hover{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 6)  0;
+}
+#skype{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 7)  84px;
+}
+#skype:hover{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 7)  0;
+}
+#twitter{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 8)  84px;
+}
+#twitter:hover{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 8)  0;
+}
+#venmo{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 9)  84px;
+}
+#venmo:hover{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 9)  0;
+}
+#youtube{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 10)  84px;
+}
+#youtube:hover{
+    width: 84px;
+    background: url(sprites.png) calc(-84px * 10)  0;
+}
+
+
+.nav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav li {
+    height: 82px;
+}

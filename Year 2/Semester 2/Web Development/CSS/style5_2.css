@@ -1,0 +1,20 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+.container  img{
+    height: 200px;
+    width: 150px;
+    padding: 15px 15px;
+
+}
+.chenar{
+    border: 2px solid black;
+    display: inline-block;
+}
+.container{
+    display: flex;
+    background-color: yellow;
+    padding: 0 25px;
+    align-items: center;
+}

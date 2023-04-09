@@ -1,0 +1,1510 @@
+09 Apr 2023 19:54:11,899 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 19:54:11,913 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 19:54:11,913 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 19:54:11,914 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 19:54:11,916 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 19:54:11,916 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 19:54:12,914 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@67f67e91)
+09 Apr 2023 20:27:21,129 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 20:27:21,138 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 20:27:21,139 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 20:27:21,140 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 20:27:21,141 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 20:27:21,142 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 20:27:21,388 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@67f67e91)
+09 Apr 2023 20:28:35,973 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 20:28:35,979 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 20:28:35,979 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 20:28:35,980 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 20:28:35,981 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 20:28:35,982 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 20:28:36,178 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@67f67e91)
+09 Apr 2023 20:33:26,954 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 20:33:26,955 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 20:33:26,956 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@67f67e91)
+09 Apr 2023 20:34:18,398 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 20:34:18,399 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 20:34:18,399 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@67f67e91)
+09 Apr 2023 20:35:42,367 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 20:35:42,370 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 20:35:42,370 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 20:35:42,371 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 20:35:42,372 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 20:35:42,372 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 20:35:42,537 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@46c895cb)
+09 Apr 2023 20:42:02,109 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 20:42:02,117 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 20:42:02,117 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 20:42:02,118 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 20:42:02,120 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 20:42:02,120 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 20:42:02,864 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@75d326d6)
+09 Apr 2023 20:44:29,346 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 20:44:29,355 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 20:44:29,356 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 20:44:29,358 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 20:44:29,360 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 20:44:29,361 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 20:44:30,291 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@75d326d6)
+09 Apr 2023 20:52:38,493 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 20:52:38,500 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 20:52:38,500 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 20:52:38,500 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 20:52:38,501 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 20:52:38,501 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 20:52:38,637 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3cc503f8)
+09 Apr 2023 21:30:19,379 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 21:30:19,383 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:30:19,384 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 21:30:19,384 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 21:30:19,385 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 21:30:19,385 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 21:30:19,530 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4871e53b)
+09 Apr 2023 21:40:54,584 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 21:40:54,585 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:40:54,585 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4871e53b)
+09 Apr 2023 21:45:27,827 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 21:45:27,841 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:45:27,842 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 21:45:27,844 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 21:45:27,847 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 21:45:27,848 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 21:45:28,629 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@12e8cc4a)
+09 Apr 2023 21:45:28,637 ERROR airline.persistence.EmployeeRepository 57 getEmployee - java.sql.SQLException: ResultSet closed
+09 Apr 2023 21:46:32,930 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 21:46:32,932 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:46:32,932 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@12e8cc4a)
+09 Apr 2023 21:47:15,290 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 21:47:15,292 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:47:15,293 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@12e8cc4a)
+09 Apr 2023 21:52:56,623 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 21:52:56,625 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:52:56,625 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 21:52:56,625 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 21:52:56,626 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 21:52:56,626 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 21:52:56,748 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4871e53b)
+09 Apr 2023 21:55:20,412 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 21:55:20,413 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:55:20,413 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4871e53b)
+09 Apr 2023 21:55:49,252 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 21:55:49,255 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:55:49,256 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 21:55:49,256 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 21:55:49,257 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 21:55:49,257 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 21:55:49,401 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6b32b24e)
+09 Apr 2023 21:58:01,274 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 21:58:01,279 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:58:01,279 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 21:58:01,280 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 21:58:01,280 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 21:58:01,280 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 21:58:01,427 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4871e53b)
+09 Apr 2023 21:58:02,450 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:58:02,451 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 21:58:02,451 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 21:58:02,452 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 21:58:02,452 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 21:58:02,454 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@49c2c0a2)
+09 Apr 2023 21:58:02,459 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 21:59:03,147 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 21:59:03,148 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:59:03,148 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4871e53b)
+09 Apr 2023 21:59:32,353 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 21:59:32,357 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:59:32,357 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 21:59:32,357 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 21:59:32,358 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 21:59:32,358 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 21:59:32,506 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4871e53b)
+09 Apr 2023 21:59:33,532 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:59:33,532 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 21:59:33,533 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 21:59:33,533 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 21:59:33,533 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 21:59:33,535 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@49c2c0a2)
+09 Apr 2023 21:59:33,540 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 21:59:50,639 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 21:59:50,640 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 21:59:50,640 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4871e53b)
+09 Apr 2023 22:00:22,771 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:00:22,772 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:00:22,772 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4871e53b)
+09 Apr 2023 22:02:54,982 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:02:55,035 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:02:55,047 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:02:55,054 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:02:55,060 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:02:55,063 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:02:56,775 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6b32b24e)
+09 Apr 2023 22:02:57,824 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:02:57,825 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:02:57,826 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:02:57,826 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:02:57,827 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:02:57,830 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6f7255c5)
+09 Apr 2023 22:02:57,836 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:02:58,905 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:02:58,906 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:02:58,906 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:02:58,907 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:02:58,907 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:02:58,908 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:02:58,910 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:02:58,913 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:02:59,927 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:02:59,928 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:02:59,929 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:02:59,930 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:00,940 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:00,941 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:00,942 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:00,943 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:01,953 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:01,954 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:01,955 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:01,956 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:02,962 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:02,962 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:02,963 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:02,964 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:03,986 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:03,987 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:03,987 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:03,989 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:05,002 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:05,003 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:05,004 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:05,005 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:06,020 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:06,020 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:06,021 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:06,022 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:07,036 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:07,037 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:07,038 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:07,039 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:08,054 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:08,055 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:08,056 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:08,057 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:09,073 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:09,073 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:09,074 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:09,075 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:10,091 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:10,092 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:10,093 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:10,094 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:11,104 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:11,105 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:11,105 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:11,107 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:12,124 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:12,125 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:12,125 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:12,126 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:13,137 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:13,138 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:13,138 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:13,140 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:14,153 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:14,154 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:14,154 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:14,155 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:15,168 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:15,169 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:15,170 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:15,171 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:16,174 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:16,175 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:16,176 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:16,177 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:20,687 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:20,688 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:20,688 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:20,689 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:21,701 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:21,702 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:21,702 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:21,704 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:22,715 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:22,716 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:22,716 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:22,717 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:23,729 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:23,729 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:23,730 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:23,731 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:24,733 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:24,734 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:24,734 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:24,736 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:25,738 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:25,739 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:25,739 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:25,741 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:26,757 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:26,757 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:26,758 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:26,758 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:27,771 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:27,772 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:27,772 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:27,773 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:28,776 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:28,777 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:28,777 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:28,778 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:29,793 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:29,794 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:29,794 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:29,795 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:30,809 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:30,810 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:30,811 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:30,812 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:31,822 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:31,822 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:31,823 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:31,824 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:34,858 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:34,858 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:34,858 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:34,859 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:35,871 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:35,871 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:35,871 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:35,872 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:36,875 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:36,876 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:36,876 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:36,877 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:37,879 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:37,879 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:37,880 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:37,880 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:38,891 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:38,891 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:38,892 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:38,893 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:39,913 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:39,913 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:39,913 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:39,914 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:40,915 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:40,916 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:40,917 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:40,922 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:41,931 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:41,931 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:41,932 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:41,932 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:42,947 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:42,947 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:42,948 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:42,949 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:43,963 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:43,963 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:43,963 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:43,964 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:44,978 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:44,979 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:44,979 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:44,980 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:45,995 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:45,995 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:45,996 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:45,997 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:47,010 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:47,011 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:47,011 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:47,012 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:48,016 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:48,017 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:48,017 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:48,018 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:49,030 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:49,030 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:49,031 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:49,031 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:50,034 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:50,035 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:50,035 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:50,037 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:51,051 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:51,052 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:51,052 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:51,053 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:52,065 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:52,065 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:52,066 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:52,067 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:53,074 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:53,074 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:53,074 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:53,075 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:54,085 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:54,085 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:54,085 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:54,087 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:55,102 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:55,103 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:55,103 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:55,104 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:56,113 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:56,113 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:56,114 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:56,115 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:57,126 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:57,126 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:57,128 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:57,129 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:58,133 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:58,133 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:58,134 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:58,135 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:03:59,148 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:03:59,148 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:03:59,149 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:03:59,152 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:00,164 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:00,165 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:00,165 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:00,167 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:01,187 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:01,187 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:01,188 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:01,189 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:02,192 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:02,193 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:02,194 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:02,196 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:31,289 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:31,290 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:31,290 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:31,291 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:32,303 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:32,304 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:32,304 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:32,306 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:33,316 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:33,316 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:33,318 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:33,318 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:34,330 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:34,331 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:34,331 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:34,332 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:35,343 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:35,343 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:35,344 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:35,345 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:36,356 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:36,357 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:36,357 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:36,358 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:37,371 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:37,372 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:37,372 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:37,373 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:38,380 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:38,381 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:38,381 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:38,383 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:41,099 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:41,100 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:41,100 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:41,102 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:42,112 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:42,112 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:42,113 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:42,114 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:43,125 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:43,125 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:43,126 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:43,126 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:44,137 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:44,138 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:44,138 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:44,140 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:45,153 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:45,154 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:45,154 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:45,155 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:46,164 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:46,164 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:46,165 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:46,166 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:47,175 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:47,176 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:47,176 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:47,177 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:48,190 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:48,190 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:48,190 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:48,191 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:49,203 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:49,203 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:49,204 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:49,205 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:50,220 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:50,220 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:50,223 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:50,225 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:51,228 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:51,228 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:51,228 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:51,230 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:52,242 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:52,242 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:52,243 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:52,243 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:53,254 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:53,256 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:53,257 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:53,258 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:54,262 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:54,263 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:54,263 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:54,264 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:55,276 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:55,276 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:55,277 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:55,277 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:56,290 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:56,291 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:56,291 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:56,291 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:57,299 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:57,299 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:57,300 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:57,300 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:58,314 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:58,314 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:58,315 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:58,316 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:04:59,330 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:04:59,330 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:04:59,330 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:04:59,331 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:00,343 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:00,343 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:00,343 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:00,344 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:01,353 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:01,353 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:01,353 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:01,354 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:02,365 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:02,365 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:02,365 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:02,366 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:03,373 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:03,373 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:03,374 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:03,374 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:04,386 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:04,386 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:04,386 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:04,387 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:05,395 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:05,396 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:05,396 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:05,396 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:06,408 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:06,409 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:06,409 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:06,410 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:07,419 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:07,419 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:07,419 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:07,420 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:08,422 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:08,422 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:08,423 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:08,423 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:09,435 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:09,435 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:09,435 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:09,436 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:28,955 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:28,956 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:28,956 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:28,957 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:29,962 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:29,962 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:29,963 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:29,963 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:30,976 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:30,976 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:30,977 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:30,977 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:31,988 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:31,988 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:31,989 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:31,990 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:32,998 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:32,998 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:32,999 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:33,000 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:05:34,011 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:05:34,011 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:05:34,011 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ff566dc)
+09 Apr 2023 22:05:34,013 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:10,252 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:10:10,266 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:10,267 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:10:10,269 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:10:10,270 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:10:10,271 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:10:10,658 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4871e53b)
+09 Apr 2023 22:10:11,698 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:11,699 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:10:11,699 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:10:11,700 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:10:11,700 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:10:11,704 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@49c2c0a2)
+09 Apr 2023 22:10:11,710 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:10:12,761 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:12,763 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:12,763 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:10:12,763 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:10:12,763 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:10:12,763 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:10:12,766 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:12,767 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:13,774 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:13,775 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:13,775 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:13,776 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:14,786 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:14,787 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:14,787 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:14,789 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:15,801 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:15,802 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:15,803 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:15,806 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:16,813 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:16,814 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:16,814 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:16,816 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:17,829 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:17,830 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:17,831 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:17,833 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:18,843 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:18,844 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:18,845 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:18,846 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:19,858 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:19,860 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:19,860 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:19,862 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:20,871 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:20,872 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:20,873 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:20,875 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:21,917 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:21,919 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:21,919 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:21,921 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:22,935 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:22,936 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:22,937 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:22,939 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:23,948 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:23,950 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:23,950 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:23,951 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:24,962 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:24,963 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:24,965 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:24,966 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:25,975 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:25,976 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:25,976 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:25,977 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:26,988 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:26,988 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:26,990 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:26,991 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:28,000 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:28,001 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:28,002 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:28,002 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:29,013 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:29,014 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:29,015 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:29,016 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:30,023 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:30,030 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:30,031 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:30,031 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:31,746 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:31,747 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:31,747 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:31,748 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:32,752 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:32,752 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:32,753 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:32,753 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:33,765 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:33,768 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:33,768 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:33,769 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:34,777 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:34,778 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:34,778 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:34,779 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:35,790 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:35,791 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:35,792 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:35,793 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:36,803 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:36,803 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:36,803 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:36,805 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:37,813 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:37,813 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:37,813 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:37,814 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:38,823 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:38,824 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:38,824 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:38,827 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:39,837 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:39,838 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:39,839 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:39,840 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:40,851 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:40,852 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:40,852 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:40,852 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:41,862 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:41,863 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:41,864 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:41,865 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:42,873 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:42,873 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:42,874 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:42,875 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:43,890 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:43,890 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:43,891 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:43,891 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:44,902 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:44,903 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:44,904 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:44,906 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:45,917 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:45,917 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:45,918 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:45,918 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:46,929 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:46,930 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:46,932 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:46,932 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:47,942 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:47,943 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:47,943 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:47,944 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:48,954 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:48,955 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:48,955 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:48,957 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:49,962 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:49,962 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:49,962 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:49,964 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:50,970 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:50,971 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:50,971 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:50,972 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:52,005 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:52,006 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:52,006 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:52,008 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:53,046 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:53,047 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:53,047 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:53,047 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:54,062 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:54,063 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:54,063 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:54,065 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:10:55,078 TRACE airline.persistence.TicketRepository 25 getAll - Enter
+09 Apr 2023 22:10:55,078 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:10:55,079 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@32e83172)
+09 Apr 2023 22:10:55,079 TRACE airline.persistence.TicketRepository 40 getAll - Exit
+09 Apr 2023 22:28:07,335 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:28:07,348 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:07,349 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:28:07,351 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:28:07,352 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:28:07,353 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:28:07,661 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7ba5352d)
+09 Apr 2023 22:28:08,688 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:08,688 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:28:08,688 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:28:08,690 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:28:08,690 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:28:08,691 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:28:08,693 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:28:14,768 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:14,769 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:28:14,772 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:28:15,788 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:15,789 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:28:15,792 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:28:16,818 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:16,819 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:28:16,820 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:28:17,832 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:17,833 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:28:17,835 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:28:18,863 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:18,863 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:28:18,866 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:28:19,878 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:19,878 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:28:19,880 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:28:20,886 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:20,886 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:28:20,886 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:28:21,895 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:21,897 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:28:21,899 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:28:34,440 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:34,440 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:28:34,442 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:28:35,451 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:35,451 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:28:35,452 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:28:50,432 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 22:28:50,432 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:50,432 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:28:50,432 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:28:50,432 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:28:50,432 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:28:50,433 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6d76c86c)
+09 Apr 2023 22:28:50,438 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 22:28:50,439 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 22:28:50,439 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 22:28:50,439 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:28:50,439 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:28:50,443 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 22:28:50,443 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 22:29:55,586 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:29:55,586 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:29:55,588 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7ba5352d)
+09 Apr 2023 22:30:23,028 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:30:23,033 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:30:23,033 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:30:23,034 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:30:23,035 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:30:23,035 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:30:23,207 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 22:30:24,235 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:30:24,237 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:30:24,237 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:30:24,238 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:30:24,238 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:30:24,239 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:30:24,242 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:30:32,334 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:30:32,335 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:30:32,335 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 22:30:52,498 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:30:52,498 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:30:52,499 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 22:40:03,780 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:40:03,785 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:40:03,786 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:40:03,786 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:40:03,787 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:40:03,787 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:40:03,969 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 22:40:04,993 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:40:04,995 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:40:04,996 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:40:04,996 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:40:04,996 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:40:04,998 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 22:40:04,999 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:40:15,898 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:40:15,899 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:40:15,899 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 22:40:16,905 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:40:16,905 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 22:40:16,907 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:40:34,066 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:40:34,067 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:40:34,067 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 22:41:55,991 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:41:55,999 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:41:56,001 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:41:56,002 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:41:56,005 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:41:56,006 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:41:56,352 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7ba5352d)
+09 Apr 2023 22:41:57,376 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:41:57,377 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:41:57,378 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:41:57,379 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:41:57,379 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:41:57,383 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:41:57,389 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:42:18,109 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:42:18,110 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:42:18,110 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7ba5352d)
+09 Apr 2023 22:42:19,119 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:42:19,120 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:42:19,126 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:44:55,889 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:44:55,902 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:44:55,903 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:44:55,905 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:44:55,907 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:44:55,907 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:44:56,292 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 22:44:57,343 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:44:57,344 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:44:57,345 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:44:57,345 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:44:57,346 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:44:57,348 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:44:57,353 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:45:01,839 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:45:01,840 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:01,841 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 22:45:02,847 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:02,848 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:45:02,852 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:45:37,090 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:45:37,091 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:37,091 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 22:45:38,104 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:38,105 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:45:38,107 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:45:42,586 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:42,586 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:45:42,587 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:45:43,591 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:43,592 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:45:43,594 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:45:44,614 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:44,615 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:45:44,616 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:45:45,622 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:45,624 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:45:45,625 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:45:46,634 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:46,636 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:45:46,637 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:45:47,646 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:47,647 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:45:47,648 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:45:48,664 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:48,666 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:45:48,668 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:45:49,683 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:49,684 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:45:49,685 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:45:55,484 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 22:45:55,484 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:55,485 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:45:55,485 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:45:55,486 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:45:55,486 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:45:55,487 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@692cf653)
+09 Apr 2023 22:45:55,493 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 22:45:55,493 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 22:45:55,493 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 22:45:55,493 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:45:55,494 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 22:45:55,498 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 22:45:55,499 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 22:55:47,219 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 22:55:47,232 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:55:47,233 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:55:47,234 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:55:47,235 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:55:47,236 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:55:47,673 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7ba5352d)
+09 Apr 2023 22:55:48,721 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:55:48,723 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:55:48,724 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:55:48,724 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:55:48,724 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:55:48,728 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:55:48,731 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:55:52,613 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:55:52,614 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:55:52,617 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:55:53,631 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:55:53,631 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:55:53,636 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:55:54,665 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:55:54,666 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:55:54,669 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:55:55,687 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:55:55,688 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:55:55,691 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:55:56,716 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:55:56,717 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:55:56,720 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:55:57,731 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:55:57,731 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:55:57,735 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:55:58,769 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:55:58,771 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:55:58,772 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:55:59,799 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:55:59,800 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:55:59,801 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 22:56:08,407 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 22:56:08,407 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:56:08,408 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 22:56:08,408 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 22:56:08,408 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 22:56:08,409 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 22:56:08,410 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15bac2ff)
+09 Apr 2023 22:56:08,419 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 22:56:08,420 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 22:56:08,420 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 22:56:08,420 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 22:56:08,420 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@54d4aa17)
+09 Apr 2023 22:56:08,425 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 22:56:08,426 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:06:21,173 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:06:21,183 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:06:21,185 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:06:21,186 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:06:21,189 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:06:21,190 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:06:21,708 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@75e17bc0)
+09 Apr 2023 23:06:26,969 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:06:26,970 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:06:26,970 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:06:26,970 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:06:26,970 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:06:26,972 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:06:26,975 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:06:39,995 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:06:39,995 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:06:39,997 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:06:42,343 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:06:42,343 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:06:42,346 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:06:53,287 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:06:53,287 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:06:53,290 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:06:56,779 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:06:56,780 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:06:56,781 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:07:04,694 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:07:04,694 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:07:04,695 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:07:07,157 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:07:07,158 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:07:07,158 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:07:08,706 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:07:08,706 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:07:08,708 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:07:12,129 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:07:12,129 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:07:12,130 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:07:31,805 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:07:31,806 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:07:31,806 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:07:31,806 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:07:31,806 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:07:31,806 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:07:31,807 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7ce7d78b)
+09 Apr 2023 23:07:31,813 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:07:31,814 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:07:31,814 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:07:31,814 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:07:31,814 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:07:31,817 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:07:31,818 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:09:20,364 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:09:20,375 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:09:20,375 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:09:20,377 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:09:20,378 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:09:20,379 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:09:20,823 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@75e17bc0)
+09 Apr 2023 23:09:21,867 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:09:21,868 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:09:21,868 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:09:21,869 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:09:21,869 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:09:21,870 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:09:21,873 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:09:31,918 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:09:31,918 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:09:31,920 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:09:32,933 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:09:32,934 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:09:32,935 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:09:33,947 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:09:33,948 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:09:33,949 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:09:34,955 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:09:34,956 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:09:34,958 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:09:35,968 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:09:35,968 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:09:35,969 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:09:36,974 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:09:36,975 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:09:36,976 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:09:37,988 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:09:37,989 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:09:37,990 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:09:39,001 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:09:39,002 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:09:39,004 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:10:04,397 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:10:04,398 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:10:04,399 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:10:04,400 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:10:04,402 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:10:04,403 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:10:04,406 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@23317acc)
+09 Apr 2023 23:10:04,411 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:10:04,413 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:10:07,975 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:10:07,978 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:10:07,981 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@8394777)
+09 Apr 2023 23:10:07,987 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:10:07,990 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:18:59,258 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:18:59,264 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:18:59,265 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:18:59,266 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:18:59,267 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:18:59,267 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:18:59,491 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 23:19:00,531 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:00,532 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:19:00,532 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:19:00,534 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:19:00,534 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:19:00,538 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:00,540 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:02,247 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:02,247 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:02,249 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:03,254 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:03,255 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:03,257 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:04,282 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:04,282 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:04,284 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:05,292 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:05,295 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:05,297 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:06,322 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:06,322 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:06,324 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:07,332 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:07,332 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:07,334 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:08,344 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:08,345 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:08,347 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:09,374 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:09,375 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:09,378 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:13,952 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:19:13,952 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:13,952 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:19:13,952 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:19:13,953 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:19:13,953 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:19:13,954 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2479f530)
+09 Apr 2023 23:19:13,959 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:19:13,960 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:19:13,961 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:19:13,961 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:13,961 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:13,965 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:19:13,965 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:19:28,930 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:19:28,931 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:28,931 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2479f530)
+09 Apr 2023 23:19:28,936 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:19:28,937 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:19:28,937 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:19:28,937 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:28,937 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:28,941 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:19:28,941 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:19:40,647 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:40,647 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:40,650 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:41,671 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:41,673 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:41,675 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:45,889 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:19:45,889 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:45,890 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2479f530)
+09 Apr 2023 23:19:45,896 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:19:45,896 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:19:45,898 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:19:45,898 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:45,899 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:45,903 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:19:45,903 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:19:46,906 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:46,906 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:46,909 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:47,919 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:47,920 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:47,922 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:52,735 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:19:52,737 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:52,737 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2479f530)
+09 Apr 2023 23:19:52,743 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:19:52,745 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:19:52,745 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:19:52,745 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:52,746 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:52,750 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:19:52,751 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:19:53,758 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:53,759 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:53,762 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:19:54,772 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:19:54,772 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:19:54,773 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:20:01,373 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:20:01,374 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:20:01,374 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2479f530)
+09 Apr 2023 23:20:01,380 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:20:01,381 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:20:01,381 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:20:01,382 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:20:01,382 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:20:01,387 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:20:01,387 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:20:02,393 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:20:02,394 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:20:02,396 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:20:03,407 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:20:03,407 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:20:03,410 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:20:06,831 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:20:06,832 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:20:06,832 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2479f530)
+09 Apr 2023 23:20:06,839 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:20:06,840 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:20:06,840 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:20:06,841 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:20:06,841 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:20:06,849 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:20:06,849 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:20:07,857 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:20:07,858 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:20:07,861 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:20:08,871 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:20:08,872 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:20:08,874 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:20:31,526 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:20:31,527 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:20:31,527 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2479f530)
+09 Apr 2023 23:20:31,533 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:20:31,535 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:20:31,536 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:20:31,536 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:20:31,537 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:20:31,543 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:20:31,544 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:20:32,549 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:20:32,549 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:20:32,551 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:20:33,563 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:20:33,563 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:20:33,565 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:24:40,529 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:24:40,538 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:24:40,539 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:24:40,540 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:24:40,542 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:24:40,542 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:24:41,232 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 23:24:42,312 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:24:42,313 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:24:42,314 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:24:42,314 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:24:42,315 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:24:42,317 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:24:42,330 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:24:52,945 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:24:52,946 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:24:52,946 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 23:24:59,120 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:24:59,122 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:24:59,122 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 23:25:00,133 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:00,134 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:25:00,140 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:25:03,996 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:03,997 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:25:03,998 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:25:05,024 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:05,025 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:25:05,028 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:25:09,031 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:09,031 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:25:09,033 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:25:10,048 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:10,049 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:25:10,050 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:25:15,572 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:25:15,573 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:15,573 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:25:15,573 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:25:15,573 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:25:15,575 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:25:15,575 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@206803c7)
+09 Apr 2023 23:25:15,586 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:25:15,586 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:25:15,587 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:25:15,587 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:15,587 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:25:15,596 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:25:15,596 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:25:29,275 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:29,276 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:25:29,277 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:25:30,300 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:30,301 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:25:30,308 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:25:30,614 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:30,614 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:25:30,616 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:25:31,625 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:31,626 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:25:31,628 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:25:37,009 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:25:37,010 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:37,010 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@206803c7)
+09 Apr 2023 23:25:37,018 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:25:37,018 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:25:37,019 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:25:37,019 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:25:37,020 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:25:37,024 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:25:37,025 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:27:29,993 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:27:30,005 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:30,006 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:27:30,007 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:27:30,008 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:27:30,009 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:27:30,424 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 23:27:31,473 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:31,474 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:27:31,474 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:27:31,475 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:27:31,475 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:27:31,479 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:27:31,486 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:27:33,071 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:27:33,072 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:33,074 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 23:27:33,079 ERROR airline.persistence.EmployeeRepository 57 getEmployee - java.sql.SQLException: ResultSet closed
+09 Apr 2023 23:27:42,662 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:27:42,663 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:42,664 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 23:27:46,235 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:27:46,236 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:46,236 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 23:27:47,248 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:47,248 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:27:47,254 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:27:49,626 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:49,626 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:27:49,628 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:27:50,655 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:50,655 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:27:50,658 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:27:55,549 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:55,549 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:27:55,552 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:27:56,571 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:56,572 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:27:56,574 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:27:59,767 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:27:59,768 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:59,768 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:27:59,769 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:27:59,769 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:27:59,770 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:27:59,772 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@41dfbeb0)
+09 Apr 2023 23:27:59,780 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:27:59,781 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:27:59,781 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:27:59,781 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:59,781 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:27:59,788 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:27:59,789 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:27:59,808 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:27:59,808 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:27:59,811 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:28:00,805 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:00,806 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:28:00,807 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:28:00,837 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:00,837 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:28:00,839 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:28:01,823 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:01,825 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:28:01,828 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:28:07,919 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:28:07,919 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:07,920 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@41dfbeb0)
+09 Apr 2023 23:28:07,926 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:28:07,927 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:28:07,927 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:28:07,927 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:07,928 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:28:07,931 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:28:07,932 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:28:07,935 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:07,936 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:28:07,937 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:28:08,947 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:08,948 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:28:08,950 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:28:08,966 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:08,966 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:28:08,967 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:28:09,972 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:09,974 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:28:09,977 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:28:17,240 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:28:17,240 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:17,240 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 23:28:18,251 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:18,252 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:28:18,254 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:28:30,581 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:28:30,582 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:30,582 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@27a93692)
+09 Apr 2023 23:28:31,595 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:28:31,597 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3158b1dc)
+09 Apr 2023 23:28:31,600 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:35:57,334 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:35:57,344 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:35:57,346 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:35:57,347 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:35:57,349 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:35:57,350 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:35:57,887 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 23:35:58,930 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:35:58,932 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:35:58,932 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:35:58,932 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:35:58,932 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:35:58,935 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:35:58,939 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:36:01,084 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:36:01,084 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:36:01,084 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 23:36:12,135 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:36:12,136 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:36:12,137 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 23:36:13,151 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:36:13,151 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:36:13,155 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:36:16,460 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:36:16,460 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:36:16,462 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:36:17,479 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:36:17,480 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:36:17,481 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:36:20,966 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:36:20,966 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:36:20,966 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 23:36:21,983 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:36:21,983 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:36:21,984 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:36:27,954 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:36:27,955 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:36:27,955 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 23:36:28,966 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:36:28,967 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:36:28,968 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:37:01,932 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:37:01,933 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:01,933 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 23:37:02,948 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:02,950 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:02,951 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:37:09,181 TRACE airline.persistence.EmployeeRepository 46 getEmployee - Enter
+09 Apr 2023 23:37:09,183 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:09,183 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1df30ebb)
+09 Apr 2023 23:37:10,199 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:10,200 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:10,201 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:37:32,065 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:37:32,065 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:32,065 TRACE airline.persistence.JdbcUtils 21 newConnection - Enter
+09 Apr 2023 23:37:32,065 INFO  airline.persistence.JdbcUtils 25 newConnection - Trying to connect to database... jdbc:sqlite:flight.db
+09 Apr 2023 23:37:32,066 INFO  airline.persistence.JdbcUtils 26 newConnection - user: null
+09 Apr 2023 23:37:32,066 INFO  airline.persistence.JdbcUtils 27 newConnection - pass: null
+09 Apr 2023 23:37:32,067 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3976f045)
+09 Apr 2023 23:37:32,072 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:37:32,073 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:37:32,073 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:37:32,073 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:32,074 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:32,081 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:37:32,082 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:37:32,099 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:32,100 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:32,101 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:37:33,099 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:33,099 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:33,100 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:37:33,113 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:33,113 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:33,114 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:37:34,126 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:34,126 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:34,129 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:37:36,396 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:36,396 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:36,397 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:37:37,412 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:37,412 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:37,413 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:37:39,524 TRACE airline.persistence.TicketRepository 75 add - Enter
+09 Apr 2023 23:37:39,524 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:39,524 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3976f045)
+09 Apr 2023 23:37:39,530 TRACE airline.persistence.TicketRepository 83 add - Added 1 instances
+09 Apr 2023 23:37:39,530 TRACE airline.persistence.TicketRepository 88 add - Exit
+09 Apr 2023 23:37:39,531 TRACE airline.persistence.FlightRepository 98 updateNumberOfSeats - Enter
+09 Apr 2023 23:37:39,531 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:39,531 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:39,535 TRACE airline.persistence.FlightRepository 103 updateNumberOfSeats - Updated 1 instances
+09 Apr 2023 23:37:39,535 TRACE airline.persistence.FlightRepository 108 updateNumberOfSeats - Exit
+09 Apr 2023 23:37:39,537 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:39,537 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:39,538 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:37:40,539 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:40,540 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:40,541 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:37:40,554 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:40,555 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:40,557 TRACE airline.persistence.FlightRepository 41 getAll - Exit
+09 Apr 2023 23:37:41,564 TRACE airline.persistence.JdbcUtils 40 getConnection - Enter
+09 Apr 2023 23:37:41,565 TRACE airline.persistence.JdbcUtils 48 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5f4950b4)
+09 Apr 2023 23:37:41,566 TRACE airline.persistence.FlightRepository 41 getAll - Exit
