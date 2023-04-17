@@ -41,3 +41,4 @@ C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 2\SGBD\MusicalLab2\MusicalLa
 C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 2\SGBD\MusicalLab2\MusicalLab2\obj\Debug\net6.0-windows\MusicalLab2.genruntimeconfig.cache
 C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 2\SGBD\MusicalLab2\MusicalLab2\obj\Debug\net6.0-windows\ref\MusicalLab2.dll
 C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 2\SGBD\MusicalLab2\MusicalLab2\obj\Debug\net6.0-windows\MusicalLab2.Form2.resources
+C:\Users\Denis\Documents\GitHub\UBB\Year 2\Semester 2\SGBD\MusicalLab2\MusicalLab2\bin\Debug\net6.0-windows\MusicalLab2.dll.config

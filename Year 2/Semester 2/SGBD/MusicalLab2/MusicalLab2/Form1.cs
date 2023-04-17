@@ -1,4 +1,5 @@
 using Microsoft.Data.SqlClient;
+using System.Configuration;
 using System.Data;
 
 namespace MusicalLab2
@@ -11,16 +12,25 @@ namespace MusicalLab2
 
         }
         private SqlConnection connection = null;
-        private SqlDataAdapter coardeAdapter = new SqlDataAdapter();
-        private SqlDataAdapter prodCoardeAdapter = new SqlDataAdapter();
+        private SqlDataAdapter childAdapter = new SqlDataAdapter();
+        private SqlDataAdapter parentAdapter = new SqlDataAdapter();
         private DataSet dataSet = new DataSet();
         //private DataSet dataSetCoarde;
         private SqlCommandBuilder cmbl;
         private BindingSource parentBS = new BindingSource();
         private BindingSource childBS = new BindingSource();
 
-        private string connectionString = @"Server=LAPTOP-RI290K7P\SQLEXPRESS;Database=MusicDatabase;
-        Integrated Security=true;TrustServerCertificate=true;";
+        private readonly string connectionString = ConfigurationManager.AppSettings["connectionString"];
+        private readonly string selectFromParent = ConfigurationManager.AppSettings["selectFromParent"];
+        private readonly string selectFromChild = ConfigurationManager.AppSettings["selectFromChild"];
+        private readonly string child = ConfigurationManager.AppSettings["child"];
+        private readonly string parent = ConfigurationManager.AppSettings["parent"];
+        private readonly List<string> paramsForInsert = new List<string>(ConfigurationManager.AppSettings["paramsForInsert"].Split(','));
+        private readonly List<string> paramsForDelete = new List<string>(ConfigurationManager.AppSettings["paramsForDelete"].Split(','));
+        private readonly List<string> paramsForUpdate = new List<string>(ConfigurationManager.AppSettings["paramsForUpdate"].Split(','));
+        private readonly string deleteCommand = ConfigurationManager.AppSettings["deleteCommand"];
+        private readonly string updateCommand = ConfigurationManager.AppSettings["updateCommand"];
+
 
         private void loadTables()
         {
@@ -29,20 +39,20 @@ namespace MusicalLab2
                 using (connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    coardeAdapter.SelectCommand = new SqlCommand("SELECT id_coarda, nume_material,vechime,refolosit,id_prod,C.id_material_coarda FROM Coarde C INNER JOIN MaterialeCoarde M on M.id_material_coarda=C.id_material_coarda;", connection);
+                    childAdapter.SelectCommand = new SqlCommand(selectFromChild, connection);
                     //coardeAdapter.SelectCommand = new SqlCommand("SELECT id_coarda, id_material_coarda,vechime,refolosit FROM Coarde;", connection);
-                    prodCoardeAdapter.SelectCommand = new SqlCommand("SELECT * FROM ProducatoriCoarde;", connection);
+                    parentAdapter.SelectCommand = new SqlCommand(selectFromParent, connection);
 
-                    if (dataSet.Tables.Contains("Coarde"))
-                        dataSet.Tables["Coarde"].Clear();
-
-
-                    if (dataSet.Tables.Contains("ProducatoriCoarde"))
-                        dataSet.Tables["ProducatoriCoarde"].Clear();
+                    if (dataSet.Tables.Contains(child))
+                        dataSet.Tables[child].Clear();
 
 
-                    prodCoardeAdapter.Fill(dataSet, "ProducatoriCoarde");
-                    coardeAdapter.Fill(dataSet, "Coarde");
+                    if (dataSet.Tables.Contains(parent))
+                        dataSet.Tables[parent].Clear();
+
+
+                    parentAdapter.Fill(dataSet, parent);
+                    childAdapter.Fill(dataSet, child);
 
 
                 }
@@ -54,22 +64,24 @@ namespace MusicalLab2
         }
         private void bindParentToChild(DataSet dataSet)
         {
-            parentBS.DataSource = dataSet.Tables["ProducatoriCoarde"];
-            parentProdCoardeGridView.DataSource = parentBS;
-            DataColumn parentColumn = dataSet.Tables["ProducatoriCoarde"].Columns["id_prod"];
-            DataColumn childColumn = dataSet.Tables["Coarde"].Columns["id_prod"];
-            DataRelation relation = new DataRelation("FK_ProdCoarde", parentColumn, childColumn);
+            parentBS.DataSource = dataSet.Tables[parent];
+            parentGridView.DataSource = parentBS;
+            DataColumn parentColumn = dataSet.Tables[parent].Columns[paramsForInsert[0].Substring(1)];
+            var colname = paramsForDelete[0].Substring(1);
+            DataColumn childColumn = dataSet.Tables[child].Columns[paramsForInsert[0].Substring(1)];
+            string relationName = "FK_" + parent;
+            DataRelation relation = new DataRelation(relationName, parentColumn, childColumn);
             dataSet.Relations.Add(relation);
             childBS.DataSource = parentBS;
-            childBS.DataMember = "FK_ProdCoarde";
-            childCoardeGridView.DataSource = childBS;
+            childBS.DataMember = relationName;
+            childGridView.DataSource = childBS;
 
         }
         private void openNewForm()
         {
             try
             {
-                int id = Convert.ToInt32(parentProdCoardeGridView.CurrentRow.Cells[0].Value);
+                int id = Convert.ToInt32(parentGridView.CurrentRow.Cells[0].Value);
 
                 Form2 form2 = new Form2(id);
                 form2.ShowDialog();
@@ -93,7 +105,7 @@ namespace MusicalLab2
                 {
                     connection.Open();
                     string updateQuery = "UPDATE Coarde SET vechime = @vechime, refolosit=@refolosit, id_material_coarda=@idmat WHERE id_coarda = @id";
-                    DataGridViewRow row = childCoardeGridView.Rows[e.RowIndex];
+                    DataGridViewRow row = childGridView.Rows[e.RowIndex];
 
 
                     string id = row.Cells[0].Value.ToString();
@@ -130,7 +142,7 @@ namespace MusicalLab2
                     connection.Open();
                     try
                     {
-                        int id = Convert.ToInt32(childCoardeGridView.CurrentRow.Cells[0].Value);
+                        int id = Convert.ToInt32(childGridView.CurrentRow.Cells[0].Value);
                         SqlCommand command = new SqlCommand(deltesql, connection);
                         command.Parameters.AddWithValue("@id", id);
                         command.ExecuteNonQuery();

@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            parentProdCoardeGridView = new DataGridView();
-            childCoardeGridView = new DataGridView();
+            parentGridView = new DataGridView();
+            childGridView = new DataGridView();
             deleteButton = new Button();
             addButton = new Button();
             refreshButton = new Button();
             label1 = new Label();
             label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)parentProdCoardeGridView).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)childCoardeGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)parentGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)childGridView).BeginInit();
             SuspendLayout();
             // 
             // parentProdCoardeGridView
             // 
-            parentProdCoardeGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            parentProdCoardeGridView.Location = new Point(18, 52);
-            parentProdCoardeGridView.Margin = new Padding(2);
-            parentProdCoardeGridView.Name = "parentProdCoardeGridView";
-            parentProdCoardeGridView.RowHeadersWidth = 72;
-            parentProdCoardeGridView.RowTemplate.Height = 37;
-            parentProdCoardeGridView.Size = new Size(496, 226);
-            parentProdCoardeGridView.TabIndex = 0;
+            parentGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            parentGridView.Location = new Point(18, 52);
+            parentGridView.Margin = new Padding(2);
+            parentGridView.Name = "parentProdCoardeGridView";
+            parentGridView.RowHeadersWidth = 72;
+            parentGridView.RowTemplate.Height = 37;
+            parentGridView.Size = new Size(496, 226);
+            parentGridView.TabIndex = 0;
             // 
             // childCoardeGridView
             // 
-            childCoardeGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            childCoardeGridView.Location = new Point(18, 321);
-            childCoardeGridView.Margin = new Padding(2);
-            childCoardeGridView.Name = "childCoardeGridView";
-            childCoardeGridView.RowHeadersWidth = 72;
-            childCoardeGridView.RowTemplate.Height = 37;
-            childCoardeGridView.Size = new Size(496, 251);
-            childCoardeGridView.TabIndex = 1;
-            childCoardeGridView.CellValueChanged += childCoardeGridView_CellValueChanged;
+            childGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            childGridView.Location = new Point(18, 321);
+            childGridView.Margin = new Padding(2);
+            childGridView.Name = "childCoardeGridView";
+            childGridView.RowHeadersWidth = 72;
+            childGridView.RowTemplate.Height = 37;
+            childGridView.Size = new Size(496, 251);
+            childGridView.TabIndex = 1;
+            childGridView.CellValueChanged += childCoardeGridView_CellValueChanged;
             // 
             // deleteButton
             // 
@@ -123,22 +123,22 @@
             Controls.Add(refreshButton);
             Controls.Add(addButton);
             Controls.Add(deleteButton);
-            Controls.Add(childCoardeGridView);
-            Controls.Add(parentProdCoardeGridView);
+            Controls.Add(childGridView);
+            Controls.Add(parentGridView);
             Margin = new Padding(2);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)parentProdCoardeGridView).EndInit();
-            ((System.ComponentModel.ISupportInitialize)childCoardeGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)parentGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)childGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView parentProdCoardeGridView;
-        private DataGridView childCoardeGridView;
+        private DataGridView parentGridView;
+        private DataGridView childGridView;
         private Button deleteButton;
         private Button addButton;
         private Button refreshButton;
