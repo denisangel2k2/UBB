@@ -66,6 +66,7 @@ namespace MusicalLab2
         {
             parentBS.DataSource = dataSet.Tables[parent];
             parentGridView.DataSource = parentBS;
+            var s = paramsForInsert[0].Substring(1);
             DataColumn parentColumn = dataSet.Tables[parent].Columns[paramsForInsert[0].Substring(1)];
             var colname = paramsForDelete[0].Substring(1);
             DataColumn childColumn = dataSet.Tables[child].Columns[paramsForInsert[0].Substring(1)];
@@ -104,23 +105,24 @@ namespace MusicalLab2
                 using (connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string updateQuery = "UPDATE Coarde SET vechime = @vechime, refolosit=@refolosit, id_material_coarda=@idmat WHERE id_coarda = @id";
+                    
                     DataGridViewRow row = childGridView.Rows[e.RowIndex];
+                    string updateQuery = updateCommand;
 
-
-                    string id = row.Cells[0].Value.ToString();
-                    string idmat = row.Cells[5].Value.ToString();
-                    //string mat = row.Cells[2].Value.ToString();
-                    string vechime = row.Cells[2].Value.ToString();
-                    bool refolosit = Convert.ToBoolean(row.Cells[3].Value.ToString());
-                    //string id_prod = row.Cells[4].Value.ToString();
                     SqlCommand command = new SqlCommand(updateQuery, connection);
-                    //command.Parameters.AddWithValue("@mat", mat);
-                    command.Parameters.AddWithValue("@vechime", vechime);
-                    command.Parameters.AddWithValue("@refolosit", refolosit);
-                    command.Parameters.AddWithValue("@id", id);
-                    command.Parameters.AddWithValue("@idmat", idmat);
+                    foreach (var param in paramsForUpdate)
+                    {
+                        //get right value for the corresponding paramater
+                        for (int i=0; i<row.Cells.Count; i++)
+                        {
+                            var value = row.Cells[i].Value.ToString();
+                            if (param.Substring(1) == row.Cells[i].OwningColumn.Name)
+                                command.Parameters.AddWithValue(param, value);
+                        }
+
+                    }
                     command.ExecuteNonQuery();
+
 
                 }
             }
@@ -136,15 +138,16 @@ namespace MusicalLab2
         {
             try
             {
-                string deltesql = "DELETE FROM Coarde where id_coarda=@id";
+                string deltesql = deleteCommand;
                 using (connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     try
                     {
+
                         int id = Convert.ToInt32(childGridView.CurrentRow.Cells[0].Value);
                         SqlCommand command = new SqlCommand(deltesql, connection);
-                        command.Parameters.AddWithValue("@id", id);
+                        command.Parameters.AddWithValue(paramsForDelete[0], id);
                         command.ExecuteNonQuery();
 
                         loadTables();

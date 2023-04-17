@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -13,17 +14,72 @@ namespace MusicalLab2
 {
     public partial class Form2 : Form
     {
-        private string connectionString = @"Server=LAPTOP-RI290K7P\SQLEXPRESS;Database=MusicDatabase;
-        Integrated Security=true;TrustServerCertificate=true;";
 
         private SqlConnection connection = null;
-        private int id_prod = 0;
+        private int currentId = 0;
+
+        private readonly string connectionString = ConfigurationManager.AppSettings["connectionString"];
+        private readonly List<string> paramsForInsert = new List<string>(ConfigurationManager.AppSettings["paramsForInsert"].Split(','));
+        private readonly List<string> paramsForInsertTypes = new List<string>(ConfigurationManager.AppSettings["paramsForInsertTypes"].Split(','));
+        private readonly string insertCommand = ConfigurationManager.AppSettings["insertCommand"];
+        private int size = Convert.ToInt32(ConfigurationManager.AppSettings["size"]);
+
+
+        private TextBox[] textBoxes;
+        private Label[] labels;
+        private CheckBox[] checkBoxes;
+
         public Form2(int id_prod)
         {
             InitializeComponent();
-            this.id_prod = id_prod;
+            this.currentId = id_prod;
+
+            AddTextBoxesForInserts();
         }
 
+        private void AddTextBoxesForInserts()
+        {
+            textBoxes = new TextBox[size];
+            labels = new Label[size];
+            checkBoxes = new CheckBox[size];
+
+            flowLayoutPanel1.WrapContents = true;
+
+
+            for (int i = 1; i < size; i++)
+            {
+                if (paramsForInsertTypes[i] == "bool")
+                {
+                    checkBoxes[i] = new CheckBox();
+                    textBoxes[i] = null;
+                }
+                else
+                {
+                    checkBoxes[i] = null;
+                    textBoxes[i] = new TextBox();
+                }
+                labels[i] = new Label() { Text = paramsForInsert[i].Substring(1) };
+
+            }
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            for (int i = 1; i < size; i++)
+            {
+
+                flowLayoutPanel1.Controls.Add(labels[i]);
+                var spaceLabel = new Label();
+                spaceLabel.Size = new Size(10, 10);
+                flowLayoutPanel1.Controls.Add(spaceLabel);
+                //flowLayoutPanel1.FlowDirection = FlowDirection.LeftToRight;
+                if (textBoxes[i] == null)
+                    flowLayoutPanel1.Controls.Add(checkBoxes[i]);
+                else flowLayoutPanel1.Controls.Add(textBoxes[i]);
+
+
+            }
+
+
+
+        }
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -42,7 +98,31 @@ namespace MusicalLab2
                 using (connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    SqlCommand sqlCommand = new SqlCommand("INSERT INTO Coarde (id_prod,id_material_coarda,vechime,refolosit) values (@id_prod,@id_material,@vechime,@refolosit)", connection);
+                    SqlCommand sqlCommand = new SqlCommand(insertCommand, connection);
+
+                    sqlCommand.Parameters.AddWithValue(paramsForInsert[0], currentId);
+                    for (int i=1; i < size; i++)
+                    {
+                        if (textBoxes[i] == null) //checkbox
+                        {
+                            bool value = checkBoxes[i].Checked;
+                            sqlCommand.Parameters.AddWithValue(paramsForInsert[i], value);
+                        }
+                        else //textbox
+                        {
+                            string value = textBoxes[i].Text;
+                            if (value.Length==0)
+                            {
+                                MessageBox.Show("Complete everything!");
+                                break;
+                            }
+                            sqlCommand.Parameters.AddWithValue(paramsForInsert[i], value);
+                        }
+                    }
+                    sqlCommand.ExecuteNonQuery();
+                    statusLabel.ForeColor = Color.Green;
+                    statusLabel.Text = "Inserted successfully!";
+                    /*
                     int id_material = Convert.ToInt32(id_matTextBox.Text);
                     int vechime = Convert.ToInt32(vechimeTextBox.Text);
                     bool refolosit = refolositCheckBox.Checked;
@@ -53,9 +133,8 @@ namespace MusicalLab2
                     sqlCommand.Parameters.AddWithValue("@refolosit", refolosit);
 
                     sqlCommand.ExecuteNonQuery();
-                    statusLabel.ForeColor = Color.Green;
-                    statusLabel.Text = "Inserted successfully!";
-
+                    
+                    */
                 }
             }
             catch (Exception ex)
@@ -64,6 +143,11 @@ namespace MusicalLab2
                 statusLabel.ForeColor = Color.Red;
                 statusLabel.Text = "Error!";
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
