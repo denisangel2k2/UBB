@@ -1,0 +1,6 @@
+C:\Users\Denis\Documents\GitHub\MPP_Project\CSharp Project\ZborCSharpServer\AirlineServer\Model\bin\Debug\Model.dll
+C:\Users\Denis\Documents\GitHub\MPP_Project\CSharp Project\ZborCSharpServer\AirlineServer\Model\bin\Debug\Model.pdb
+C:\Users\Denis\Documents\GitHub\MPP_Project\CSharp Project\ZborCSharpServer\AirlineServer\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\Denis\Documents\GitHub\MPP_Project\CSharp Project\ZborCSharpServer\AirlineServer\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Denis\Documents\GitHub\MPP_Project\CSharp Project\ZborCSharpServer\AirlineServer\Model\obj\Debug\Model.dll
+C:\Users\Denis\Documents\GitHub\MPP_Project\CSharp Project\ZborCSharpServer\AirlineServer\Model\obj\Debug\Model.pdb
