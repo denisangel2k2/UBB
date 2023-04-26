@@ -96,16 +96,17 @@ function runGame(){
                 if (img1.src!==img2.src){
                     console.log('not equal');
                     setTimeout(()=>{
-                        img1.style.visibility="hidden";
-                        img2.style.visibility="hidden";
-    
-                        num1.style.visibility="hidden";
-                        num2.style.visibility="hidden";
-                        
+                        if (img1.style.visibility !== 'hidden' && img2.style.visibility !== 'hidden') {
+                            img1.style.visibility = 'hidden';
+                            img2.style.visibility = 'hidden';
+                            num1.style.visibility = 'hidden';
+                            num2.style.visibility = 'hidden';
+                        }
     
                     },1000)
                 }
                 else{
+
                     img1.parentNode.removeEventListener('click',arguments.callee);
                     img2.parentNode.removeEventListener('click',arguments.callee);
                     checkWin();
