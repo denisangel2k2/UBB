@@ -1,0 +1,26 @@
+body{
+    display: inline-flex;
+    flex-direction: row;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    
+}
+
+table{
+    border-collapse:collapse;
+    margin: 15px 15px;
+
+}
+td,th{
+    align-items: center;
+    padding: 5px;
+    margin: 5px 5px;
+    border-bottom: 1px solid rgb(163, 163, 163) ;
+}
+th:hover{
+    color: brown;
+    font-weight: bold;
+    font-size: 120%;
+    cursor: pointer;
+}
