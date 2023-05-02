@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <table id="tableColumns">
+        <tr>
+            <th onclick="sortColumns(0)">
+                Fructe
+            </th>
+            <td>Mere</td>
+            <td>Pere</td>
+        </tr>
+        <tr>
+            <th onclick="sortColumns(1)">
+                Pret
+            </th>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <th onclick="sortColumns(2)">
+                Cantitate
+            </th>
+            <td>8</td>
+            <td>6</td>
+    </table>
+
+    <br>
+    <table id="tableRows">
+       <tr>
+            <th onclick="sortRows(0)">Fructe</td>
+            <th onclick="sortRows(1)">Pret</td>
+            <th onclick="sortRows(2)">Cantitate</td>
+       </tr>
+       <tr>
+            <td>Mere</td>
+            <td>3</td>
+            <td>8</td>
+       </tr>
+         <tr>
+                <td>Pere</td>
+                <td>4</td>
+                <td>6</td>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>

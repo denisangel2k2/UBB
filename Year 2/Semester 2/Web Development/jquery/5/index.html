@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <ol id="slideShow">
+        <li class="slides fade" style="display: block;">
+            <img src="img/1.jpg">
+            <a href="#" class="text">Profesor 1</a>
+
+        </li>
+        <li class="slides fade">
+            <img src="img/2.jpg">
+            <a href="#" class="text">Profesor 2</a>
+        </li>
+        <li class="slides fade">
+            <img src="img/3.jpg">
+            <a href="#" class="text">Profesor 3</a>
+        </li>
+        <li class="slides fade">
+            <img src="img/4.jpg">
+            <a href="#" class="text">Profesor 4</a>
+        </li>
+        <li class="slides fade">
+            <img src="img/5.jpg">
+            <a href="#" class="text">Profesor 5</a>
+        </li>
+    </ol>
+    <div class="buttons">
+        <button onclick="showNextSlide(-1)">Previous</button>
+        <button onclick="showNextSlide(1)">Next</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
