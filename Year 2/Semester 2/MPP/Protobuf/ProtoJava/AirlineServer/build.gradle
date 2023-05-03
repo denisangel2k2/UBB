@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'airline.server'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation project(':AirlinePersistence')
+    implementation project(':AirlineModel')
+    implementation project(':AirlineNetworking')
+    implementation project(':AirlineServices')
+}
+
+test {
+    useJUnitPlatform()
+}
+application{
+    mainClass = 'airline.server.StartRpcServer'
+}

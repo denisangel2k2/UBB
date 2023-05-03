@@ -1,0 +1,63 @@
+syntax = "proto3";
+package JavaSocket.protocol;
+
+//option java_multiple_files = true;
+option java_package = "JavaSocket.protobuffnet";
+option java_outer_classname = "Protobuffs";
+option objc_class_prefix = "PB";
+
+
+message Employee{
+  int32 Id=1;
+  string firstName = 2;
+  string lastName = 3;
+  string username = 4;
+  string password = 5;
+}
+
+message Flight{
+  int32 Id = 1;
+  string destination = 2;
+  string date = 3;
+  string hour = 4;
+  int32 numberOfSeats = 5;
+  int32 availableSeats = 6;
+}
+
+message Ticket{
+  int32 Id = 1;
+  string client_name = 2;
+  string address = 3;
+  int32 flightId = 4;
+}
+
+message Request {
+  enum Type {Unknown = 0; LOGIN = 1; LOGOUT = 2; BUY_TICKET = 3; GET_FLIGHTS = 4; GET_EMPLOYEE = 5; GET_NUMBER_OF_TICKETS = 6; GET_ALL_FLIGHTS=7;}
+
+  // Identifies which request is filled in.
+  Type type = 1;
+
+  // One of the following will be filled in, depending on the type.
+  oneof payload{
+    Employee employee = 2;
+    Ticket ticket = 3;
+    Flight flight = 4;
+    int32 flightId = 5;
+  }
+}
+
+message Response{
+  enum Type {Unknown = 0; OK = 1; ERROR = 2; LOGIN = 3; LOGOUT = 4; BUY_TICKET = 5; GET_FLIGHTS = 6; GET_EMPLOYEE = 7; GET_NUMBER_OF_TICKETS_FOR_FLIGHT = 8; GET_ALL_FLIGHTS=9;}
+
+  // Identifies which request is filled in.
+  Type type = 1;
+
+  // One of the following will be filled in, depending on the type.
+
+  repeated Flight flights = 2;
+  Employee employee = 3;
+  int32 numberOfTickets = 4;
+  Ticket ticket = 5;
+  string error = 6;
+
+}
