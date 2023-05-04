@@ -54,7 +54,8 @@ namespace MusicalLab2
                     parentAdapter.Fill(dataSet, parent);
                     childAdapter.Fill(dataSet, child);
 
-
+                    label1.Text = parent;
+                    label2.Text = child;
                 }
             }
             catch (Exception ex)
@@ -105,7 +106,7 @@ namespace MusicalLab2
                 using (connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    
+
                     DataGridViewRow row = childGridView.Rows[e.RowIndex];
                     string updateQuery = updateCommand;
 
@@ -113,7 +114,7 @@ namespace MusicalLab2
                     foreach (var param in paramsForUpdate)
                     {
                         //get right value for the corresponding paramater
-                        for (int i=0; i<row.Cells.Count; i++)
+                        for (int i = 0; i < row.Cells.Count; i++)
                         {
                             var value = row.Cells[i].Value.ToString();
                             if (param.Substring(1) == row.Cells[i].OwningColumn.Name)

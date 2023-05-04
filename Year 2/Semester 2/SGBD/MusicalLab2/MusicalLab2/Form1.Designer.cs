@@ -39,35 +39,35 @@
             ((System.ComponentModel.ISupportInitialize)childGridView).BeginInit();
             SuspendLayout();
             // 
-            // parentProdCoardeGridView
+            // parentGridView
             // 
             parentGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            parentGridView.Location = new Point(18, 52);
-            parentGridView.Margin = new Padding(2);
-            parentGridView.Name = "parentProdCoardeGridView";
+            parentGridView.Location = new Point(21, 69);
+            parentGridView.Margin = new Padding(2, 3, 2, 3);
+            parentGridView.Name = "parentGridView";
             parentGridView.RowHeadersWidth = 72;
             parentGridView.RowTemplate.Height = 37;
-            parentGridView.Size = new Size(496, 226);
+            parentGridView.Size = new Size(567, 301);
             parentGridView.TabIndex = 0;
             // 
-            // childCoardeGridView
+            // childGridView
             // 
             childGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            childGridView.Location = new Point(18, 321);
-            childGridView.Margin = new Padding(2);
-            childGridView.Name = "childCoardeGridView";
+            childGridView.Location = new Point(21, 428);
+            childGridView.Margin = new Padding(2, 3, 2, 3);
+            childGridView.Name = "childGridView";
             childGridView.RowHeadersWidth = 72;
             childGridView.RowTemplate.Height = 37;
-            childGridView.Size = new Size(496, 251);
+            childGridView.Size = new Size(567, 335);
             childGridView.TabIndex = 1;
             childGridView.CellValueChanged += childCoardeGridView_CellValueChanged;
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(112, 587);
-            deleteButton.Margin = new Padding(2);
+            deleteButton.Location = new Point(128, 783);
+            deleteButton.Margin = new Padding(2, 3, 2, 3);
             deleteButton.Name = "deleteButton";
-            deleteButton.Size = new Size(89, 36);
+            deleteButton.Size = new Size(102, 48);
             deleteButton.TabIndex = 2;
             deleteButton.Text = "Delete";
             deleteButton.UseVisualStyleBackColor = true;
@@ -75,9 +75,10 @@
             // 
             // addButton
             // 
-            addButton.Location = new Point(18, 587);
+            addButton.Location = new Point(21, 783);
+            addButton.Margin = new Padding(3, 4, 3, 4);
             addButton.Name = "addButton";
-            addButton.Size = new Size(89, 36);
+            addButton.Size = new Size(102, 48);
             addButton.TabIndex = 3;
             addButton.Text = "Add";
             addButton.UseVisualStyleBackColor = true;
@@ -85,9 +86,10 @@
             // 
             // refreshButton
             // 
-            refreshButton.Location = new Point(439, 587);
+            refreshButton.Location = new Point(502, 783);
+            refreshButton.Margin = new Padding(3, 4, 3, 4);
             refreshButton.Name = "refreshButton";
-            refreshButton.Size = new Size(75, 36);
+            refreshButton.Size = new Size(86, 48);
             refreshButton.TabIndex = 4;
             refreshButton.Text = "Refresh";
             refreshButton.UseVisualStyleBackColor = true;
@@ -97,27 +99,27 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(176, 19);
+            label1.Location = new Point(253, 21);
             label1.Name = "label1";
-            label1.Size = new Size(158, 21);
+            label1.Size = new Size(74, 28);
             label1.TabIndex = 5;
-            label1.Text = "Producatori Coarde";
+            label1.Text = "Parent";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(234, 290);
+            label2.Location = new Point(267, 387);
             label2.Name = "label2";
-            label2.Size = new Size(64, 21);
+            label2.Size = new Size(60, 28);
             label2.TabIndex = 6;
-            label2.Text = "Coarde";
+            label2.Text = "Child";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(538, 659);
+            ClientSize = new Size(615, 879);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(refreshButton);
@@ -125,7 +127,7 @@
             Controls.Add(deleteButton);
             Controls.Add(childGridView);
             Controls.Add(parentGridView);
-            Margin = new Padding(2);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
