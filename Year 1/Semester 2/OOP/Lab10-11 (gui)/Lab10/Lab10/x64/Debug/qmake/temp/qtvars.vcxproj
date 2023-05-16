@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|x64&apos;">
     <ClCompile>
-      <AdditionalIncludeDirectories>&quot;C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab10-11 (gui)\Lab10\Lab10\x64\Debug\qmake\temp&quot;;C:\Qt\6.3.0\msvc2019_64\include;C:\Qt\6.3.0\msvc2019_64\include\QtWidgets;C:\Qt\6.3.0\msvc2019_64\include\QtGui;C:\Qt\6.3.0\msvc2019_64\include\QtCore;&quot;C:\Users\Denis\Documents\GitHub\UBB\Year 1\Semester 2\OOP\Lab10-11 (gui)\Lab10\Lab10\x64\Debug\qmake\temp&quot;;/include;C:\Qt\6.3.0\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Denis\AppData\Local\Temp\aieaxvjz.vpd;C:\Qt\6.3.0\msvc2019_64\include;C:\Qt\6.3.0\msvc2019_64\include\QtWidgets;C:\Qt\6.3.0\msvc2019_64\include\QtGui;C:\Qt\6.3.0\msvc2019_64\include\QtCore;C:\Users\Denis\AppData\Local\Temp\aieaxvjz.vpd;/include;C:\Qt\6.3.0\msvc2019_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>.\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
