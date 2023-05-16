@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        select { 
+            margin-bottom: 15px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    
+    <select name="stations" id="stations" onchange="showAvailable(this.value)">
+        <option value="Cluj">Cluj</option>
+        <option value="Arad">Arad</option>
+        <option value="Timisoara">Timisoara</option>
+        <option value="Iasi">Iasi</option>
+    </select>
+
+    <select name="destinations" id="destinations" size="10"></select>
+    <script src="script.js"></script>
+</body>
+</html>

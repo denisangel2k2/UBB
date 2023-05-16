@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .menu{
+            display: block;
+            position: absolute;
+            background-color: brown;
+            height: 100vh;
+            width: 6em;
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu p{
+            color: aliceblue;
+
+        }
+        .menu label{
+            color: aliceblue        ;
+        }
+       
+        table{
+            margin-left: 6em;
+            width: 100vh;
+        }
+        td{
+            border: 1px solid black;
+            padding: 1em;
+        }
+  
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <p>CPU</p>
+        <div class="item">
+            <input type="checkbox" name="cpu" value="I5" id="I5">
+            <label for="I5">I5</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" name="cpu" value="I7" id="I7">
+            <label for="I7">I7</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" name="cpu" value="M2" id="M2">
+            <label for="M2">M2</label>
+        </div>
+        <br>
+        <p>PRODUCER</p>
+        <div class="item">
+            <input type="checkbox" name="producer" value="Asus" id="Asus">
+            <label for="Asus">Asus</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" name="producer" value="Acer" id="Acer">
+            <label for="Acer">Acer</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" name="producer" value="Apple" id="Apple">
+            <label for="Apple">Apple</label>
+        </div>
+        <br>
+        <p>GPU</p>
+        <div class="item">
+            <input type="checkbox" name="gpu" value="Nvidia" id="Nvidia">
+            <label for="Nvidia">Nvidia</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" name="gpu" value="AMD" id="AMD"> 
+            <label for="AMD">AMD</label>
+        </div>
+        <br>
+        <p>HDD</p>
+        <div class="item">
+            <input type="checkbox" name="hdd_capacity" value="500" id="500">
+            <label for="500">500</label>
+        </div>
+
+        <div class="item">
+            <input type="checkbox" name="hdd_capacity" value="250" id="250">
+            <label for="250">250</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" name="hdd_capacity" value="1000" id="1000">
+            <label for="1000">1000</label>
+        </div>
+       
+        
+    </div>
+    <table id="laptops"></table>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

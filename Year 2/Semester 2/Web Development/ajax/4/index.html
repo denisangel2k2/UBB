@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>X si O</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <table class="board">
+        <tr>
+            <td id="00" onclick="playCell(0,0)"></td>
+            <td id="01" onclick="playCell(0,1)"></td>
+            <td id="02" onclick="playCell(0,2)"></td>
+        </tr>
+        <tr>
+            <td id="10" onclick="playCell(1,0)"></td>
+            <td id="11" onclick="playCell(1,1)"></td>
+            <td id="12" onclick="playCell(1,2)"></td>
+        </tr>
+        <tr>
+            <td id="20" onclick="playCell(2,0)"></td>
+            <td id="21" onclick="playCell(2,1)"></td>
+            <td id="22" onclick="playCell(2,2)"></td>
+        </tr>
+    </table>
+    <p id="message"></p>
+    <script src="script.js"></script>
+</body>
+</html>
